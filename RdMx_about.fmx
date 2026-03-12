@@ -1,0 +1,85 @@
+object fmAbout: TfmAbout
+  Left = 0
+  Top = 0
+  ActiveControl = bClose
+  Caption = 'About'
+  ClientHeight = 300
+  ClientWidth = 640
+  Visible = True
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnClose = FormClose
+  DesignerMasterStyle = 0
+  object Panel2: TPanel
+    Align = Bottom
+    Position.Y = 236.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 64.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'pushpanel'
+    TabOrder = 0
+    TabStop = False
+    object bClose: TButton
+      ModalResult = 8
+      Position.X = 264.000000000000000000
+      Position.Y = 24.000000000000000000
+      TabOrder = 0
+      Text = 'Close'
+      OnClick = bCloseClick
+    end
+  end
+  object Panel3: TPanel
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 236.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'pushpanel'
+    TabOrder = 1
+    TabStop = False
+    object Label1: TLabel
+      AutoSize = True
+      StyledSettings = [Family, FontColor]
+      Position.X = 16.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 597.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 18.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.HorzAlign = Center
+      TextSettings.VertAlign = Leading
+      TextSettings.WordWrap = False
+      TextSettings.Trimming = None
+      Text = 
+        'RadMix - Radiogenic Isotope and Chemistry Modelling for Arc Magm' +
+        'a'
+      TabOrder = 0
+      TabStop = False
+    end
+    object Memo1: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      Lines.Strings = (
+        
+          'Forward modelling of mixing and assimilation fractional crystall' +
+          'isation for testing variations in contributions from mantle and ' +
+          'crustal melts. Allows one to estimate radiogenic isotope and che' +
+          'mistry variations for different proportions of mantle melt and c' +
+          'rust assimilation. '
+        ''
+        'Bruce Eglington'
+        '2026')
+      TextSettings.WordWrap = True
+      Position.X = 48.000000000000000000
+      Position.Y = 64.000000000000000000
+      Size.Width = 537.000000000000000000
+      Size.Height = 169.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      TabStop = False
+      Viewport.Width = 533.000000000000000000
+      Viewport.Height = 165.000000000000000000
+    end
+  end
+end

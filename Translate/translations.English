@@ -1,0 +1,359 @@
+﻿$TITLE$
+&Next >
+< &Back
+Cancel
+TotalRequiredSpace
+RemainingSpace
+Description
+Remaining:
+Required:
+ Feature Description 
+InstallAware
+$GLASS$
+InstallAware
+Custom Setup
+Choose the program features you would like to install.
+Click on an icon in the list below to change how a feature is installed.
+$TITLE$
+Cancel
+< &Back
+&Next >
+
+&Change...
+TotalRequiredSpace
+RemainingSpace
+Required Disk Space:
+Remaining Disk Space:
+ Destination Folder 
+$GLASS$
+InstallAware
+InstallAware
+Destination Folder
+Select folder where setup will install files.
+Install $TITLE$ to:
+$TITLE$
+Cancel
+< &Back
+&Finish
+&Run $TITLE$ now
+&Restart now
+$GLASS$
+InstallAware
+To close this wizard, click Finish.
+Completing the InstallAware Wizard for $TITLE$
+$SUCCESS$
+$REMOVE$
+You have successfully completed the InstallAware Wizard for $TITLE$.
+The InstallAware Wizard for $TITLE$ has failed: "$LASTERROR$". Please check your settings and try again.
+You have successfully completed the InstallAware Wizard for $TITLE$. To apply the changes, the wizard has to restart Windows. To restart Windows automatically, click Finish. If you want to restart later, deselect the Restart now check box, and then click Finish.
+The InstallAware Wizard for $TITLE$ was cancelled. You may run the wizard again at a later time to complete setup.
+You have successfully completed the InstallAware Wizard for $TITLE$.
+$TITLE$
+Cancel
+< &Back
+&Next >
+I &accept the terms of the license agreement
+$GLASS$
+InstallAware
+InstallAware
+Please carefully read the following license agreement.
+License Agreement
+$TITLE$
+Cancel
+< &Back
+&Next >
+&Modify Available Options
+Re&pair Application
+&Uninstall
+$GLASS$
+InstallAware
+To continue, click Next.
+Welcome to the InstallAware Wizard for $TITLE$
+Please choose a maintenance operation to perform:
+$TITLE$
+Cancel
+< &Back
+&Next >
+$GLASS$
+InstallAware
+InstallAware
+To continue, click Next.
+Application Requirements
+The following requirements must be processed before starting setup.
+$PRELIST$
+$TITLE$
+Cancel
+< &Back
+&Next >
+ProgressLabel
+$GLASS$
+InstallAware
+InstallAware
+Status:
+Installing $TITLE$
+The program features you selected are being configured.
+$REMOVE$
+Please wait while the InstallAware Wizard uninstalls $TITLE$. This may take several minutes.
+Please wait while the InstallAware Wizard installs $TITLE$. This may take several minutes.
+$TITLE$
+Cancel
+< &Back
+&Next >
+ProgressLabel
+$GLASS$
+InstallAware
+InstallAware
+Status:
+Installing $TITLE$ Requirements
+The program requirements are being configured.
+Please wait while the InstallAware Wizard installs $TITLE$ requirements. This may take several minutes.
+$TITLE$
+Cancel
+< &Back
+&Next >
+$GLASS$
+InstallAware
+InstallAware
+Please carefully read the following program information.
+Important Information
+$TITLE$
+Cancel
+< &Back
+&Next >
+
+
+$GLASS$
+InstallAware
+InstallAware
+Customer Registration
+Please enter information on yourself.
+&Organization:
+&User Name:
+$TITLE$
+&Next >
+< &Back
+Cancel
+
+
+
+
+
+
+
+$GLASS$
+InstallAware
+InstallAware
+Customer Registration
+Please enter the following information.
+&User Name:
+&Organization:
+&Product License Key:
+$TITLE$
+Cancel
+< &Back
+&Next >
+&Complete
+C&ompact
+Cu&stom
+$GLASS$
+InstallAware
+InstallAware
+Choose which program features you want installed. Recommended for advanced users.
+Program will be installed with minimum required features. This may disable some application functionality.
+All program features will be installed. This option requires the most disk space.
+Setup Type
+Choose the setup type that is best for your needs.
+Please select a setup type.
+$TITLE$
+Cancel
+< &Back
+&Next >
+$GLASS$
+InstallAware
+- Click Cancel to exit
+Completing the InstallAware Wizard for $TITLE$
+The InstallAware Wizard is now ready to configure $TITLE$ on this computer.
+- Click Next to begin configuration
+- Click Back to change settings
+$TITLE$
+Cancel
+< &Back
+&Next >
+Only for &me (current user)
+&Anyone who uses this computer (all users)
+
+$GLASS$
+InstallAware
+InstallAware
+Select Program Folder
+Select the location where you would like to create new shortcuts.
+Setup will add program shortcuts to the Program Folder listed below. You may type a new folder name, or accept the suggested name. Click Next to continue.
+&Program Folder:
+$ISNT$
+Install this application for:
+$TITLE$
+Cancel
+< &Back
+&Next >
+$GLASS$
+InstallAware
+To continue, click Next.
+WARNING: This program is protected by copyright law and international treaties.
+The InstallAware Wizard will install $TITLE$ on your computer.
+Welcome to the InstallAware Wizard for $TITLE$
+$TITLE$
+Cancel
+< &Back
+&Next >
+$GLASS$
+InstallAware
+InstallAware
+Wizard Step
+Description for Wizard Step
+FALSE
+
+TRUE
+$PRELIST$$NEWLINE$Previous Version Uninstallation
+
+
+FALSE
+$SHORTCUTFILES$
+$PROGRAMFILES$\$TITLE$
+$TITLE$
+Installing $TITLE$
+
+
+$SHORTCUTFILESALL$\$STARTMENU$
+$SHORTCUTFILES$\$STARTMENU$
+Uninstalling $TITLE$
+100
+100
+Uninstall #TITLE#
+Removes this EggSoft product
+Default
+Description for #TITLE#
+Default
+$TITLE$ Setup
+Unable to uninstall old version of $TITLE$. Please uninstall it yourself using Control Panel Add-Remove Programs before attempting to install this product.$NEWLINE$$NEWLINE$$ERROROLD$
+$TITLE$ Setup
+Your computer needs to be restarted before $TITLE$ Setup can continue.$NEWLINE$$NEWLINE$Please save your work in all running programs and click OK to restart your computer. Setup will resume once your computer restarts.$NEWLINE$$NEWLINE$If you click CANCEL, setup will exit. You will have to run setup again at a later time to install $TITLE$.
+$TITLE$ Setup Error
+This product requires at least a 64 bit operating system.$NEWLINE$$NEWLINE$Setup cannot continue.
+Default
+Default
+BUILDMODE
+PATCH
+NEEDSUPGRADE
+TRUE
+PREREQ
+FALSE
+WIZARD
+CANCEL
+BUILDMODE
+PATCH
+NEEDSUPGRADE
+TRUE
+REMOVEOLD
+ERROR
+REMOVEOLD
+REBOOT
+REBOOTNOW
+OK
+SHORTCUTFILESALL
+
+MAINTENANCE
+TRUE
+BUILDMODE
+PATCH
+WIZARD
+CANCEL
+BUILDMODE
+PATCH
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+MINIMUM
+TRUE
+COMPLETE
+TRUE
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+BUILDMODE
+PATCH
+WIZARD
+CANCEL
+ALLUSERS
+TRUE
+REMOVE
+TRUE
+SELECTED
+TRUE
+BUILDMODE
+PATCH
+ADVERTISE
+TRUE
+SILENT
+FALSE
+REBOOTCOMPUTER
+TRUE
+SUCCESS
+REBOOT
+RUNAPP
+TRUE
+REMOVE
+FALSE
+SUCCESS
+COMPLETE
+CHECKSYSTEM
+TRUE
+$PRELIST$$NEWLINE$Microsoft Windows Installer 2.0
+TRUE
+TRUE
+MSI20
+FALSE
+Installing Microsoft Windows Installer 2.0
+MARQUEE
+
+$TITLE$ Setup
+Windows Installer 2.0 could not be installed. Please use Windows Update to manually install this update on your system.$NEWLINE$$NEWLINE$$TITLE$ Setup cannot continue.
+$TITLE$ Setup
+Your computer needs to be restarted before $TITLE$ Setup can continue.$NEWLINE$$NEWLINE$Please save your work in all running programs and click OK to restart your computer. Setup will resume once your computer restarts.$NEWLINE$$NEWLINE$If you click CANCEL, setup will exit. You will have to run setup again at a later time to install $TITLE$.
+$TITLE$ Setup
+Your computer needs to be restarted before $TITLE$ Setup can continue.$NEWLINE$$NEWLINE$Please save your work in all running programs and click OK to restart your computer. Setup will resume once your computer restarts.$NEWLINE$$NEWLINE$If you click CANCEL, setup will exit. You will have to run setup again at a later time to install $TITLE$.
+MSI20
+ERROR
+REBOOTNOW
+OK
+MSI20
+REBOOT
+MSI20
+FALSE
+PLATFORM
+FALSE
+REBOOTNOW
+OK

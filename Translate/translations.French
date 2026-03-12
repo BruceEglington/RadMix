@@ -1,0 +1,359 @@
+﻿$TITLE$
+&Suivant >
+< &Précédent
+Annuler
+EspaceNécessaire
+EspaceRestante
+Description
+Reste:
+Nécessaire:
+ Description des Caratéristiques 
+InstallAware
+$GLASS$
+InstallAware
+Réglage Personnalisé
+Sélectionnez les caracteristiques du programme que vous voulez installer.
+Appuyez sur l'icon ci-dessous pour changer le mode d'installation des caractéristiques.
+$TITLE$
+Annuler
+< &Précédent
+&Suivant >
+
+&Changer...
+EspaceNécessaire
+EspaceRestante
+Espace Disque Nécessaire:
+Espace Libre:
+ Dossier Cible 
+$GLASS$
+InstallAware
+InstallAware
+Dossier Cible
+Sélectionnez le dossier d'installation des fichiers.
+Installer $TITLE$ :
+$TITLE$
+Annuler
+< &Précédent
+&Finish
+&Exécuter $TITLE$ maintenant
+&Redémarrer maintenant
+$GLASS$
+InstallAware
+Pour fermer cet assistant, appuyez sur Terminer.
+Terminer l'Assistant InstallAware pour $TITLE$
+$SUCCESS$
+$REMOVE$
+Vous avez terminer avec succès l'Assistant InstallAware pour $TITLE$.
+L'Assistant InstallAware pour $TITLE$ a échoué: "$LASTERROR$". Veuillez vérifier votre configuration et reessayer.
+Vous avez terminer avec succès l'Assistant InstallAware pour $TITLE$. L'assistant doit redémarrer Windows pour appliquer les changements. Appuyez sur Terminer pour redémarrer automatiquement. Si vous voulez redémarrer plus tard, desélectionner l'option Redémarrer maintenant, et appuyez sur Terminer.
+l'Assistant InstallAware pour $TITLE$ a été annulé. Vous pouvez exécuter l'assistant plus tard pour terminer l'installation.
+Vous avez terminer avec succès l'Assistant InstallAware pour $TITLE$.
+$TITLE$
+Annuler
+< &Précédent
+&Suivant >
+J'&accepte les termes du contrat de licence
+$GLASS$
+InstallAware
+InstallAware
+Veuillez lire attentivement le contrat de licence.
+Contrat de Lincence
+$TITLE$
+Annuler
+< &Précédent
+&Suivant >
+&Modifier les Options Disponibles
+Ré&parer l'Application
+&Désinstaller
+$GLASS$
+InstallAware
+Appuyez sur Suivant pour continuer.
+Bienvenue dans l'Assistant InstallAware pour $TITLE$
+Veuillez sélectionner l'entretien que vous voulez faire:
+$TITLE$
+Annuler
+< &Précédent
+&Suivant >
+$GLASS$
+InstallAware
+InstallAware
+Appuyez sur Suivant pour continuer.
+Exigences de l'Application
+Vous devez procéder aux exigences suivants avant de commencer l'installation.
+$PRELIST$
+$TITLE$
+Annuler
+< &Précédent
+&Suivant >
+ProgressLabel
+$GLASS$
+InstallAware
+InstallAware
+Etat:
+Installation en cours $TITLE$
+Les caracteristiques que vous avez sélectionné ont été configurés.
+$REMOVE$
+Veuillez patienter pendant que l'Assistant InstallAware désinstalle $TITLE$. Ceci peut prendre quelques minutes.
+Veuillez patienter pendant que l'Assistant InstallAware installe $TITLE$. Ceci peut prendre quelques minutes.
+$TITLE$
+Annuler
+< &Précédent
+&Suivant >
+ProgressLabel
+$GLASS$
+InstallAware
+InstallAware
+Etat:
+Exigences $TITLE$ d'Installation
+Les exigences du programme sont configurées.
+Veuillez patienter pendant que l'Assistant InstallAware installe $TITLE$ les exigences. Ceci peut prendre quelques minutes.
+$TITLE$
+Annuler
+< &Précédent
+&Suivant >
+$GLASS$
+InstallAware
+InstallAware
+Veuillez lire attentivement l'information sur le programme.
+Information Importante
+$TITLE$
+Annuler
+< &Précédent
+&Suivant >
+
+
+$GLASS$
+InstallAware
+InstallAware
+Enregistrement du Client
+Veuillez insérer vos informations.
+&Organisation:
+Nom d'&Utilisateur:
+$TITLE$
+&Suivant >
+< &Précédent
+Annuler
+
+
+
+
+
+
+
+$GLASS$
+InstallAware
+InstallAware
+Enregistrement du Client
+Veuillez insérer les informations suivantes.
+Nom d'&Utilisateur:
+&Organisation:
+Clé du &Produit:
+$TITLE$
+Annuler
+< &Précédent
+&Suivant >
+&Terminer
+C&ompact
+&Personnalisé
+$GLASS$
+InstallAware
+InstallAware
+Sélectionnez les caracteristiques que vous voulez installer. Recommander pour les utilisateurs avancés.
+Le programme sera installé avec les exigences minimales. Ceci peut désactiver certaine application.
+Tous les caractéristiques du programme seront installés. Cette option demande la plupart de l'espace du disque.
+Type d'Installation
+Sélectionnez le type d'installation qui convient le mieux à vos besoins.
+Veuillez sélectionner un type d'installation.
+$TITLE$
+Annuler
+< &Précédent
+&Suivant >
+$GLASS$
+InstallAware
+- Appuyez sur Annuler pour annuler
+Terminer l'Assistant InstallAware pour $TITLE$
+L'Assistant InstallAware est maintenant prêt pour configurer $TITLE$ sur votre ordinateur.
+- Appuyez sur Suivant pour commencer la configuration
+- Appuyez sur Précédent pour changer les configurations
+$TITLE$
+Annuler
+< &Précédent
+&Suivant >
+&Moi Uniquement (utilisateur actuel)
+&Tous ceux qui utilisent cet ordinateur (tous les utilisateurs)
+
+$GLASS$
+InstallAware
+InstallAware
+Sélectionnez le Dossier du Programme
+Sélectionnez un emplacement pour créer un nouveau raccourci.
+L'installation ajoutera un raccourci du programme à chaque liste de Dossier. Vous pouvez insérer un nouveau nom de dossier, ou accepter le nom par défaut. Appuyez sur Suivant pour continuer.
+Dossier du &Program:
+$ISNT$
+Installer cette application pour:
+$TITLE$
+Annuler
+< &Précédent
+&Suivant >
+$GLASS$
+InstallAware
+Appuyez sur Suivant pour continuer.
+AVERTISSEMENT: Ce programme est protegé par la loi sur le droit d'exploitation (copyright) et les traités internationaux.
+L'Assistant InstallAware installera $TITLE$ dans votre ordinateur.
+Bienvenue dans l'Assistant InstallAware pour $TITLE$
+$TITLE$
+Annuler
+< &Précédent
+&Suivant >
+$GLASS$
+InstallAware
+InstallAware
+Etape de l'Assistant
+Description de l'Etape de l'Assistant
+FALSE
+
+TRUE
+La version précédente de $PRELIST$$NEWLINE$ a été désinstallée
+
+
+FALSE
+$SHORTCUTFILES$
+$PROGRAMFILES$\$TITLE$
+$TITLE$
+Installation en cours $TITLE$
+
+
+$SHORTCUTFILESALL$\$STARTMENU$
+$SHORTCUTFILES$\$STARTMENU$
+Uninstalling $TITLE$
+100
+100
+Désinstallé #TITLE#
+Removes this EggSoft product
+Default
+Description de #TITLE#
+Default
+Configuration de $TITLE$
+Impossible de désinstaller la version précédente de $TITLE$. Veuillez le désinstaller manuellement en allant dans le panneau de configuration, modifier ou supprimer des programmes avant de commencer l'installation de ce programme.$NEWLINE$$NEWLINE$$ERROROLD$
+Configuration de $TITLE$
+Votre ordinateur doit redémarrer avec que la configuration de $TITLE$  peut continuer.$NEWLINE$$NEWLINE$Veuillez enregistrer tous vos travails et appuyez sur OK pour redémarrer votre ordinateur. La configuration continuera une fois que votre ordinateur redémarre.$NEWLINE$$NEWLINE$L'installation s'arrêtera si vous appuyez sur ANNULER. Vous devez redémarrer encore une fois la configuration pour installer $TITLE$.
+$TITLE$ Erreur de Configuration
+Ce produit demande au moins système d'exploitation 64 bit.$NEWLINE$$NEWLINE$Impossible de poursuivre l'installation.
+Default
+Default
+BUILDMODE
+PATCH
+NEEDSUPGRADE
+TRUE
+PREREQ
+FALSE
+WIZARD
+CANCEL
+BUILDMODE
+PATCH
+NEEDSUPGRADE
+TRUE
+REMOVEOLD
+ERROR
+REMOVEOLD
+REBOOT
+REBOOTNOW
+OK
+SHORTCUTFILESALL
+
+MAINTENANCE
+TRUE
+BUILDMODE
+PATCH
+WIZARD
+CANCEL
+BUILDMODE
+PATCH
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+MINIMUM
+TRUE
+COMPLETE
+TRUE
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+BUILDMODE
+PATCH
+WIZARD
+CANCEL
+ALLUSERS
+TRUE
+REMOVE
+TRUE
+SELECTED
+TRUE
+BUILDMODE
+PATCH
+ADVERTISE
+TRUE
+SILENT
+FALSE
+REBOOTCOMPUTER
+TRUE
+SUCCESS
+REBOOT
+RUNAPP
+TRUE
+REMOVE
+FALSE
+SUCCESS
+COMPLETE
+CHECKSYSTEM
+TRUE
+$PRELIST$$NEWLINE$Microsoft Windows Installer 2.0
+TRUE
+TRUE
+MSI20
+FALSE
+Installation de Microsoft Windows Installer 2.0
+MARQUEE
+
+Configuration de $TITLE$
+Windows Installer 2.0 impossible d'installer. Veuillez utiliser la mise à jour de Windows pour installer manuellement la mise à jour dans votre système.$NEWLINE$$NEWLINE$$TITLE$ Impossible de poursuivre l'installation.
+Configuration de $TITLE$
+Votre ordinateur doit redémarrer avec que la configuration de $TITLE$  peut continuer.$NEWLINE$$NEWLINE$Veuillez enregistrer tous vos travails et appuyez sur OK pour redémarrer votre ordinateur. La configuration continuera une fois que votre ordinateur redémarre.$NEWLINE$$NEWLINE$L'installation s'arrêtera si vous appuyez sur ANNULER. Vous devez redémarrer encore une fois la configuration pour installer $TITLE$.
+Configuration de $TITLE$
+Votre ordinateur doit redémarrer avec que la configuration de $TITLE$  peut continuer.$NEWLINE$$NEWLINE$Veuillez enregistrer tous vos travails et appuyez sur OK pour redémarrer votre ordinateur. La configuration continuera une fois que votre ordinateur redémarre.$NEWLINE$$NEWLINE$L'installation s'arrêtera si vous appuyez sur ANNULER. Vous devez redémarrer encore une fois la configuration pour installer $TITLE$.
+MSI20
+ERROR
+REBOOTNOW
+OK
+MSI20
+REBOOT
+MSI20
+FALSE
+PLATFORM
+FALSE
+REBOOTNOW
+OK

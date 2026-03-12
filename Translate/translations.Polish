@@ -1,0 +1,359 @@
+﻿$TITLE$
+&Dalej >
+< &Wstecz
+Anuluj
+WymaganaPowierzchnia
+DostępnaPowierzchnia
+Opis
+Dostępne:
+Wymagane:
+ Opis funkcji
+InstallAware
+$GLASS$
+InstallAware
+Instalacja niestandardowa
+Wybierz funkcje programu które chcesz zainstalować.
+Kliknij ikony poniżej, aby zmienić sposób, w jaki funkcje zostaną zainstalowane.
+$TITLE$
+Anuluj
+< &Wstecz
+&Dalej >
+
+&Zmień...
+WymaganaPowierzchnia
+DostępnaPowierzchnia
+Wymagane miejsce na dysku:
+Dostępne miejsce na dysku:
+ Folder docelowy
+$GLASS$
+InstallAware
+InstallAware
+Folder docelowy
+Wybierz folder, w którym instalator ma zainstalować pliki.
+Zainstaluj $TITLE$ w:
+$TITLE$
+Anuluj
+< &Wstecz
+&Finish
+&Uruchom $TITLE$ 
+&Uruchom ponownie 
+$GLASS$
+InstallAware
+Kliknij przycisk Zakończ, aby zakończyć pracę Kreatora instalacji.
+Kończenie działania instalatora $TITLE$
+$SUCCESS$
+$REMOVE$
+Zakończono pracę kreatora instalacji produktu $TITLE$.
+Działanie kreatora instalacji produktu $TITLE$ zostało przerwane: "$LASTERROR$". Sprawdź ustawienia i spróbuj ponownie.
+Działanie kreatora instalacji $TITLE$ zostało zakończone. Kreator instalacji musi ponownie uruchomić system, aby zmiany konfiguracji zostały wprowadzone. Aby uruchomić ponownie system, kliknij Zakończ. Jeżeli chcesz uruchomić system później, usuń zaznaczenie pola Uruchom ponownie teraz i kliknij Zakończ.
+Działanie kreatora instalacji produktu $TITLE$ zostało anulowane. Uruchom ponownie kreatora instalacji aby dokończyć instalację.
+Zakończono pracę kreatora instalacji produktu $TITLE$.
+$TITLE$
+Anuluj
+< &Wstecz
+&Dalej >
+&Akceptuję warunki Umowy licencyjnej
+$GLASS$
+InstallAware
+InstallAware
+Przeczytaj uważnie poniższą umowę licencyjną.
+Umowa Licencyjna
+$TITLE$
+Anuluj
+< &Wstecz
+&Dalej >
+&Modyfikuj dostępne opcje
+Na&praw aplikację
+&Usuń
+$GLASS$
+InstallAware
+Aby kontynuować, kliknij Dalej.
+Witaj w kreatorze instalacji $TITLE$
+Wybierz operację, którą chcesz wykonać:
+$TITLE$
+Anuluj
+< &Wstecz
+&Dalej >
+$GLASS$
+InstallAware
+InstallAware
+Aby kontynuować, kliknij Dalej.
+Wymagania aplikacji
+Poniższe wymagania muszą być sprawdzone przed rozpoczęciem instalacji.
+$PRELIST$
+$TITLE$
+Anuluj
+< &Wstecz
+&Dalej >
+Pasek postępu
+$GLASS$
+InstallAware
+InstallAware
+Stan:
+Instaluję $TITLE$
+Wybrane funkcje programu są konfigurowane.
+$REMOVE$
+Proszę czekać, aż kreator instalacji usunie $TITLE$. To może zająć kilka minut.
+Proszę czekać, aż kreator instalacji zainstaluje $TITLE$. To może zająć kilka minut.
+$TITLE$
+Anuluj
+< &Wstecz
+&Dalej >
+Pasek postępu
+$GLASS$
+InstallAware
+InstallAware
+Stan:
+Instaluję składniki wymagane przez $TITLE$
+Wymagania programu są konfigurowane.
+Proszę czekać, aż kreator instalacji zainstaluje składniki wymagane przez $TITLE$. To może zająć kilka minut.
+$TITLE$
+Anuluj
+< &Wstecz
+&Dalej >
+$GLASS$
+InstallAware
+InstallAware
+Przeczytaj uważnie poniższe informacje.
+Ważna informacja
+$TITLE$
+Anuluj
+< &Wstecz
+&Dalej >
+
+
+$GLASS$
+InstallAware
+InstallAware
+Rejestracja klienta
+Proszę wpisać informacje o sobie.
+&Firma:
+&Nazwa użytkownika:
+$TITLE$
+&Dalej >
+< &Wstecz
+Anuluj
+
+
+
+
+
+
+
+$GLASS$
+InstallAware
+InstallAware
+Rejestracja klienta
+Proszę wpisać poniższe informacje.
+&Nazwa użytkownika:
+&Firma:
+&Klucz licencyjny produktu:
+$TITLE$
+Anuluj
+< &Wstecz
+&Dalej >
+&Kompletna
+M&inimalna
+Ni&estandardowa
+$GLASS$
+InstallAware
+InstallAware
+Wybierz które funkcje mają być zainstalowane. Zalecany dla użytkowników zaawansowanych.
+Program zostanie zainstalowany z minimalnymi, wymaganymi funkcjami. Może to uniemożliwić wykorzystanie pewnej funkcjonalności programu.
+Wszystkie funkcje programu zostaną zainstalowane. Wymaga największej ilości miejsca na dysku.
+Rodzaj instalacji
+Wybierz rodzaj instalacji, który najlepiej spełnia Twoje wymagania.
+Wybierz rodzaj instalacji.
+$TITLE$
+Anuluj
+< &Wstecz
+&Dalej >
+$GLASS$
+InstallAware
+- Kliknij Anuluj aby przerwać
+Kończenie działania instalatora $TITLE$
+Kreator instalacji jest gotowy do konfiguracji $TITLE$ na tym komputerze.
+- Kliknij Dalej aby rozpocząć konfigurację
+- Kliknij Wstecz aby zmienić ustawienia
+$TITLE$
+Anuluj
+< &Wstecz
+&Dalej >
+Tylko &ja (bieżący użytkownik)
+&Dowolny użytkownik tego komputera (wszyscy użytkownicy)
+
+$GLASS$
+InstallAware
+InstallAware
+Wybierz folder programu
+Wybierz lokalizację, w której chcesz utworzyć nowe skróty.
+Instalator doda skróty programu do poniższego folderu. Możesz wpisać nową nazwę folderu lub zaakceptować domyślną. Kliknij Dalej aby kontynuować.
+&Folder programu:
+$ISNT$
+Zainstaluj aplikację dla:
+$TITLE$
+Anuluj
+< &Wstecz
+&Dalej >
+$GLASS$
+InstallAware
+Aby kontynuować, kliknij Dalej.
+OSTRZEŻENIE: Program jest chroniony przez prawa autorskie oraz umowy międzynarodowe.
+Kreator instalacji zainstaluje $TITLE$ na Twoim komputerze.
+Witaj w kreatorze instalacji $TITLE$
+$TITLE$
+Anuluj
+< &Wstecz
+&Dalej >
+$GLASS$
+InstallAware
+InstallAware
+Krok kreatora
+Opis kroku kreatora
+FALSE
+
+TRUE
+$PRELIST$$NEWLINE$Usunięcie poprzedniej wersji
+
+
+FALSE
+$SHORTCUTFILES$
+$PROGRAMFILES$\$TITLE$
+$TITLE$
+Instaluję $TITLE$
+
+
+$SHORTCUTFILESALL$\$STARTMENU$
+$SHORTCUTFILES$\$STARTMENU$
+Uninstalling $TITLE$
+100
+100
+Usuń #TITLE#
+Removes this EggSoft product
+Default
+Opis #TITLE#
+Default
+Instalator $TITLE$
+Nie można usunąć starej wersji $TITLE$. Proszę odinstalować ją za pomocą apletu Dodaj lub usuń programy przed ponowną próbą instalacji programu.$NEWLINE$$NEWLINE$$ERROROLD$
+Instalator $TITLE$
+Twój komputer wymaga ponownego uruchomienia zanim instalator $TITLE$ będzie mógł kontynuować.$NEWLINE$$NEWLINE$Prosimy zapisać zmiany dokonane w otwartych programach i kliknąć OK w celu ponownego uruchomienia komputera. Instalator wznowi działanie jak tylko komputer zostanie uruchomiony ponownie.$NEWLINE$$NEWLINE$Jeżeli naciśniesz ANULUJ, instalacja zostanie zakończona. Będziesz musiał uruchomić instalację ponownie aby zainstalować program $TITLE$ w późniejszym czasie.
+Błąd instalatora $TITLE$
+Program wymaga 64 bitowego systemu operacyjnego.$NEWLINE$$NEWLINE$Instalacja nie może być kontynuowana.
+Default
+Default
+BUILDMODE
+PATCH
+NEEDSUPGRADE
+TRUE
+PREREQ
+FALSE
+WIZARD
+CANCEL
+BUILDMODE
+PATCH
+NEEDSUPGRADE
+TRUE
+REMOVEOLD
+ERROR
+REMOVEOLD
+REBOOT
+REBOOTNOW
+OK
+SHORTCUTFILESALL
+
+MAINTENANCE
+TRUE
+BUILDMODE
+PATCH
+WIZARD
+CANCEL
+BUILDMODE
+PATCH
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+MINIMUM
+TRUE
+COMPLETE
+TRUE
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+BUILDMODE
+PATCH
+WIZARD
+CANCEL
+ALLUSERS
+TRUE
+REMOVE
+TRUE
+SELECTED
+TRUE
+BUILDMODE
+PATCH
+ADVERTISE
+TRUE
+SILENT
+FALSE
+REBOOTCOMPUTER
+TRUE
+SUCCESS
+REBOOT
+RUNAPP
+TRUE
+REMOVE
+FALSE
+SUCCESS
+COMPLETE
+CHECKSYSTEM
+TRUE
+$PRELIST$$NEWLINE$Microsoft Windows Installer 2.0
+TRUE
+TRUE
+MSI20
+FALSE
+Instaluję Microsoft Windows Installer 2.0
+MARQUEE
+
+Instalator $TITLE$
+Windows Installer 2.0 nie może zostać zainstalowany. Użyj usługi Windows Update w celu ręcznej instalacji tej aktualizacji w twoim systemie.$NEWLINE$$NEWLINE$Instalacja $TITLE$ nie może być kontynuowana.
+Instalator $TITLE$
+Twój komputer wymaga ponownego uruchomienia zanim instalator $TITLE$ będzie mógł kontynuować.$NEWLINE$$NEWLINE$Prosimy zapisać zmiany dokonane w otwartych programach i kliknąć OK w celu ponownego uruchomienia komputera. Instalator wznowi działanie jak tylko komputer zostanie uruchomiony ponownie.$NEWLINE$$NEWLINE$Jeżeli naciśniesz ANULUJ, instalacja zostanie zakończona. Będziesz musiał uruchomić instalację ponownie aby zainstalować program $TITLE$ w późniejszym czasie.
+Instalator $TITLE$
+Twój komputer wymaga ponownego uruchomienia zanim instalator $TITLE$ będzie mógł kontynuować.$NEWLINE$$NEWLINE$Prosimy zapisać zmiany dokonane w otwartych programach i kliknąć OK w celu ponownego uruchomienia komputera. Instalator wznowi działanie jak tylko komputer zostanie uruchomiony ponownie.$NEWLINE$$NEWLINE$Jeżeli naciśniesz ANULUJ, instalacja zostanie zakończona. Będziesz musiał uruchomić instalację ponownie aby zainstalować program $TITLE$ w późniejszym czasie.
+MSI20
+ERROR
+REBOOTNOW
+OK
+MSI20
+REBOOT
+MSI20
+FALSE
+PLATFORM
+FALSE
+REBOOTNOW
+OK

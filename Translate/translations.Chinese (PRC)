@@ -1,0 +1,359 @@
+﻿$TITLE$
+&后一项 >
+< &前一项
+取消
+占用系统空间
+剩余空间
+描述
+剩余:
+需求:
+ 特点描述 
+InstallAware
+$GLASS$
+InstallAware
+自定义安装
+选择您需要的功能进行安装.
+点击以下列表中的一个图标来改变安装方式.
+$TITLE$
+取消
+< &前一项
+&后一项 >
+
+&改变...
+占用系统空间
+剩余空间
+占用磁盘空间:
+剩余磁盘空间:
+ 目标文件夹 
+$GLASS$
+InstallAware
+InstallAware
+目标文件夹
+选择所要安装的文件夹.
+安装 $TITLE$ 到:
+$TITLE$
+取消
+< &前一项
+&Finish
+&运行 $TITLE$ 现在
+&马上重启
+$GLASS$
+InstallAware
+点击完成, 退出安装向导.
+正在完成 InstallAware 安装向导 $TITLE$
+$SUCCESS$
+$REMOVE$
+您已经成功完成 InstallAware 安装向导 $TITLE$.
+此 InstallAware 安装向导 $TITLE$ 运行失败: "$LASTERROR$". 请检查您的系统设定后再试一次.
+您已经成功完成 InstallAware 安装向导 $TITLE$. 改变立即生效, 安装向导需要重启您的电脑. 自动重启您的电脑, 点击完成. 如果您想稍后重启, 取消勾选现在重启选项, 并且之后点击完成.
+此 InstallAware 安装向导 $TITLE$ 已被取消. 您可以稍后运行此安装向导来完成此次安装.
+您已经成功完成 InstallAware 安装向导 $TITLE$.
+$TITLE$
+取消
+< &前一项
+&后一项 >
+我 &接受此协议的条款
+$GLASS$
+InstallAware
+InstallAware
+请认真阅读下列协议条款.
+许可条款
+$TITLE$
+取消
+< &前一项
+&后一项 >
+&修改可用选项
+&修复 应用程序
+&卸载
+$GLASS$
+InstallAware
+继续, 请点击下一步.
+欢迎使用 InstallAware 安装向导 $TITLE$
+选择维护操作:
+$TITLE$
+取消
+< &前一项
+&后一项 >
+$GLASS$
+InstallAware
+InstallAware
+继续, 请点击下一步.
+应用程序需求
+在开始安装程序前请完成以下需求.
+$PRELIST$
+$TITLE$
+取消
+< &前一项
+&后一项 >
+进程标签
+$GLASS$
+InstallAware
+InstallAware
+状态:
+正在安装 $TITLE$
+您所选择的功能正在安装.
+$REMOVE$
+请稍候 InstallAware 向导正在卸载 $TITLE$. 这也许会花上几分钟.
+请稍候 InstallAware 向导正在卸载 $TITLE$. 这也许会花上几分钟.
+$TITLE$
+取消
+< &前一项
+&后一项 >
+进程标签
+$GLASS$
+InstallAware
+InstallAware
+状态:
+安装 $TITLE$ 要求
+系统需求设定完成.
+请稍候 InstallAware 向导正在安装 $TITLE$ 需求. 这也许会花上几分钟.
+$TITLE$
+取消
+< &前一项
+&后一项 >
+$GLASS$
+InstallAware
+InstallAware
+请认真阅读以下安装信息.
+重要信息
+$TITLE$
+取消
+< &前一项
+&后一项 >
+
+
+$GLASS$
+InstallAware
+InstallAware
+顾客注册
+请您输入信息.
+&组织:
+&用户名:
+$TITLE$
+&后一项 >
+< &前一项
+取消
+
+
+
+
+
+
+
+$GLASS$
+InstallAware
+InstallAware
+顾客注册
+请输入以下信息.
+&用户名:
+&组织:
+&产品注册码:
+$TITLE$
+取消
+< &前一项
+&后一项 >
+&完成
+&压缩
+&自定义
+$GLASS$
+InstallAware
+InstallAware
+请选择您想要安装的功能. 建议高级用户使用.
+程序将会以最低要求安装程序功能. 这可能会使一些功能失效.
+程序所有功能全部安装. 这个选项将会需要最多的磁盘空间.
+安装方式
+请选择最适合您的安装方式.
+请选择安装方式.
+$TITLE$
+取消
+< &前一项
+&后一项 >
+$GLASS$
+InstallAware
+- 点击取消退出
+正在完成 InstallAware 安装向导 $TITLE$
+此 InstallAware 安装向导已经准备好安装 $TITLE$ 到您的电脑.
+- 点击下一步来开始安装
+- 点击上一步改变设定
+$TITLE$
+取消
+< &前一项
+&后一项 >
+只适用于 &我 (当前用户)
+&任何使用此电脑的人 (所有用户)
+
+$GLASS$
+InstallAware
+InstallAware
+选择程序文件夹
+选择您想要建立新的快捷方式的位置.
+安装将会在程序文件夹中添加新的快捷方式. 您可以添加新的文件名, 也可以使用默认文件名. 点击下一步继续.
+&程序文件夹:
+$ISNT$
+安装此程序:
+$TITLE$
+取消
+< &前一项
+&后一项 >
+$GLASS$
+InstallAware
+继续, 请点击下一步.
+警告: 本程序受到版权和国际条款保护.
+此 InstallAware 安装向导将会安装 $TITLE$ 到您的电脑上.
+欢迎使用 InstallAware 安装向导 $TITLE$
+$TITLE$
+取消
+< &前一项
+&后一项 >
+$GLASS$
+InstallAware
+InstallAware
+向导步骤
+步骤描述
+FALSE
+
+TRUE
+$PRELIST$$NEWLINE$卸载前一版本
+
+
+FALSE
+$SHORTCUTFILES$
+$PROGRAMFILES$\$TITLE$
+$TITLE$
+正在安装 $TITLE$
+
+
+$SHORTCUTFILESALL$\$STARTMENU$
+$SHORTCUTFILES$\$STARTMENU$
+Uninstalling $TITLE$
+100
+100
+卸载 #TITLE#
+Removes this EggSoft product
+Default
+描述 #TITLE#
+Default
+$TITLE$ 安装
+无法删除旧的版本 $TITLE$. 请在安装本软件之前使用控制面板里的添加或删除程序来删除旧的版本.$NEWLINE$$NEWLINE$$ERROROLD$
+$TITLE$ 安装
+您的电脑需要重启 $TITLE$ 安装才能继续.$NEWLINE$$NEWLINE$请将您的文件保存之后点击OK来重启电脑. 安装将会在您的电脑重启之后继续运行.$NEWLINE$$NEWLINE$如果你点击取消, 或终止安装. 您将需要再次运行设置来进行安装 $TITLE$.
+$TITLE$ Setup Error
+本软件至少需要 一个 64 bit 操作系统.$NEWLINE$$NEWLINE$安装无法继续.
+Default
+Default
+BUILDMODE
+PATCH
+NEEDSUPGRADE
+TRUE
+PREREQ
+FALSE
+WIZARD
+CANCEL
+BUILDMODE
+PATCH
+NEEDSUPGRADE
+TRUE
+REMOVEOLD
+ERROR
+REMOVEOLD
+REBOOT
+REBOOTNOW
+OK
+SHORTCUTFILESALL
+
+MAINTENANCE
+TRUE
+BUILDMODE
+PATCH
+WIZARD
+CANCEL
+BUILDMODE
+PATCH
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+MINIMUM
+TRUE
+COMPLETE
+TRUE
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+BUILDMODE
+PATCH
+WIZARD
+CANCEL
+ALLUSERS
+TRUE
+REMOVE
+TRUE
+SELECTED
+TRUE
+BUILDMODE
+PATCH
+ADVERTISE
+TRUE
+SILENT
+FALSE
+REBOOTCOMPUTER
+TRUE
+SUCCESS
+REBOOT
+RUNAPP
+TRUE
+REMOVE
+FALSE
+SUCCESS
+COMPLETE
+CHECKSYSTEM
+TRUE
+$PRELIST$$NEWLINE$Microsoft Windows Installer 2.0
+TRUE
+TRUE
+MSI20
+FALSE
+安装中 Microsoft Windows Installer 2.0
+MARQUEE
+
+$TITLE$ 安装
+Windows Installer 2.0 无法安装. 请使用 Windows Update 来手动安装更新.$NEWLINE$$NEWLINE$$TITLE$ 安装无法继续.
+$TITLE$ 安装
+您的电脑需要重启 $TITLE$ 安装才能继续.$NEWLINE$$NEWLINE$请将您的文件保存之后点击OK来重启电脑. 安装将会在您的电脑重启之后继续运行.$NEWLINE$$NEWLINE$如果你点击取消, 或终止安装. 您将需要再次运行设置来进行安装 $TITLE$.
+$TITLE$ 安装
+您的电脑需要重启 $TITLE$ 安装才能继续.$NEWLINE$$NEWLINE$请将您的文件保存之后点击OK来重启电脑. 安装将会在您的电脑重启之后继续运行.$NEWLINE$$NEWLINE$如果你点击取消, 或终止安装. 您将需要再次运行设置来进行安装 $TITLE$.
+MSI20
+ERROR
+REBOOTNOW
+OK
+MSI20
+REBOOT
+MSI20
+FALSE
+PLATFORM
+FALSE
+REBOOTNOW
+OK

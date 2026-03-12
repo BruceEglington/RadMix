@@ -1,0 +1,359 @@
+﻿$TITLE$
+&Avanti >
+< &Indietro
+Cancella
+SpazioTotaleRichiesto
+SpazioRestante
+Descrizione
+Rimanente:
+Richiesto:
+ Descrizione Caratteristica
+InstallAware
+$GLASS$
+InstallAware
+Setup Personalizzato
+Scegli le caratteristiche del programma che vorresti installare.
+Clicca sull'icona della lista qui di sotto per cambiare le impostazioni della caratteristica.
+$TITLE$
+Cancella
+< &Indietro
+&Avanti >
+
+&Cambia...
+SpazioTotaleRichiesto
+SpazioRestante
+Spazio sul Disco Richiesto:
+Spazio sul Disco Rimanente:
+ Cartella di Destinazione 
+$GLASS$
+InstallAware
+InstallAware
+Cartella di Destinazione
+Scegli la cartella dove il setup installerà i file.
+Installa $TITLE$ in:
+$TITLE$
+Cancella
+< &Indietro
+&Finish
+&Esegui $TITLE$ ora
+&Riavvia ora
+$GLASS$
+InstallAware
+Per chiudere questo wizard, clicca su Termina.
+Completamento del Wizard InstallAware per $TITLE$
+$SUCCESS$
+$REMOVE$
+Hai completato con successo il Wizard InstallAware per $TITLE$.
+Il Wizard InstallAware per $TITLE$ è fallito: "$LASTERROR$". Per favore controlla le tue impostazione e prova di nuovo.
+Hai completato con successo il Wizard InstallAware per $TITLE$. Per applicare i cambiamenti, il wizard deve riavviare Windows. Per riavviare Windows automaticamente, clicca Termina. Se vuoi riavviare dopo, deseleziona la casella Ravvia ora e poi clicca su Termina.
+Il Wizard InstallAware per $TITLE$ è stato cancellato. Puoi eseguire il wizard di nuovo in seguito per completare il setup.
+Hai completato con successo il Wizard InstallAware per $TITLE$.
+$TITLE$
+Cancella
+< &Indietro
+&Avanti >
+&Accetto i termini del contratto di licenza
+$GLASS$
+InstallAware
+InstallAware
+Per favore leggi con attenzione il seguente contratto di licenza.
+Contratto di Licenza
+$TITLE$
+Cancella
+< &Indietro
+&Avanti >
+&Modifica Le Opzioni Disponibili
+Ri&para Applicazione
+&Disinstalla
+$GLASS$
+InstallAware
+per continuare, clicca su Avanti.
+Benvenuto al Wizard InstallAware per $TITLE$
+Per favore scegli un'operazione di manutenzione da eseguire:
+$TITLE$
+Cancella
+< &Indietro
+&Avanti >
+$GLASS$
+InstallAware
+InstallAware
+per continuare, clicca su Avanti.
+Requisiti Applicazione
+I seguenti requisiti devono essere elaborati prima di iniziare il setup.
+$PRELIST$
+$TITLE$
+Cancella
+< &Indietro
+&Avanti >
+EtichettaProgresso
+$GLASS$
+InstallAware
+InstallAware
+Stato:
+Installazione $TITLE$
+Le caratteristiche del programma che hai selezionato stanno per essere configurate.
+$REMOVE$
+Per favore aspetta che il Wizard InstallAware disinstalli $TITLE$. Ci possono volere alcuni minuti.
+Per favore aspetta che il Wizard InstallAware installi $TITLE$. Ci possono volere alcuni minuti.
+$TITLE$
+Cancella
+< &Indietro
+&Avanti >
+EtichettaProgresso
+$GLASS$
+InstallAware
+InstallAware
+Stato:
+Installazione $TITLE$ Requisiti
+I requisiti del programma stanno per essere configurati.
+Per favore aspetta che il Wizard InstallAware installi i requisiti $TITLE$. Ci possono volere alcuni minuti.
+$TITLE$
+Cancella
+< &Indietro
+&Avanti >
+$GLASS$
+InstallAware
+InstallAware
+Per favore, leggi con attenzione le seguenti informazioni del programma.
+Informatione Importante
+$TITLE$
+Cancella
+< &Indietro
+&Avanti >
+
+
+$GLASS$
+InstallAware
+InstallAware
+Registrazione Cliente
+Per favore inserisci le tue informazioni.
+&Organizzazione:
+&Nome Utente:
+$TITLE$
+&Avanti >
+< &Indietro
+Cancella
+
+
+
+
+
+
+
+$GLASS$
+InstallAware
+InstallAware
+Registrazione Cliente
+Per favore inserisci le seguenti informazioni.
+&Nome Utente:
+&Organizzazione:
+&Codice Licenza Prodotto:
+$TITLE$
+Cancella
+< &Indietro
+&Avanti >
+&Completa
+C&ompatta
+&Personalizzata
+$GLASS$
+InstallAware
+InstallAware
+Scegli quali caratteristiche vuoi installare.Raccomandato per utenti esperti.
+Il programma sarà installato con le caratteristiche minime richieste. Ciò può disabilitare alcune funzionalità dell'applicazione.
+Tutte le caratteristiche del programma saranno installate. Questa opzione richiede il massimo di spazio nell'hard disk.
+Tipo di Setup
+Scegli il setup che ti piace di più.
+Per favore seleziona un tipo di setup.
+$TITLE$
+Cancella
+< &Indietro
+&Avanti >
+$GLASS$
+InstallAware
+- Clicca Cancella per uscire
+Completamento del Wizard InstallAware per $TITLE$
+Il Wizard InstallAware é ora pronto per configurare $TITLE$ su questo computer.
+- Clicca Avanti per iniziare la configurazione
+- Clicca Indietro per cambiare le impostazioni
+$TITLE$
+Cancella
+< &Indietro
+&Avanti >
+Solo per &me (utente corrente
+&Tutti quelli che usano questo computer (tutti gli utenti)
+
+$GLASS$
+InstallAware
+InstallAware
+Scegli la Cartella del Programma
+Scegli la posizione dove vuoi creare un nuovo collegamento.
+Il setup aggiungerà i collegamenti del programma nelle Cartelle del Programma elencati qui sotto. Puoi digitare il nome di una nuova cartella o accettare il nome che ti viene suggerito. Clicca Avanti per continuare.
+&Cartella del Programma:
+$ISNT$
+Installa questa applicazione per:
+$TITLE$
+Cancella
+< &Indietro
+&Avanti >
+$GLASS$
+InstallAware
+per continuare, clicca su Avanti.
+ATTENZIONE: Questo programma è protetto dalle leggi sul copyright e dai trattati internazionali.
+Il Wizard  InstallAware installerà $TITLE$ sul tuo computer.
+Benvenuto al Wizard InstallAware per $TITLE$
+$TITLE$
+Cancella
+< &Indietro
+&Avanti >
+$GLASS$
+InstallAware
+InstallAware
+Procedura guidata passo
+Descrizione per Wizard Step
+FALSE
+
+TRUE
+$PRELIST$$NEWLINE$VERSIONE PRECEDENTE disinstallazione
+
+
+FALSE
+$SHORTCUTFILES$
+$PROGRAMFILES$\$TITLE$
+$TITLE$
+Installazione $TITLE$
+
+
+$SHORTCUTFILESALL$\$STARTMENU$
+$SHORTCUTFILES$\$STARTMENU$
+Uninstalling $TITLE$
+100
+100
+Disinstalla #TITLE#
+Removes this EggSoft product
+Default
+Descrizione per #TITLE#
+Default
+Setup $TITLE$ 
+Impossibile disinstallare la vecchia versione di $TITLE$. Per favore disinstallalo da solo usandor Aggiungi/Rimuovi Programmi nel Pannello di Controllo prima di provare a installare questo prodotto.$NEWLINE$$NEWLINE$$ERROROLD$
+Setup $TITLE$ 
+Il tuo computer ha bisogno di essere riavviato prima che il Setup $TITLE$ possa continuare.$NEWLINE$$NEWLINE$Per favore salva il tuo lavoro in tutti i programmi in esecuzione e clicca su OK per riavviare il tuo computer. Il Setup riprenderà una volta che il computer sarà riavviato.$NEWLINE$$NEWLINE$Se clicchi CANCELLA, il setup terminerà. Dovrai eseguire il setup di nuovo in seguito per installarlo $TITLE$.
+$TITLE$ Errore Setup
+Questo prodotto richiede almeno un sistema operativo a 64 bit.$NEWLINE$$NEWLINE$Il setup non può continuare.
+Default
+Default
+BUILDMODE
+PATCH
+NEEDSUPGRADE
+TRUE
+PREREQ
+FALSE
+WIZARD
+CANCEL
+BUILDMODE
+PATCH
+NEEDSUPGRADE
+TRUE
+REMOVEOLD
+ERROR
+REMOVEOLD
+REBOOT
+REBOOTNOW
+OK
+SHORTCUTFILESALL
+
+MAINTENANCE
+TRUE
+BUILDMODE
+PATCH
+WIZARD
+CANCEL
+BUILDMODE
+PATCH
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+MINIMUM
+TRUE
+COMPLETE
+TRUE
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+BUILDMODE
+PATCH
+WIZARD
+CANCEL
+ALLUSERS
+TRUE
+REMOVE
+TRUE
+SELECTED
+TRUE
+BUILDMODE
+PATCH
+ADVERTISE
+TRUE
+SILENT
+FALSE
+REBOOTCOMPUTER
+TRUE
+SUCCESS
+REBOOT
+RUNAPP
+TRUE
+REMOVE
+FALSE
+SUCCESS
+COMPLETE
+CHECKSYSTEM
+TRUE
+$PRELIST$$NEWLINE$Microsoft Windows Installer 2.0
+TRUE
+TRUE
+MSI20
+FALSE
+Installazione Microsoft Windows Installer 2.0
+MARQUEE
+
+Setup $TITLE$ 
+Windows Installer 2.0 non è poptuto essere installato. Per favore, usa Windows Update per installare manulamente questo aggiornamneto nel tuo sistema.$NEWLINE$$NEWLINE$$TITLE$ Il setup non può continuare.
+Setup $TITLE$ 
+Il tuo computer ha bisogno di essere riavviato prima che il Setup $TITLE$ possa continuare.$NEWLINE$$NEWLINE$Per favore salva il tuo lavoro in tutti i programmi in esecuzione e clicca su OK per riavviare il tuo computer. Il Setup riprenderà una volta che il computer sarà riavviato.$NEWLINE$$NEWLINE$Se clicchi CANCELLA, il setup terminerà. Dovrai eseguire il setup di nuovo in seguito per installarlo $TITLE$.
+Setup $TITLE$ 
+Il tuo computer ha bisogno di essere riavviato prima che il Setup $TITLE$ possa continuare.$NEWLINE$$NEWLINE$Per favore salva il tuo lavoro in tutti i programmi in esecuzione e clicca su OK per riavviare il tuo computer. Il Setup riprenderà una volta che il computer sarà riavviato.$NEWLINE$$NEWLINE$Se clicchi CANCELLA, il setup terminerà. Dovrai eseguire il setup di nuovo in seguito per installarlo $TITLE$.
+MSI20
+ERROR
+REBOOTNOW
+OK
+MSI20
+REBOOT
+MSI20
+FALSE
+PLATFORM
+FALSE
+REBOOTNOW
+OK

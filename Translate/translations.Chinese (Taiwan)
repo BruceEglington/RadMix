@@ -1,0 +1,359 @@
+﻿$TITLE$
+&后一項 >
+< &前一項
+取消
+占用系統空間
+剩餘空間
+描述
+剩餘:
+需求:
+ 特點描述 
+InstallAware
+$GLASS$
+InstallAware
+自定義安裝
+選擇您需要的功能進行安裝.
+點擊以下列裱中的一個圖標來改變安裝方式.
+$TITLE$
+取消
+< &前一項
+&后一項 >
+
+&改變...
+占用系統空間
+剩餘空間
+占用磁盤空間:
+剩餘磁盤空間:
+ 目標文件夾 
+$GLASS$
+InstallAware
+InstallAware
+目標文件夾
+選擇所要安裝的文件夾.
+安裝 $TITLE$ 到:
+$TITLE$
+取消
+< &前一項
+&Finish
+&運行 $TITLE$ 現在
+&馬上重啟
+$GLASS$
+InstallAware
+點擊完成, 退出安裝嚮導.
+正在完成 InstallAware 安裝嚮導 $TITLE$
+$SUCCESS$
+$REMOVE$
+您已經成功完成 InstallAware 安裝嚮導 $TITLE$.
+此 InstallAware 安裝嚮導 $TITLE$ 運行失敗: "$LASTERROR$". 請您檢查您的系統後再試一次.
+您已經成功完成 InstallAware 安裝嚮導 $TITLE$. 改變立即生效, 安裝嚮導需要重啟您的電腦. 自動重啟您的電腦, 點擊完成. 如果您想要稍後重啟, 取消勾選現在重啟選項, 并且之後點擊完成.
+此 InstallAware 安裝嚮導 $TITLE$ 已被取消. 您可以稍後運行此嚮導來完成此次安裝.
+您已經成功完成 InstallAware 安裝嚮導 $TITLE$.
+$TITLE$
+取消
+< &前一項
+&后一項 >
+我 &接受此協議的條款
+$GLASS$
+InstallAware
+InstallAware
+請認真閱讀下列條款.
+許可條款
+$TITLE$
+取消
+< &前一項
+&后一項 >
+&修改可用選項
+修&復 應用程序
+&卸載
+$GLASS$
+InstallAware
+繼續, 請點擊下一步.
+歡迎使用 InstallAware 安裝嚮導 $TITLE$
+選擇維護操作:
+$TITLE$
+取消
+< &前一項
+&后一項 >
+$GLASS$
+InstallAware
+InstallAware
+繼續, 請點擊下一步.
+應用程序需求
+在開始安裝程序前請完成以下需求.
+$PRELIST$
+$TITLE$
+取消
+< &前一項
+&后一項 >
+進程標籤
+$GLASS$
+InstallAware
+InstallAware
+狀態:
+正在安裝 $TITLE$
+您所選擇的功能正在安裝.
+$REMOVE$
+請稍候 InstallAware 嚮導正在卸載 $TITLE$. 這也許會花上幾分鍾.
+請稍候 InstallAware 嚮導正在卸載 $TITLE$. 這也許會花上幾分鍾.
+$TITLE$
+取消
+< &前一項
+&后一項 >
+進程標籤
+$GLASS$
+InstallAware
+InstallAware
+狀態:
+安裝 $TITLE$ 要求
+系統需求設定完成.
+請稍候 InstallAware 嚮導正在安裝 $TITLE$ 需求. 這也許會花上幾分鍾.
+$TITLE$
+取消
+< &前一項
+&后一項 >
+$GLASS$
+InstallAware
+InstallAware
+請認真閱讀以下信息.
+重要信息
+$TITLE$
+取消
+< &前一項
+&后一項 >
+
+
+$GLASS$
+InstallAware
+InstallAware
+顧客注冊
+請您輸入信息.
+&組織:
+&用戶名:
+$TITLE$
+&后一項 >
+< &前一項
+取消
+
+
+
+
+
+
+
+$GLASS$
+InstallAware
+InstallAware
+顧客注冊
+請輸入以下信息.
+&用戶名:
+&組織:
+&產品注冊碼:
+$TITLE$
+取消
+< &前一項
+&后一項 >
+&完成
+&壓縮
+&自定義
+$GLASS$
+InstallAware
+InstallAware
+請選擇您想要安裝的功能. 建議高級用戶使用.
+程序將會以最低要求安裝程序功能. 這可能使一些功能失效.
+程序所有功能全部安裝. 這個選項需要最多的磁盤空間.
+安裝方式
+請選擇最適合您的安裝方式.
+請選擇安裝方式.
+$TITLE$
+取消
+< &前一項
+&后一項 >
+$GLASS$
+InstallAware
+- 點擊取消退出
+正在完成 InstallAware 安裝嚮導 $TITLE$
+此 InstallAware 安裝嚮導已經準備好安裝 $TITLE$ 到您的電腦.
+- 點擊下一步開始安裝
+- 點擊上一步改變設定
+$TITLE$
+取消
+< &前一項
+&后一項 >
+只適用於 &我 (當前用戶)
+&任何使用此電腦的人 (所有用戶)
+
+$GLASS$
+InstallAware
+InstallAware
+選擇程序文件夾
+選擇您想要建立新的快捷方式的位置.
+安裝將會在程序文件夾中添加新的快捷方式. 您可以添加新的文件名, 也可以使用默認文件名. 點擊下一步繼續.
+&程序文件夾:
+$ISNT$
+安裝此程序:
+$TITLE$
+取消
+< &前一項
+&后一項 >
+$GLASS$
+InstallAware
+繼續, 請點擊下一步.
+警告: 本程序受到版權和國際條款保護.
+此 InstallAware 安裝嚮導將會安裝 $TITLE$ 到您的電腦上.
+歡迎使用 InstallAware 安裝嚮導 $TITLE$
+$TITLE$
+取消
+< &前一項
+&后一項 >
+$GLASS$
+InstallAware
+InstallAware
+嚮導步驟
+步驟描述
+FALSE
+
+TRUE
+$PRELIST$$NEWLINE$卸載前一版本
+
+
+FALSE
+$SHORTCUTFILES$
+$PROGRAMFILES$\$TITLE$
+$TITLE$
+正在安裝 $TITLE$
+
+
+$SHORTCUTFILESALL$\$STARTMENU$
+$SHORTCUTFILES$\$STARTMENU$
+Uninstalling $TITLE$
+100
+100
+卸載 #TITLE#
+Removes this EggSoft product
+Default
+描述 #TITLE#
+Default
+$TITLE$ 安裝
+無法刪除舊的版本 $TITLE$.請在安裝本軟件之前使用控制面板中的添加或刪除程序來刪除舊的版本.$NEWLINE$$NEWLINE$$ERROROLD$
+$TITLE$ 安裝
+您的電腦需要重啟 $TITLE$ 安裝才能繼續.$NEWLINE$$NEWLINE$請將您的文件保存后點擊OK來重啟電腦. 安裝將會在重啟後繼續運行.$NEWLINE$$NEWLINE$如果你點擊取消, 或終止安裝. 您將需要再次運行設置來進行安裝 $TITLE$.
+$TITLE$ Setup Error
+本軟件至少需要 一個 64 bit 操作系統.$NEWLINE$$NEWLINE$安裝無法繼續.
+Default
+Default
+BUILDMODE
+PATCH
+NEEDSUPGRADE
+TRUE
+PREREQ
+FALSE
+WIZARD
+CANCEL
+BUILDMODE
+PATCH
+NEEDSUPGRADE
+TRUE
+REMOVEOLD
+ERROR
+REMOVEOLD
+REBOOT
+REBOOTNOW
+OK
+SHORTCUTFILESALL
+
+MAINTENANCE
+TRUE
+BUILDMODE
+PATCH
+WIZARD
+CANCEL
+BUILDMODE
+PATCH
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+MINIMUM
+TRUE
+COMPLETE
+TRUE
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+BUILDMODE
+PATCH
+WIZARD
+CANCEL
+ALLUSERS
+TRUE
+REMOVE
+TRUE
+SELECTED
+TRUE
+BUILDMODE
+PATCH
+ADVERTISE
+TRUE
+SILENT
+FALSE
+REBOOTCOMPUTER
+TRUE
+SUCCESS
+REBOOT
+RUNAPP
+TRUE
+REMOVE
+FALSE
+SUCCESS
+COMPLETE
+CHECKSYSTEM
+TRUE
+$PRELIST$$NEWLINE$Microsoft Windows Installer 2.0
+TRUE
+TRUE
+MSI20
+FALSE
+安裝 Microsoft Windows Installer 2.0
+MARQUEE
+
+$TITLE$ 安裝
+Windows Installer 2.0 無法安裝. 請使用 Windows Update 來手動安裝更新.$NEWLINE$$NEWLINE$$TITLE$ 安裝無法繼續.
+$TITLE$ 安裝
+您的電腦需要重啟 $TITLE$ 安裝才能繼續.$NEWLINE$$NEWLINE$請將您的文件保存后點擊OK來重啟電腦. 安裝將會在重啟後繼續運行.$NEWLINE$$NEWLINE$如果你點擊取消, 或終止安裝. 您將需要再次運行設置來進行安裝 $TITLE$.
+$TITLE$ 安裝
+您的電腦需要重啟 $TITLE$ 安裝才能繼續.$NEWLINE$$NEWLINE$請將您的文件保存后點擊OK來重啟電腦. 安裝將會在重啟後繼續運行.$NEWLINE$$NEWLINE$如果你點擊取消, 或終止安裝. 您將需要再次運行設置來進行安裝 $TITLE$.
+MSI20
+ERROR
+REBOOTNOW
+OK
+MSI20
+REBOOT
+MSI20
+FALSE
+PLATFORM
+FALSE
+REBOOTNOW
+OK

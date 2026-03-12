@@ -1,0 +1,359 @@
+﻿$TITLE$
+&Næste >
+> &Tilbage
+Annuller
+TotalPåkrævetPlads
+ResterendePlads
+Beskrivelse
+Resterende:
+Påkrævet:
+ Feature Beskrivelse
+InstallAware
+$GLASS$
+InstallAware
+Personlige Indstillinger
+Vælg den program feature du ønsker at installere
+Klik på et ikon i listen nedenfor for at ændre hvordan en feature skal installeres.
+$TITLE$
+Annuller
+> &Tilbage
+&Næste >
+
+&Ændre...
+TotalPåkrævetPlads
+ResterendePlads
+Påkrævet Disk Plads:
+Resterende Disk Plads:
+ Destinations Mappe
+$GLASS$
+InstallAware
+InstallAware
+Destinations Mappe
+Vælg mappe hvor setup skal installere filer
+Installere $TITLE$ til:
+$TITLE$
+Annuller
+> &Tilbage
+&Finish
+&Kør $TITLE$ nu
+&Genstart nu
+$GLASS$
+InstallAware
+For at lukke denne wizard, klik Færdig.
+Afslutter InstallAware Wizard for $TITLE$
+$SUCCESS$
+$REMOVE$
+Du har succesfuldt afsluttet InstallAware Wizard for $TITLE$.
+InstallAware Wizard for $TITLE$ har fejlet: "$LASTERROR$". Kontroller dine indstillinger og prøv igen.
+Du har succesfuldt afsluttet InstallAware Wizard for $TITLE$. For at anvende ændringerne, er wizard nødt til at genstarte Windows.
+InstallAware wizard for $TITLE$ blev annulleret. Du kan kører wizard igen på et senere tidspunkt for at afslutte setup.
+Du har succesfuldt afsluttet InstallAware Wizard for $TITLE$.
+$TITLE$
+Annuller
+> &Tilbage
+&Næste >
+Jeg &acceptere reglerne for følgende licens aftale
+$GLASS$
+InstallAware
+InstallAware
+Læs venligst følgende licens aftale omhyggeligt.
+Licens Aftale
+$TITLE$
+Annuller
+> &Tilbage
+&Næste >
+&Ændre Tilgængelige Valg
+Re&parer Applikationen
+&Afinstaller
+$GLASS$
+InstallAware
+Forsæt ved at klikke Næste.
+Velkommen til InstallAware wizard for $TITLE$
+Vælg venligst en vedligeholdelses operation til udførelse:
+$TITLE$
+Annuller
+> &Tilbage
+&Næste >
+$GLASS$
+InstallAware
+InstallAware
+Forsæt ved at klikke Næste.
+Applikations Krav
+Følgende krav skal opfyldes inden setup startes.
+$PRELIST$
+$TITLE$
+Annuller
+> &Tilbage
+&Næste >
+FremskidtsEtikette
+$GLASS$
+InstallAware
+InstallAware
+Status:
+Installere $TITLE$
+Den valgte program feature konfigureres.
+$REMOVE$
+Vent venligst mens InstallAware wizard afinstallere $TITLE$. Dette kan tage flere minutter.
+Vent venligst mens InstallAware wizard installere $TITLE$. Dette kan tage flere minutter.
+$TITLE$
+Annuller
+> &Tilbage
+&Næste >
+FremskidtsEtikette
+$GLASS$
+InstallAware
+InstallAware
+Status:
+Installere $TITLE$ Krav
+Program Kravene konfigureres.
+Vent venligst mens InstallAware wizard installere $TITLE$ krav. Dette kan tage flere minutter.
+$TITLE$
+Annuller
+> &Tilbage
+&Næste >
+$GLASS$
+InstallAware
+InstallAware
+Læs følgende program information omhyggeligt.
+Vigtig Information
+$TITLE$
+Annuller
+> &Tilbage
+&Næste >
+
+
+$GLASS$
+InstallAware
+InstallAware
+Kunde registrering
+Indtast venligst følgende information.
+&Organisation
+&Brugernavn
+$TITLE$
+&Næste >
+> &Tilbage
+Annuller
+
+
+
+
+
+
+
+$GLASS$
+InstallAware
+InstallAware
+Kunde registrering
+Indtast følgende information.
+&Brugernavn
+&Organisation
+&Produkt licens nøgle:
+$TITLE$
+Annuller
+> &Tilbage
+&Næste >
+&Færdig
+K&ompakt
+Sø&ning
+$GLASS$
+InstallAware
+InstallAware
+Vælg den program feature du vil installere. Anbefalet for avancerede brugere.
+Programmet vil blive installeret med minimum krav features. Dette vil måske deaktivere nogle applikations funktionaliteter.
+Alle program features vil blive installeret. Dette valg kræver mest disk plads.
+Setup Type
+Vælg den setup type der passer dine behov.
+Vælg venligst en setup type.
+$TITLE$
+Annuller
+> &Tilbage
+&Næste >
+$GLASS$
+InstallAware
+#NAME?
+Afslutter InstallAware Wizard for $TITLE$
+InstallAware wizard er nu klar til at konfigurere $TITLE$ på denne computer.
+#NAME?
+#NAME?
+$TITLE$
+Annuller
+> &Tilbage
+&Næste >
+Kun for &mig (nuværende bruger)
+&Enhver som bruger denne computer (alle brugere)
+
+$GLASS$
+InstallAware
+InstallAware
+Vælg Program Mappe
+Vælg en placering hvor du vil oprette nye genveje.
+Setup vil tilføje program genveje til Program Mappen listet nedenfor. Du skal måske angive et nyt mappe navn, eller acceptere det foreslåede navn. Klik Næste for at fortsætte.
+&Program Mappe:
+$ISNT$
+Installer denne applikation for:
+$TITLE$
+Annuller
+> &Tilbage
+&Næste >
+$GLASS$
+InstallAware
+Forsæt ved at klikke Næste.
+ADVARSEL: Dette program er beskyttet af lov om ophavsret og internationale traktater.
+InstallAware wizard vil installere $TITLE$ på din computer.
+Velkommen til InstallAware wizard for $TITLE$
+$TITLE$
+Annuller
+> &Tilbage
+&Næste >
+$GLASS$
+InstallAware
+InstallAware
+Wizard Trin
+Beskrivelse af wizard trin
+FALSE
+
+TRUE
+$PRELIST$$NEWLINE$Tidligere version afinstallering
+
+
+FALSE
+$SHORTCUTFILES$
+$PROGRAMFILES$\$TITLE$
+$TITLE$
+Installere $TITLE$
+
+
+$SHORTCUTFILESALL$\$STARTMENU$
+$SHORTCUTFILES$\$STARTMENU$
+Uninstalling $TITLE$
+100
+100
+Afinstaller #TITLE# 
+Removes this EggSoft product
+Default
+Beskrivelse for #TITLE# 
+Default
+$TITLE$ Setup
+Kunne ikke afinstallere gammel version af $TITLE$. Afinstaller venligst selv ved at bruge Kontrol Panel Tilføj-Fjern programmer inden forsøg på at installere dette produkt.$NEWLINE$$NEWLINE$$ERROROLD$
+$TITLE$ Setup
+Din computer skal genstartes før $TITLE$ setup kan fortsætte.$NEWLINE$$NEWLINE$Gem venligst dit arbejde i alle kørende programmer og klik OK for at genstarte. Setup vil fortsætte når din computer genstartes. $NEWLINE$$NEWLINE$Hvis du trykker Annuller, vil setup blive lukket. Du er da nødt til at kører setup igen på et senere tidspunkt for at installere $TITLE$. 
+$TITLE$ Setup Fejl
+Dette produkt kræver mindst et 64 bit operativ system.$NEWLINE$$NEWLINE$Setup kan ikke fortsætte.
+Default
+Default
+BUILDMODE
+PATCH
+NEEDSUPGRADE
+TRUE
+PREREQ
+FALSE
+WIZARD
+CANCEL
+BUILDMODE
+PATCH
+NEEDSUPGRADE
+TRUE
+REMOVEOLD
+ERROR
+REMOVEOLD
+REBOOT
+REBOOTNOW
+OK
+SHORTCUTFILESALL
+
+MAINTENANCE
+TRUE
+BUILDMODE
+PATCH
+WIZARD
+CANCEL
+BUILDMODE
+PATCH
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+MINIMUM
+TRUE
+COMPLETE
+TRUE
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+BUILDMODE
+PATCH
+WIZARD
+CANCEL
+ALLUSERS
+TRUE
+REMOVE
+TRUE
+SELECTED
+TRUE
+BUILDMODE
+PATCH
+ADVERTISE
+TRUE
+SILENT
+FALSE
+REBOOTCOMPUTER
+TRUE
+SUCCESS
+REBOOT
+RUNAPP
+TRUE
+REMOVE
+FALSE
+SUCCESS
+COMPLETE
+CHECKSYSTEM
+TRUE
+$PRELIST$$NEWLINE$Microsoft Windows Installer 2.0
+TRUE
+TRUE
+MSI20
+FALSE
+Installere Microsoft Windows Installer 2.0
+MARQUEE
+
+$TITLE$ Setup
+Windows Installer 2.0 kunne ikke installeres. Brug venligst Windows Update for manuel installation af denne opdatering på dit system.$NEWLINE$$NEWLINE$$TITLE$ Setup kan ikke fortsætte.
+$TITLE$ Setup
+Din computer skal genstartes før $TITLE$ setup kan fortsætte.$NEWLINE$$NEWLINE$Gem venligst dit arbejde i alle kørende programmer og klik OK for at genstarte. Setup vil fortsætte når din computer genstartes. $NEWLINE$$NEWLINE$Hvis du trykker Annuller, vil setup blive lukket. Du er da nødt til at kører setup igen på et senere tidspunkt for at installere $TITLE$. 
+$TITLE$ Setup
+Din computer skal genstartes før $TITLE$ setup kan fortsætte.$NEWLINE$$NEWLINE$Gem venligst dit arbejde i alle kørende programmer og klik OK for at genstarte. Setup vil fortsætte når din computer genstartes. $NEWLINE$$NEWLINE$Hvis du trykker Annuller, vil setup blive lukket. Du er da nødt til at kører setup igen på et senere tidspunkt for at installere $TITLE$. 
+MSI20
+ERROR
+REBOOTNOW
+OK
+MSI20
+REBOOT
+MSI20
+FALSE
+PLATFORM
+FALSE
+REBOOTNOW
+OK

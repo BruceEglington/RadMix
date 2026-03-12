@@ -1,0 +1,2612 @@
+object fm_RdMx_Main: Tfm_RdMx_Main
+  Left = 0
+  Top = 0
+  Caption = 'Radiogenic Isotope Mixture Modelling'
+  ClientHeight = 603
+  ClientWidth = 1008
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object MenuBar1: TMenuBar
+    Size.Width = 1008.000000000000000000
+    Size.Height = 24.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+  end
+  object StatusBar1: TStatusBar
+    Position.Y = 581.000000000000000000
+    ShowSizeGrip = True
+    Size.Width = 1008.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+  end
+  object TabControl1: TTabControl
+    Align = Client
+    Size.Width = 1008.000000000000000000
+    Size.Height = 508.000000000000000000
+    Size.PlatformDefault = False
+    TabIndex = 1
+    TabOrder = 4
+    TabPosition = PlatformDefault
+    Sizes = (
+      1008s
+      482s
+      1008s
+      482s)
+    object ti_Control: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 60.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Control'
+      ExplicitSize.cx = 60.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object pJuvenile: TPanel
+        Align = Left
+        Size.Width = 249.000000000000000000
+        Size.Height = 482.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        object Panel3: TPanel
+          Align = Top
+          Size.Width = 249.000000000000000000
+          Size.Height = 25.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+        end
+        object Panel4: TPanel
+          Align = Top
+          Position.Y = 25.000000000000000000
+          Size.Width = 249.000000000000000000
+          Size.Height = 208.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          object Label1: TLabel
+            StyledSettings = [Family, Size, FontColor]
+            Position.X = 8.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 217.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.WordWrap = False
+            Text = 'Juvenile Component (present day)'
+            TabOrder = 1
+          end
+          object ljElementXX: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 40.000000000000000000
+            Text = 'Sm (ppm)'
+            TabOrder = 11
+          end
+          object ljElementYY: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 65.000000000000000000
+            Text = 'Nd (ppm)'
+            TabOrder = 10
+          end
+          object ljRatioX: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 90.000000000000000000
+            Text = '147Sm/144Nd'
+            TabOrder = 4
+          end
+          object ljEpsilon: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 140.000000000000000000
+            Text = 'Epsilon'
+            TabOrder = 2
+          end
+          object ejElementXX: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 9
+            Text = '3.3'
+            Position.X = 104.000000000000000000
+            Position.Y = 35.000000000000000000
+          end
+          object ejElementYY: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 8
+            Text = '8.0'
+            Position.X = 104.000000000000000000
+            Position.Y = 60.000000000000000000
+          end
+          object ejRatioX: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 7
+            Text = ' 0.2136'
+            Position.X = 104.000000000000000000
+            Position.Y = 90.000000000000000000
+          end
+          object ejRatioY: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 6
+            Text = '0.513075'
+            Position.X = 104.000000000000000000
+            Position.Y = 115.000000000000000000
+          end
+          object ejEpsilon: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 5
+            Position.X = 104.000000000000000000
+            Position.Y = 138.000000000000000000
+          end
+          object ljRatioY: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 115.000000000000000000
+            Text = '143Nd/144Nd'
+            TabOrder = 3
+          end
+        end
+        object Panel6: TPanel
+          Align = Bottom
+          Position.Y = 330.000000000000000000
+          Size.Width = 249.000000000000000000
+          Size.Height = 152.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          object cbIsotopeSystem: TComboBox
+            Items.Strings = (
+              'Sm-Nd'
+              'Lu-Hf')
+            ItemIndex = 0
+            Position.X = 120.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 100.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 3
+            OnChange = cbIsotopeSystemChange
+          end
+          object Label3: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 88.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Isotope System'
+            TabOrder = 4
+          end
+          object Label6: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 49.000000000000000000
+            Size.Width = 104.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Starting age (Ma)'
+            TabOrder = 2
+          end
+          object Label7: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 74.000000000000000000
+            Size.Width = 88.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Ending age (Ma)'
+            TabOrder = 1
+          end
+          object eModelStartingAge: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 7
+            Text = '3800'
+            Position.X = 120.000000000000000000
+            Position.Y = 41.000000000000000000
+          end
+          object eModelEndingAge: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 6
+            Text = '0'
+            Position.X = 120.000000000000000000
+            Position.Y = 71.000000000000000000
+          end
+        end
+      end
+      object pEvolved: TPanel
+        Align = Left
+        Position.X = 498.000000000000000000
+        Size.Width = 249.000000000000000000
+        Size.Height = 482.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        object Panel8: TPanel
+          Align = Top
+          Size.Width = 249.000000000000000000
+          Size.Height = 25.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+        end
+        object Panel9: TPanel
+          Align = Top
+          Position.Y = 25.000000000000000000
+          Size.Width = 249.000000000000000000
+          Size.Height = 208.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          object Label4: TLabel
+            StyledSettings = [Family, Size, FontColor]
+            Position.X = 8.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 209.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.WordWrap = False
+            Text = 'Evolved Component (present day)'
+            TabOrder = 1
+          end
+          object leElementXX: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 40.000000000000000000
+            Text = 'Sm (ppm)'
+            TabOrder = 11
+          end
+          object leElementYY: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 65.000000000000000000
+            Size.Width = 73.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Nd (ppm)'
+            TabOrder = 10
+          end
+          object leRatioX: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 90.000000000000000000
+            Size.Width = 81.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = '147Sm/144Nd'
+            TabOrder = 4
+          end
+          object leEpsilon: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 140.000000000000000000
+            Size.Width = 113.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Epsilon'
+            TabOrder = 2
+          end
+          object eeElementXX: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 9
+            Text = '3.17'
+            Position.X = 104.000000000000000000
+            Position.Y = 35.000000000000000000
+          end
+          object eeElementYY: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 8
+            Text = '12.7'
+            Position.X = 104.000000000000000000
+            Position.Y = 65.000000000000000000
+          end
+          object eeRatioX: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 7
+            Text = '0.118'
+            Position.X = 105.000000000000000000
+            Position.Y = 93.000000000000000000
+          end
+          object eeEpsilon: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 5
+            Position.X = 104.000000000000000000
+            Position.Y = 140.000000000000000000
+          end
+          object leRatioY: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 120.000000000000000000
+            Size.Width = 88.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = '143Nd/144Nd'
+            TabOrder = 3
+          end
+          object eeRatioY: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 6
+            Text = '0.5105'
+            Position.X = 104.000000000000000000
+            Position.Y = 115.000000000000000000
+          end
+        end
+        object Panel10: TPanel
+          Align = Bottom
+          Position.Y = 330.000000000000000000
+          Size.Width = 249.000000000000000000
+          Size.Height = 152.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          object eMix1Y_Age2: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 6
+            Position.X = 112.000000000000000000
+            Position.Y = 63.000000000000000000
+          end
+          object lMix1Y_Age2: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 64.000000000000000000
+            Size.Width = 81.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = '143Nd/144Nd'
+            TabOrder = 4
+          end
+          object Label34: TLabel
+            StyledSettings = [Family, Size, FontColor]
+            Position.X = 8.000000000000000000
+            Position.Y = 8.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.WordWrap = False
+            Text = 'Mix1 at Age2'
+            TabOrder = 0
+          end
+          object eMix1X_Age2: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 5
+            Position.X = 112.000000000000000000
+            Position.Y = 33.000000000000000000
+          end
+          object lMix1X_Age2: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 34.000000000000000000
+            Size.Width = 81.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = '147Sm/144Nd'
+            TabOrder = 3
+          end
+          object eMix1YY: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 7
+            Position.X = 112.000000000000000000
+            Position.Y = 121.000000000000000000
+          end
+          object lMix1YY_Age2: TLabel
+            Position.X = 16.000000000000000000
+            Position.Y = 121.000000000000000000
+            Size.Width = 57.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Nd (ppm)'
+            TabOrder = 10
+          end
+          object eMix1XX: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 8
+            Position.X = 112.000000000000000000
+            Position.Y = 91.000000000000000000
+          end
+          object lMix1XX_Age2: TLabel
+            Position.X = 16.000000000000000000
+            Position.Y = 96.000000000000000000
+            Size.Width = 65.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Sm (ppm)'
+            TabOrder = 9
+          end
+        end
+      end
+      object pMixing: TPanel
+        Align = Left
+        Position.X = 249.000000000000000000
+        Size.Width = 249.000000000000000000
+        Size.Height = 482.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Panel11: TPanel
+          Align = Top
+          Size.Width = 249.000000000000000000
+          Size.Height = 25.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+        end
+        object Panel12: TPanel
+          Align = Top
+          Position.Y = 25.000000000000000000
+          Size.Width = 249.000000000000000000
+          Size.Height = 287.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          object Label8: TLabel
+            StyledSettings = [Family, Size, FontColor]
+            Position.X = 8.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 169.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.WordWrap = False
+            Text = 'Calculation Parameters'
+            TabOrder = 1
+          end
+          object lmMixingAge1: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 47.000000000000000000
+            Text = 'Mixing age 1 (Ma)'
+            TabOrder = 2
+          end
+          object lmMixingAge2: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 72.000000000000000000
+            Text = 'Mixing age 2 (Ma)'
+            TabOrder = 17
+          end
+          object lmProportionJuvenile: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 97.000000000000000000
+            Size.Width = 152.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Proportion juvenile in mix'
+            TabOrder = 16
+          end
+          object emMixingAge1: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 15
+            Text = '2000.0'
+            Position.X = 168.000000000000000000
+            Position.Y = 42.000000000000000000
+            Size.Width = 68.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object emMixingAge2: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 12
+            Text = '1000.0'
+            Position.X = 168.000000000000000000
+            Position.Y = 67.000000000000000000
+            Size.Width = 68.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object emProportionJuvenile: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 9
+            Text = '0.7'
+            Position.X = 168.000000000000000000
+            Position.Y = 97.000000000000000000
+            Size.Width = 68.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object eProportionMeltDefined: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 6
+            Text = '0.7'
+            Position.X = 168.000000000000000000
+            Position.Y = 163.000000000000000000
+            Size.Width = 68.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object Label28: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 163.000000000000000000
+            Text = 'Proportion melt'
+            TabOrder = 13
+          end
+          object eBulk_Kd_Sm: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 4
+            Text = '0.5'
+            Position.X = 168.000000000000000000
+            Position.Y = 227.000000000000000000
+            Size.Width = 41.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object lBulkKdXX: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 232.000000000000000000
+            Text = 'Bulk Kd (Sm)'
+            TabOrder = 10
+          end
+          object eBulk_Kd_Nd: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 3
+            Text = '0.5'
+            Position.X = 168.000000000000000000
+            Position.Y = 257.000000000000000000
+            Size.Width = 41.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object lBulkKdYY: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 257.000000000000000000
+            Text = 'Bulk Kd (Nd)'
+            TabOrder = 7
+          end
+          object eMassAssimilatedMassCrystallised: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 5
+            Text = '0.5'
+            Position.X = 168.000000000000000000
+            Position.Y = 133.000000000000000000
+            Size.Width = 68.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object Label55: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 133.000000000000000000
+            Size.Width = 113.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Mass assim. / cryst.'
+            TabOrder = 11
+          end
+          object eCalculatedProportionJuvenile: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 8
+            Text = '0.4'
+            Position.X = 168.000000000000000000
+            Position.Y = 193.000000000000000000
+            Size.Width = 68.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object Label57: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 193.000000000000000000
+            Size.Width = 152.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Calc. proportion juvenile'
+            TabOrder = 14
+          end
+        end
+        object Panel13: TPanel
+          Align = Bottom
+          Position.Y = 331.000000000000000000
+          Size.Width = 249.000000000000000000
+          Size.Height = 151.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          object Label5: TLabel
+            StyledSettings = [Family, Size, FontColor]
+            Position.X = 8.000000000000000000
+            Position.Y = 8.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.WordWrap = False
+            Text = 'Simple SiO2 scenario'
+            TabOrder = 0
+          end
+          object Label9: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 65.000000000000000000
+            Size.Width = 89.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Juvenile basalt'
+            TabOrder = 4
+            object eJuvenile_SiO2: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              TabOrder = 4
+              Text = '54'
+              Position.X = 112.000000000000000000
+              Position.Y = -5.000000000000000000
+              Size.Width = 33.000000000000000000
+              Size.Height = 22.000000000000000000
+              Size.PlatformDefault = False
+            end
+          end
+          object Label10: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 90.000000000000000000
+            Size.Width = 89.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Evolved crust'
+            TabOrder = 8
+          end
+          object Label11: TLabel
+            Position.X = 120.000000000000000000
+            Position.Y = 33.000000000000000000
+            Size.Width = 41.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'SiO2'
+            TabOrder = 2
+          end
+          object eEvolved_SiO2: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 7
+            Text = '68'
+            Position.X = 120.000000000000000000
+            Position.Y = 90.000000000000000000
+            Size.Width = 33.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object eAndesitic_SiO2: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 5
+            Text = '62'
+            Position.X = 120.000000000000000000
+            Position.Y = 120.000000000000000000
+            Size.Width = 33.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object Label12: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 120.000000000000000000
+            Size.Width = 104.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Andesitic product'
+            TabOrder = 6
+          end
+          object Label13: TLabel
+            Position.X = 176.000000000000000000
+            Position.Y = 33.000000000000000000
+            Size.Width = 65.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Proportion'
+            TabOrder = 1
+          end
+          object eJuvenileProportion_SiO2: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 3
+            Position.X = 184.000000000000000000
+            Position.Y = 58.000000000000000000
+            Size.Width = 33.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object bCalculateSiO2: TButton
+            Position.X = 161.000000000000000000
+            Position.Y = 88.000000000000000000
+            TabOrder = 9
+            Text = 'Calculate'
+            OnClick = bCalculateSiO2Click
+          end
+        end
+      end
+      object pKd: TPanel
+        Align = Left
+        Position.X = 747.000000000000000000
+        Size.Width = 249.000000000000000000
+        Size.Height = 482.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object Panel7: TPanel
+          Align = Top
+          Size.Width = 249.000000000000000000
+          Size.Height = 25.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+        end
+        object Panel14: TPanel
+          Align = Top
+          Position.Y = 25.000000000000000000
+          Size.Width = 249.000000000000000000
+          Size.Height = 280.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          object Label49: TLabel
+            StyledSettings = [Family, Size, FontColor]
+            Position.X = 8.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 209.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.WordWrap = False
+            Text = 'Chemistry'
+            TabOrder = 1
+          end
+          object lChemistryXX: TLabel
+            Position.X = 112.000000000000000000
+            Position.Y = 26.000000000000000000
+            Size.Width = 41.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.HorzAlign = Center
+            Text = 'Sm'
+            TabOrder = 40
+          end
+          object Label51: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 51.000000000000000000
+            Size.Width = 33.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Ol'
+            TabOrder = 37
+          end
+          object Label52: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 76.000000000000000000
+            Size.Width = 33.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Opx'
+            TabOrder = 20
+          end
+          object Label53: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 126.000000000000000000
+            Size.Width = 33.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Hbl'
+            TabOrder = 7
+          end
+          object eWtOl: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 36
+            Text = '0.00'
+            TextSettings.HorzAlign = Trailing
+            Position.X = 56.000000000000000000
+            Position.Y = 50.000000000000000000
+            Size.Width = 45.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            OnChange = eWtOlChange
+          end
+          object eWtOpx: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 35
+            Text = '0.10'
+            TextSettings.HorzAlign = Trailing
+            Position.X = 56.000000000000000000
+            Position.Y = 75.000000000000000000
+            Size.Width = 45.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            OnChange = eWtOlChange
+          end
+          object eWtCpx: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 34
+            Text = '0.10'
+            TextSettings.HorzAlign = Trailing
+            Position.X = 56.000000000000000000
+            Position.Y = 100.000000000000000000
+            Size.Width = 45.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            OnChange = eWtOlChange
+          end
+          object eWtGt: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 33
+            Text = '0.05'
+            TextSettings.HorzAlign = Trailing
+            Position.X = 56.000000000000000000
+            Position.Y = 151.000000000000000000
+            Size.Width = 45.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            OnChange = eWtOlChange
+          end
+          object Label54: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 101.000000000000000000
+            Size.Width = 33.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Cpx'
+            TabOrder = 8
+          end
+          object eWtHbl: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 11
+            Text = '0.30'
+            TextSettings.HorzAlign = Trailing
+            Position.X = 56.000000000000000000
+            Position.Y = 125.000000000000000000
+            Size.Width = 45.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            OnChange = eWtOlChange
+          end
+          object Label60: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 151.000000000000000000
+            Size.Width = 33.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Gt'
+            TabOrder = 6
+          end
+          object Label61: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 176.000000000000000000
+            Size.Width = 33.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Pg'
+            TabOrder = 5
+          end
+          object Label62: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 205.000000000000000000
+            Size.Width = 33.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Mt'
+            TabOrder = 4
+          end
+          object Label63: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 230.000000000000000000
+            Size.Width = 33.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Tit'
+            TabOrder = 3
+          end
+          object Label64: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 255.000000000000000000
+            Size.Width = 33.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Sum'
+            TabOrder = 2
+          end
+          object Label65: TLabel
+            Position.X = 55.000000000000000000
+            Position.Y = 25.000000000000000000
+            Size.Width = 41.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.HorzAlign = Center
+            Text = 'Wt %'
+            TabOrder = 38
+          end
+          object lChemistryYY: TLabel
+            Position.X = 184.000000000000000000
+            Position.Y = 25.000000000000000000
+            Size.Width = 41.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.HorzAlign = Center
+            Text = 'Nd'
+            TabOrder = 39
+          end
+          object eWtPg: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 32
+            Text = '0.40'
+            TextSettings.HorzAlign = Trailing
+            Position.X = 56.000000000000000000
+            Position.Y = 176.000000000000000000
+            Size.Width = 45.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            OnChange = eWtOlChange
+          end
+          object eWtMt: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 31
+            Text = '0.03'
+            TextSettings.HorzAlign = Trailing
+            Position.X = 56.000000000000000000
+            Position.Y = 201.000000000000000000
+            Size.Width = 45.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            OnChange = eWtOlChange
+          end
+          object eWtTit: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 30
+            Text = '0.02'
+            TextSettings.HorzAlign = Trailing
+            Position.X = 56.000000000000000000
+            Position.Y = 227.000000000000000000
+            Size.Width = 45.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            OnChange = eWtOlChange
+          end
+          object eWtSum: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 29
+            Text = '1.00'
+            TextSettings.HorzAlign = Trailing
+            Position.X = 56.000000000000000000
+            Position.Y = 251.000000000000000000
+            Size.Width = 45.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object eKd_XX_Bulk: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 21
+            Text = '-20'
+            TextSettings.HorzAlign = Trailing
+            Position.X = 120.000000000000000000
+            Position.Y = 251.000000000000000000
+            Size.Width = 45.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            OnDblClick = eKd_XX_OlDblClick
+          end
+          object eKd_XX_Tit: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 22
+            Text = '10.0'
+            TextSettings.HorzAlign = Trailing
+            Position.X = 120.000000000000000000
+            Position.Y = 227.000000000000000000
+            Size.Width = 45.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            OnChange = eKd_XX_OlChange
+            OnDblClick = eKd_XX_OlDblClick
+          end
+          object eKd_XX_Mt: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 23
+            Text = '1.1'
+            TextSettings.HorzAlign = Trailing
+            Position.X = 120.000000000000000000
+            Position.Y = 201.000000000000000000
+            Size.Width = 45.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            OnChange = eKd_XX_OlChange
+            OnDblClick = eKd_XX_OlDblClick
+          end
+          object eKd_XX_Pg: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 24
+            Text = '0.11'
+            TextSettings.HorzAlign = Trailing
+            Position.X = 120.000000000000000000
+            Position.Y = 176.000000000000000000
+            Size.Width = 45.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            OnChange = eKd_XX_OlChange
+            OnDblClick = eKd_XX_OlDblClick
+          end
+          object eKd_XX_Gt: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 28
+            Text = '0.217'
+            TextSettings.HorzAlign = Trailing
+            Position.X = 120.000000000000000000
+            Position.Y = 151.000000000000000000
+            Size.Width = 45.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            OnChange = eKd_XX_OlChange
+            OnDblClick = eKd_XX_OlDblClick
+          end
+          object eKd_XX_Hbl: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 10
+            Text = '0.85'
+            TextSettings.HorzAlign = Trailing
+            Position.X = 120.000000000000000000
+            Position.Y = 125.000000000000000000
+            Size.Width = 45.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            OnChange = eKd_XX_OlChange
+            OnDblClick = eKd_XX_OlDblClick
+          end
+          object eKd_XX_Cpx: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 25
+            Text = '0.7'
+            TextSettings.HorzAlign = Trailing
+            Position.X = 120.000000000000000000
+            Position.Y = 100.000000000000000000
+            Size.Width = 45.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            OnChange = eKd_XX_OlChange
+            OnDblClick = eKd_XX_OlDblClick
+          end
+          object eKd_XX_Opx: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 26
+            Text = '0.01'
+            TextSettings.HorzAlign = Trailing
+            Position.X = 120.000000000000000000
+            Position.Y = 75.000000000000000000
+            Size.Width = 45.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            OnChange = eKd_XX_OlChange
+            OnDblClick = eKd_XX_OlDblClick
+          end
+          object eKd_XX_Ol: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 27
+            Text = '0.0013'
+            TextSettings.HorzAlign = Trailing
+            Position.X = 120.000000000000000000
+            Position.Y = 50.000000000000000000
+            Size.Width = 45.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            OnChange = eKd_XX_OlChange
+            OnDblClick = eKd_XX_OlDblClick
+          end
+          object eKd_YY_Bulk: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 12
+            Text = '-20'
+            TextSettings.HorzAlign = Trailing
+            Position.X = 184.000000000000000000
+            Position.Y = 251.000000000000000000
+            Size.Width = 45.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            OnDblClick = eKd_YY_OlDblClick
+          end
+          object eKd_YY_Tit: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 13
+            Text = '10.0'
+            TextSettings.HorzAlign = Trailing
+            Position.X = 184.000000000000000000
+            Position.Y = 227.000000000000000000
+            Size.Width = 45.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            OnChange = eKd_YY_OlChange
+            OnDblClick = eKd_YY_OlDblClick
+          end
+          object eKd_YY_Mt: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 14
+            Text = '1.0'
+            TextSettings.HorzAlign = Trailing
+            Position.X = 184.000000000000000000
+            Position.Y = 201.000000000000000000
+            Size.Width = 45.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            OnChange = eKd_YY_OlChange
+            OnDblClick = eKd_YY_OlDblClick
+          end
+          object eKd_YY_Pg: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 15
+            Text = '0.14'
+            TextSettings.HorzAlign = Trailing
+            Position.X = 184.000000000000000000
+            Position.Y = 176.000000000000000000
+            Size.Width = 45.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            OnChange = eKd_YY_OlChange
+            OnDblClick = eKd_YY_OlDblClick
+          end
+          object eKd_YY_Gt: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 19
+            Text = '0.087'
+            TextSettings.HorzAlign = Trailing
+            Position.X = 184.000000000000000000
+            Position.Y = 151.000000000000000000
+            Size.Width = 45.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            OnChange = eKd_YY_OlChange
+            OnDblClick = eKd_YY_OlDblClick
+          end
+          object eKd_YY_Hbl: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 9
+            Text = '0.65'
+            TextSettings.HorzAlign = Trailing
+            Position.X = 184.000000000000000000
+            Position.Y = 125.000000000000000000
+            Size.Width = 45.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            OnChange = eKd_YY_OlChange
+            OnDblClick = eKd_YY_OlDblClick
+          end
+          object eKd_YY_Cpx: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 16
+            Text = '0.3'
+            TextSettings.HorzAlign = Trailing
+            Position.X = 184.000000000000000000
+            Position.Y = 100.000000000000000000
+            Size.Width = 45.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            OnChange = eKd_YY_OlChange
+            OnDblClick = eKd_YY_OlDblClick
+          end
+          object eKd_YY_Opx: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 17
+            Text = '0.005'
+            TextSettings.HorzAlign = Trailing
+            Position.X = 184.000000000000000000
+            Position.Y = 75.000000000000000000
+            Size.Width = 45.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            OnChange = eKd_YY_OlChange
+            OnDblClick = eKd_YY_OlDblClick
+          end
+          object eKd_YY_Ol: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 18
+            Text = '0.001'
+            TextSettings.HorzAlign = Trailing
+            Position.X = 184.000000000000000000
+            Position.Y = 50.000000000000000000
+            Size.Width = 45.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            OnChange = eKd_YY_OlChange
+            OnDblClick = eKd_YY_OlDblClick
+          end
+        end
+        object Panel18: TPanel
+          Align = Bottom
+          Position.Y = 330.000000000000000000
+          Size.Width = 249.000000000000000000
+          Size.Height = 152.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+        end
+      end
+    end
+    object ti_Graph: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 53.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Graph'
+      ExplicitSize.cx = 53.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object pChartInitial: TPanel
+        Align = Left
+        Size.Width = 490.000000000000000000
+        Size.Height = 482.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        object Panel15: TPanel
+          Align = Top
+          Size.Width = 490.000000000000000000
+          Size.Height = 49.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object TeeCommanderInitial: TTeeCommander
+            Panel = ChartInitial
+            Align = Top
+            ParentShowHint = False
+            Size.Width = 490.000000000000000000
+            Size.Height = 33.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+          end
+        end
+        object Panel16: TPanel
+          Align = Bottom
+          Position.Y = 314.000000000000000000
+          Size.Width = 490.000000000000000000
+          Size.Height = 168.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          object eRatioY_e_Age1: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 16
+            Position.X = 170.000000000000000000
+            Position.Y = 62.000000000000000000
+            Size.Width = 56.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object eRatioY_j_Age1: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 24
+            Position.X = 170.000000000000000000
+            Position.Y = 32.000000000000000000
+            Size.Width = 56.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object lAge1: TLabel
+            Position.X = 184.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 41.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'Age1'
+            TabOrder = 6
+          end
+          object lAge2: TLabel
+            Position.X = 112.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 41.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'Age2'
+            TabOrder = 8
+          end
+          object eRatioY_j_Age2: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 26
+            Position.X = 98.000000000000000000
+            Position.Y = 32.000000000000000000
+            Size.Width = 56.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object eRatioY_e_Age2: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 25
+            Position.X = 98.000000000000000000
+            Position.Y = 62.000000000000000000
+            Size.Width = 56.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object lRatioY_e: TLabel
+            Position.X = 9.000000000000000000
+            Position.Y = 65.000000000000000000
+            Size.Width = 81.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'Evolved ratio'
+            TabOrder = 2
+          end
+          object lRatioY_j: TLabel
+            Position.X = 9.000000000000000000
+            Position.Y = 35.000000000000000000
+            Size.Width = 81.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'Juvenile ratio'
+            TabOrder = 7
+          end
+          object eRatioY_m_Age1: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 15
+            Position.X = 170.000000000000000000
+            Position.Y = 112.000000000000000000
+            Size.Width = 56.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object eRatioY_m_Age2: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 22
+            Position.X = 98.000000000000000000
+            Position.Y = 112.000000000000000000
+            Size.Width = 56.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object lRatioY_m: TLabel
+            Position.X = 9.000000000000000000
+            Position.Y = 112.000000000000000000
+            Size.Width = 81.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'Mixture ratio'
+            TabOrder = 1
+          end
+          object Label16: TLabel
+            Position.X = 256.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 73.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'Proportion'
+            TabOrder = 3
+          end
+          object eProportion_Juvenile_Chart: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 23
+            Position.X = 265.000000000000000000
+            Position.Y = 32.000000000000000000
+            Size.Width = 33.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object Label17: TLabel
+            StyledSettings = [Family, Size, FontColor]
+            Position.X = 8.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 65.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.WordWrap = False
+            Text = 'Ratios'
+            TabOrder = 27
+          end
+          object eRatioX_m_Age2: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 12
+            Position.X = 346.000000000000000000
+            Position.Y = 112.000000000000000000
+            Size.Width = 56.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object eRatioX_e_Age2: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 13
+            Position.X = 346.000000000000000000
+            Position.Y = 62.000000000000000000
+            Size.Width = 56.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object eRatioX_j_Age2: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 18
+            Position.X = 346.000000000000000000
+            Position.Y = 32.000000000000000000
+            Size.Width = 56.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object Label31: TLabel
+            Position.X = 345.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 56.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'X Ratio 2'
+            TabOrder = 5
+          end
+          object eRatioX_j_Age1: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 17
+            Position.X = 426.000000000000000000
+            Position.Y = 32.000000000000000000
+            Size.Width = 56.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object eRatioX_m_Age1: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 10
+            Position.X = 426.000000000000000000
+            Position.Y = 112.000000000000000000
+            Size.Width = 56.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object eRatioX_e_Age1: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 11
+            Position.X = 426.000000000000000000
+            Position.Y = 62.000000000000000000
+            Size.Width = 56.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object Label32: TLabel
+            Position.X = 425.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 56.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'X Ratio 1'
+            TabOrder = 4
+          end
+          object eRatioY_melt_Age2: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 19
+            Position.X = 97.000000000000000000
+            Position.Y = 140.000000000000000000
+            Size.Width = 56.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object eRatioY_melt_Age1: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 14
+            Position.X = 169.000000000000000000
+            Position.Y = 140.000000000000000000
+            Size.Width = 56.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object Label56: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 143.000000000000000000
+            Size.Width = 81.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'AFC melt ratio'
+            TabOrder = 0
+          end
+          object eProportionMelt: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 20
+            Position.X = 264.000000000000000000
+            Position.Y = 138.000000000000000000
+            Size.Width = 40.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object eMixRatioY_m_Age2: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 21
+            Position.X = 98.000000000000000000
+            Position.Y = 88.000000000000000000
+            Size.Width = 56.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+        end
+        object Panel17: TPanel
+          Align = Client
+          Size.Width = 490.000000000000000000
+          Size.Height = 265.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          object ChartInitial: TChart
+            Foot.Alignment = taLeftJustify
+            Foot.Font.Size = 8.000000000000000000
+            Foot.Font.Style = []
+            Foot.Font.Color = claBlack
+            Foot.Font.Brush.Color = claBlack
+            Foot.TextAlignment = taLeftJustify
+            Legend.CheckBoxes = True
+            Legend.Title.Font.StyleExt = {00070000000000000004000000}
+            SubFoot.Alignment = taLeftJustify
+            SubFoot.Font.Size = 9.000000000000000000
+            SubFoot.Font.Style = []
+            SubFoot.Font.Color = xFF0B0A0A
+            SubFoot.Font.Brush.Color = xFF0B0A0A
+            SubFoot.Text.Strings = (
+              'RadMix (2026)')
+            SubFoot.TextAlignment = taLeftJustify
+            Title.Text.Strings = (
+              'TChart')
+            BottomAxis.Title.Caption = 'Age (Ma)'
+            Chart3DPercent = 1
+            LeftAxis.AxisValuesFormat = '#,##0.0000'
+            LeftAxis.Title.Caption = 'Ratio'
+            View3D = False
+            Zoom.Brush.Kind = None
+            Zoom.Pen.Fill.Color = claSilver
+            Align = Client
+            TabOrder = 1
+            Size.Width = 490.000000000000000000
+            Size.Height = 265.000000000000000000
+            Size.PlatformDefault = False
+            ColorPaletteIndex = 13
+            object Series1: TPointSeries
+              SeriesColor = xFF4D9C16
+              Title = 'Juvenile'
+              ClickableLine = False
+              Pointer.HorizSize = 3
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              Pointer.VertSize = 3
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object Series2: TPointSeries
+              SeriesColor = xFFDA0D0D
+              Title = 'Evolved'
+              ClickableLine = False
+              Pointer.HorizSize = 3
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              Pointer.VertSize = 3
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object Series3: TPointSeries
+              SeriesColor = xFFF18914
+              Title = 'Mixture'
+              ClickableLine = False
+              Pointer.HorizSize = 3
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              Pointer.VertSize = 3
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object Series10: TPointSeries
+              SeriesColor = xFF146BF1
+              Title = 'AFC'
+              ClickableLine = False
+              Pointer.HorizSize = 5
+              Pointer.InflateMargins = True
+              Pointer.Style = psDiamond
+              Pointer.VertSize = 5
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object Series4: TLineSeries
+              SeriesColor = xFF2A9D02
+              Title = 'Depleted mantle'
+              Brush.BackColor = x00FFFFFF
+              LinePen.Width = 2.000000000000000000
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object Series5: TLineSeries
+              SeriesColor = xFFF23636
+              Title = 'Evolved evolution'
+              Brush.BackColor = x00FFFFFF
+              LinePen.Width = 2.000000000000000000
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object Series6: TLineSeries
+              SeriesColor = xFFE8A106
+              Title = 'Mixture Age1'
+              Brush.BackColor = x00FFFFFF
+              LinePen.Width = 3.000000000000000000
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object Series7: TLineSeries
+              SeriesColor = xFFCCB177
+              Title = 'Mixture Age2'
+              Brush.BackColor = x00FFFFFF
+              LinePen.Width = 4.000000000000000000
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object Series8: TLineSeries
+              SeriesColor = xFF0635E8
+              Title = 'AFC Melt Age1'
+              Brush.BackColor = x00FFFFFF
+              LinePen.Width = 3.000000000000000000
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object Series9: TLineSeries
+              SeriesColor = xFF18AFE6
+              Title = 'AFC Melt Age2'
+              Brush.BackColor = x00FFFFFF
+              LinePen.Width = 4.000000000000000000
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object Series15: TLineSeries
+              SeriesColor = xFF4F4E4E
+              Title = 'Zircon Mixture Age1'
+              Brush.BackColor = x00FFFFFF
+              LinePen.Width = 3.000000000000000000
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object Series16: TLineSeries
+              SeriesColor = xFFADADAD
+              Title = 'Zircon Mixture Age2'
+              Brush.BackColor = x00FFFFFF
+              LinePen.Width = 3.000000000000000000
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object Series19: TLineSeries
+              SeriesColor = xFF6A6A6A
+              Title = 'Zircon Melt Age1'
+              Brush.BackColor = x00FFFFFF
+              LinePen.Width = 3.000000000000000000
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object Series20: TLineSeries
+              SeriesColor = xFF9A9A9A
+              Title = 'Zircon Melt Age2'
+              Brush.BackColor = x00FFFFFF
+              LinePen.Width = 3.000000000000000000
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+          end
+        end
+      end
+      object pChartChemistry: TPanel
+        Align = Right
+        Position.X = 658.000000000000000000
+        Size.Width = 350.000000000000000000
+        Size.Height = 482.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object Panel19: TPanel
+          Align = Top
+          Size.Width = 350.000000000000000000
+          Size.Height = 49.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object TeeCommander1: TTeeCommander
+            Panel = ChartChemistry
+            Align = Top
+            ParentShowHint = False
+            Size.Width = 350.000000000000000000
+            Size.Height = 33.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+          end
+        end
+        object Panel21: TPanel
+          Align = Client
+          Size.Width = 350.000000000000000000
+          Size.Height = 265.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          object ChartChemistry: TChart
+            Foot.Alignment = taLeftJustify
+            Foot.Font.Size = 8.000000000000000000
+            Foot.Font.Style = []
+            Foot.Font.Color = claBlack
+            Foot.Font.Brush.Color = claBlack
+            Foot.TextAlignment = taLeftJustify
+            Legend.Title.Font.StyleExt = {00070000000000000004000000}
+            Legend.Visible = False
+            SubFoot.Alignment = taLeftJustify
+            SubFoot.Font.Size = 9.000000000000000000
+            SubFoot.Font.Style = []
+            SubFoot.Font.Color = xFF0B0A0A
+            SubFoot.Font.Brush.Color = xFF0B0A0A
+            SubFoot.Text.Strings = (
+              'RadMix (2026)')
+            SubFoot.TextAlignment = taLeftJustify
+            Title.Text.Strings = (
+              'TChart')
+            BottomAxis.AxisValuesFormat = '#,##0.0##'
+            BottomAxis.Title.Caption = 'Concentration'
+            Chart3DPercent = 1
+            LeftAxis.AxisValuesFormat = '#,##0.0000'
+            LeftAxis.LabelsSeparation = 0
+            LeftAxis.RoundFirstLabel = False
+            LeftAxis.Title.Caption = 'Ratio'
+            View3D = False
+            Zoom.Brush.Kind = None
+            Zoom.Pen.Fill.Color = claSilver
+            Align = Client
+            TabOrder = 0
+            Size.Width = 350.000000000000000000
+            Size.Height = 265.000000000000000000
+            Size.PlatformDefault = False
+            ColorPaletteIndex = 13
+            object PointSeries4: TPointSeries
+              SeriesColor = xFF4D9C16
+              Title = 'Juvenile'
+              ClickableLine = False
+              Pointer.HorizSize = 3
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              Pointer.VertSize = 3
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object PointSeries5: TPointSeries
+              SeriesColor = xFFDA0D0D
+              Title = 'Evolved'
+              ClickableLine = False
+              Pointer.HorizSize = 3
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              Pointer.VertSize = 3
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object PointSeries6: TPointSeries
+              SeriesColor = xFFF18914
+              Title = 'Mixture'
+              ClickableLine = False
+              Pointer.HorizSize = 3
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              Pointer.VertSize = 3
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object PointSeries7: TPointSeries
+              SeriesColor = xFF1479F1
+              Title = 'AFC'
+              ClickableLine = False
+              Pointer.HorizSize = 5
+              Pointer.InflateMargins = True
+              Pointer.Style = psDiamond
+              Pointer.VertSize = 5
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object Series11: TLineSeries
+              SeriesColor = xFFE38816
+              Title = 'Mixture Age1'
+              Brush.BackColor = x00FFFFFF
+              LinePen.Width = 3.000000000000000000
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object Series13: TLineSeries
+              SeriesColor = xFFDED69D
+              Title = 'Mixture Age2'
+              Brush.BackColor = x00FFFFFF
+              LinePen.Width = 4.000000000000000000
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object Series12: TLineSeries
+              SeriesColor = xFF0B4CD1
+              Title = 'Melt Age1'
+              Brush.BackColor = x00FFFFFF
+              LinePen.Width = 3.000000000000000000
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object Series14: TLineSeries
+              SeriesColor = xFF14C1ED
+              Title = 'Melt Age2'
+              Brush.BackColor = x00FFFFFF
+              LinePen.Width = 3.000000000000000000
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+          end
+        end
+        object Panel1: TPanel
+          Align = Bottom
+          Position.Y = 314.000000000000000000
+          Size.Width = 350.000000000000000000
+          Size.Height = 168.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          object Label38: TLabel
+            StyledSettings = [Family, Size, FontColor]
+            Position.X = 8.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 89.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.WordWrap = False
+            Text = 'AFC'
+            TabOrder = 33
+          end
+          object Label39: TLabel
+            Position.X = 152.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 41.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'Age2'
+            TabOrder = 16
+          end
+          object Label40: TLabel
+            Position.X = 274.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 41.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'Age1'
+            TabOrder = 6
+          end
+          object eAFCMelt_SmNd_Age2: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 26
+            Position.X = 137.000000000000000000
+            Position.Y = 130.000000000000000000
+            Size.Width = 48.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object Label41: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 133.000000000000000000
+            Size.Width = 81.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'Ratio'
+            TabOrder = 0
+          end
+          object Label42: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 45.000000000000000000
+            Size.Width = 81.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'Magma'
+            TabOrder = 5
+          end
+          object eAFCMagma_Sm_Age2: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 29
+            Position.X = 113.000000000000000000
+            Position.Y = 40.000000000000000000
+            Size.Width = 48.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object eAFCMagma_Nd_Age1: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 24
+            Position.X = 297.000000000000000000
+            Position.Y = 40.000000000000000000
+            Size.Width = 48.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object Label43: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 73.000000000000000000
+            Size.Width = 81.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'Assimilant'
+            TabOrder = 2
+          end
+          object eAFCAssimilant_Sm_Age2: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 22
+            Position.X = 113.000000000000000000
+            Position.Y = 70.000000000000000000
+            Size.Width = 48.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object eAFCAssimilant_Nd_Age1: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 11
+            Position.X = 297.000000000000000000
+            Position.Y = 70.000000000000000000
+            Size.Width = 48.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object eAFCMagma_Nd_Age2: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 28
+            Position.X = 169.000000000000000000
+            Position.Y = 40.000000000000000000
+            Size.Width = 48.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object eAFCAssimilant_Nd_Age2: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 21
+            Position.X = 169.000000000000000000
+            Position.Y = 70.000000000000000000
+            Size.Width = 48.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object lAFCXX_Age2: TLabel
+            Position.X = 119.000000000000000000
+            Position.Y = 25.000000000000000000
+            Size.Width = 25.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'Sm'
+            TabOrder = 15
+          end
+          object lAFCYY_Age2: TLabel
+            Position.X = 175.000000000000000000
+            Position.Y = 23.000000000000000000
+            Size.Width = 25.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'Nd'
+            TabOrder = 14
+          end
+          object eAFCAssimilant_Sm_Age1: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 9
+            Position.X = 232.000000000000000000
+            Position.Y = 70.000000000000000000
+            Size.Width = 49.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object eAFCMagma_Sm_Age1: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 23
+            Position.X = 232.000000000000000000
+            Position.Y = 40.000000000000000000
+            Size.Width = 49.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object eAFCMelt_SmNd_Age1: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 19
+            Position.X = 256.000000000000000000
+            Position.Y = 130.000000000000000000
+            Size.Width = 49.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object lAFCYY_Age1: TLabel
+            Position.X = 305.000000000000000000
+            Position.Y = 25.000000000000000000
+            Size.Width = 25.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'Nd'
+            TabOrder = 12
+          end
+          object lAFCXX_Age1: TLabel
+            Position.X = 241.000000000000000000
+            Position.Y = 25.000000000000000000
+            Size.Width = 25.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'Sm'
+            TabOrder = 13
+          end
+          object eProportionMeltAFC: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 25
+            Position.X = 50.000000000000000000
+            Position.Y = 100.000000000000000000
+            Size.Width = 40.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object eAFCMelt_Nd_Age1: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 10
+            Position.X = 294.000000000000000000
+            Position.Y = 100.000000000000000000
+            Size.Width = 48.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object eAFCMelt_Sm_Age1: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 8
+            Position.X = 232.000000000000000000
+            Position.Y = 100.000000000000000000
+            Size.Width = 49.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object eAFCMelt_Nd_Age2: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 17
+            Position.X = 169.000000000000000000
+            Position.Y = 100.000000000000000000
+            Size.Width = 48.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object eAFCMelt_Sm_Age2: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 18
+            Position.X = 113.000000000000000000
+            Position.Y = 100.000000000000000000
+            Size.Width = 48.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object Label48: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 103.000000000000000000
+            Size.Width = 81.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'Melt'
+            TabOrder = 1
+          end
+        end
+      end
+      object pChartEpsilon: TPanel
+        Align = Client
+        Size.Width = 152.000000000000000000
+        Size.Height = 482.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Panel23: TPanel
+          Align = Top
+          Size.Width = 152.000000000000000000
+          Size.Height = 49.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object TeeCommanderEpsilon: TTeeCommander
+            Panel = ChartEpsilon
+            Align = Top
+            ParentShowHint = False
+            Size.Width = 152.000000000000000000
+            Size.Height = 33.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+          end
+        end
+        object Panel24: TPanel
+          Align = Bottom
+          Position.Y = 314.000000000000000000
+          Size.Width = 152.000000000000000000
+          Size.Height = 168.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          object Label18: TLabel
+            StyledSettings = [Family, Size, FontColor]
+            Position.X = 8.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 129.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.WordWrap = False
+            Text = 'Mixture and AFC Melt'
+            TabOrder = 27
+          end
+          object Label19: TLabel
+            Position.X = 152.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 41.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'Age2'
+            TabOrder = 13
+          end
+          object Label20: TLabel
+            Position.X = 274.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 41.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'Age1'
+            TabOrder = 5
+          end
+          object eMelt_SmNd_Age2: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 20
+            Position.X = 137.000000000000000000
+            Position.Y = 100.000000000000000000
+            Size.Width = 48.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object Label21: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 101.000000000000000000
+            Size.Width = 81.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'Ratio'
+            TabOrder = 0
+          end
+          object Label22: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 43.000000000000000000
+            Size.Width = 81.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'Mixture'
+            TabOrder = 4
+          end
+          object eMix_Sm_Age2: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 23
+            Position.X = 113.000000000000000000
+            Position.Y = 40.000000000000000000
+            Size.Width = 48.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object eMix_Nd_Age1: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 19
+            Position.X = 297.000000000000000000
+            Position.Y = 40.000000000000000000
+            Size.Width = 48.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object Label23: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 73.000000000000000000
+            Size.Width = 81.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'Melt'
+            TabOrder = 1
+          end
+          object eMelt_Sm_Age2: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 17
+            Position.X = 113.000000000000000000
+            Position.Y = 70.000000000000000000
+            Size.Width = 48.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object eMelt_Nd_Age1: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 8
+            Position.X = 297.000000000000000000
+            Position.Y = 70.000000000000000000
+            Size.Width = 48.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object eMix_Nd_Age2: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 22
+            Position.X = 169.000000000000000000
+            Position.Y = 40.000000000000000000
+            Size.Width = 48.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object eMelt_Nd_Age2: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 16
+            Position.X = 169.000000000000000000
+            Position.Y = 70.000000000000000000
+            Size.Width = 48.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object lMixAFCXX_Age2: TLabel
+            Position.X = 119.000000000000000000
+            Position.Y = 25.000000000000000000
+            Size.Width = 25.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'Sm'
+            TabOrder = 12
+          end
+          object lMixAFCYY_Age2: TLabel
+            Position.X = 175.000000000000000000
+            Position.Y = 23.000000000000000000
+            Size.Width = 25.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'Nd'
+            TabOrder = 11
+          end
+          object eMelt_Sm_Age1: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 7
+            Position.X = 232.000000000000000000
+            Position.Y = 70.000000000000000000
+            Size.Width = 49.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object eMix_Sm_Age1: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 18
+            Position.X = 232.000000000000000000
+            Position.Y = 40.000000000000000000
+            Size.Width = 49.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object eMelt_SmNd_Age1: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 14
+            Position.X = 256.000000000000000000
+            Position.Y = 98.000000000000000000
+            Size.Width = 49.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object lMixAFCYY_Age1: TLabel
+            Position.X = 305.000000000000000000
+            Position.Y = 25.000000000000000000
+            Size.Width = 25.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'Nd'
+            TabOrder = 9
+          end
+          object lMixAFCXX_Age1: TLabel
+            Position.X = 241.000000000000000000
+            Position.Y = 25.000000000000000000
+            Size.Width = 25.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'Sm'
+            TabOrder = 10
+          end
+        end
+        object Panel25: TPanel
+          Align = Client
+          Size.Width = 152.000000000000000000
+          Size.Height = 265.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          object ChartEpsilon: TChart
+            Foot.Alignment = taLeftJustify
+            Foot.Font.Size = 8.000000000000000000
+            Foot.Font.Style = []
+            Foot.Font.Color = claBlack
+            Foot.Font.Brush.Color = claBlack
+            Foot.TextAlignment = taLeftJustify
+            Legend.CheckBoxes = True
+            Legend.Title.Font.StyleExt = {00070000000000000004000000}
+            Legend.Visible = False
+            SubFoot.Alignment = taLeftJustify
+            SubFoot.Font.Size = 9.000000000000000000
+            SubFoot.Font.Style = []
+            SubFoot.Font.Color = xFF0B0A0A
+            SubFoot.Font.Brush.Color = xFF0B0A0A
+            SubFoot.Text.Strings = (
+              'RadMix (2026)')
+            SubFoot.TextAlignment = taLeftJustify
+            Title.Text.Strings = (
+              'TChart')
+            BottomAxis.Title.Caption = 'Age (Ma)'
+            Chart3DPercent = 1
+            LeftAxis.AxisValuesFormat = '#,##0.00'
+            LeftAxis.Title.Caption = 'Epsilon'
+            View3D = False
+            Zoom.Brush.Kind = None
+            Zoom.Pen.Fill.Color = claSilver
+            Align = Client
+            TabOrder = 1
+            Size.Width = 152.000000000000000000
+            Size.Height = 265.000000000000000000
+            Size.PlatformDefault = False
+            ColorPaletteIndex = 13
+            object PointSeries1: TPointSeries
+              SeriesColor = xFF4D9C16
+              Title = 'Juvenile'
+              ClickableLine = False
+              Pointer.HorizSize = 3
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              Pointer.VertSize = 3
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object PointSeries2: TPointSeries
+              SeriesColor = xFFDA0D0D
+              Title = 'Evolved'
+              ClickableLine = False
+              Pointer.HorizSize = 3
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              Pointer.VertSize = 3
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object PointSeries3: TPointSeries
+              SeriesColor = xFFF18914
+              Title = 'Mixture'
+              ClickableLine = False
+              Pointer.HorizSize = 3
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              Pointer.VertSize = 3
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object PointSeries8: TPointSeries
+              SeriesColor = xFF146BF1
+              Title = 'AFC'
+              ClickableLine = False
+              Pointer.HorizSize = 5
+              Pointer.InflateMargins = True
+              Pointer.Style = psDiamond
+              Pointer.VertSize = 5
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object LineSeries1: TLineSeries
+              SeriesColor = xFF2A9D02
+              Title = 'Depleted mantle'
+              Brush.BackColor = x00FFFFFF
+              LinePen.Width = 2.000000000000000000
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object LineSeries2: TLineSeries
+              SeriesColor = xFFF23636
+              Title = 'Evolved evolution'
+              Brush.BackColor = x00FFFFFF
+              LinePen.Width = 2.000000000000000000
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object LineSeries3: TLineSeries
+              SeriesColor = xFFE8A106
+              Title = 'Mixture Age1'
+              Brush.BackColor = x00FFFFFF
+              LinePen.Width = 3.000000000000000000
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object LineSeries4: TLineSeries
+              SeriesColor = xFFCCB177
+              Title = 'Mixture Age2'
+              Brush.BackColor = x00FFFFFF
+              LinePen.Width = 4.000000000000000000
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object LineSeries5: TLineSeries
+              SeriesColor = xFF0635E8
+              Title = 'Melt Age1'
+              Brush.BackColor = x00FFFFFF
+              LinePen.Width = 3.000000000000000000
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object LineSeries6: TLineSeries
+              SeriesColor = xFF18AFE6
+              Title = 'Melt Age2'
+              Brush.BackColor = x00FFFFFF
+              LinePen.Width = 4.000000000000000000
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object Series17: TLineSeries
+              SeriesColor = xFF575759
+              Title = 'Zircon Age1'
+              Brush.BackColor = x00FFFFFF
+              LinePen.Width = 3.000000000000000000
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object Series18: TLineSeries
+              SeriesColor = claDarkgray
+              Title = 'Zircon Age2'
+              Brush.BackColor = x00FFFFFF
+              LinePen.Width = 3.000000000000000000
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object Series21: TLineSeries
+              SeriesColor = xFF727272
+              Title = 'Zircon Melt Age1'
+              Brush.BackColor = x00FFFFFF
+              LinePen.Width = 3.000000000000000000
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object Series22: TLineSeries
+              SeriesColor = xFFA2A2A2
+              Title = 'Zircon Melt Age2'
+              Brush.BackColor = x00FFFFFF
+              LinePen.Width = 3.000000000000000000
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+          end
+        end
+      end
+      object Splitter1: TSplitter
+        Align = Right
+        Cursor = crHSplit
+        MinSize = 20.000000000000000000
+        Position.X = 650.000000000000000000
+        Size.Width = 8.000000000000000000
+        Size.Height = 482.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object Splitter2: TSplitter
+        Align = Left
+        Cursor = crHSplit
+        MinSize = 20.000000000000000000
+        Position.X = 490.000000000000000000
+        Size.Width = 8.000000000000000000
+        Size.Height = 482.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+  end
+  object Panel5: TPanel
+    Align = Top
+    Position.Y = 24.000000000000000000
+    Size.Width = 1008.000000000000000000
+    Size.Height = 49.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    object Label2: TLabel
+      StyledSettings = [Family]
+      Position.X = 24.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 952.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 20.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claBlue
+      TextSettings.HorzAlign = Center
+      TextSettings.WordWrap = False
+      Text = 'Crust Formation via Mixing of Juvenile and Evolved Components'
+      TabOrder = 1
+    end
+  end
+  object MainMenu1: TMainMenu
+    Left = 584
+    Top = 32
+    object mi_File: TMenuItem
+      Text = 'File'
+      object mi_File_Exit: TMenuItem
+        Locked = True
+        Text = 'Exit'
+        OnClick = mi_File_ExitClick
+      end
+    end
+    object mi_Calculate: TMenuItem
+      Locked = True
+      Text = 'Calculate'
+      OnClick = mi_CalculateClick
+    end
+    object mi_Help: TMenuItem
+      Text = 'Help'
+      object mi_Help_About: TMenuItem
+        Locked = True
+        Text = 'About'
+        OnClick = mi_Help_AboutClick
+      end
+    end
+  end
+end

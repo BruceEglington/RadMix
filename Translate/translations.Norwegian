@@ -1,0 +1,359 @@
+﻿$TITLE$
+&Neste >
+< &Tilbake
+Avbryt
+Totalnødvenigplass
+Resterendeplass
+Beskivelse
+Gjenstående:
+Nødvendig:
+Funksjons Beskrivelse
+InstallAware
+$GLASS$
+InstallAware
+Tilpasset installasjon
+Velg programfunksjoner du vil installere.
+Klikk på et ikon i listen nedenfor for å endre en funksjon som er installert.
+$TITLE$
+Avbryt
+< &Tilbake
+&Neste >
+
+&Endre...
+Totalnødvenigplass
+Resterendeplass
+Nødvendig diskplass:
+Resterende diskplass:
+Målkatalog
+$GLASS$
+InstallAware
+InstallAware
+Målkatalog
+Velg mappen der oppsett vil installere filer.
+Instaler $TITLE$ til:
+$TITLE$
+Avbryt
+< &Tilbake
+&Finish
+&Kjør $TITLE$ nå
+&Start på nytt nå
+$GLASS$
+InstallAware
+For å lukke denne veiviseren, klikker du på Fullfør.
+Fullfører InstallAware veiviseren for$TITLE$
+$SUCCESS$
+$REMOVE$
+Du har nå fullført InstallAware veiviseren for $TITLE$.
+Den InstallAware veiviseren for $TITLE$ mislyktes "$LASTERROR$". Kontroller innstillingene og prøv igjen.
+Du har nå fullført InstallAware veiviseren for $TITLE$. Hvis du vil bruke endringene, vil veiviseren er nå starte Windows på nytt. Hvis du vil starte Windows automatisk, klikker du på Fullfør. Hvis du vil starte på nytt senere, opphever du Omstart nå boksen, og klikker deretter Fullfør.
+Den InstallAware veiviseren for $TITLE$ har mislyktes. Du kan kjøre veiviseren på nytt på et senere tidspunkt for å fullføre installasjonen.
+Du har nå fullført InstallAware veiviseren for $TITLE$.
+$TITLE$
+Avbryt
+< &Tilbake
+&Neste >
+Jeg &godtar vilkårene i lisensavtalen
+$GLASS$
+InstallAware
+InstallAware
+Vær vennlig å les nøye følgende lisensavtale.
+Lisesnavtale
+$TITLE$
+Avbryt
+< &Tilbake
+&Neste >
+&Modifisere tilgjengelige alternativene.
+Re&parer Søknadd
+&Avinstaler
+$GLASS$
+InstallAware
+For å fortsette, klikker du Neste.
+Velkommen til InstallAware veiviseren for $TITLE$
+Velg vedlikehold operasjonen for å utføre:
+$TITLE$
+Avbryt
+< &Tilbake
+&Neste >
+$GLASS$
+InstallAware
+InstallAware
+For å fortsette, klikker du Neste.
+Søknadens Krav
+Følgende krav må være behandlet før du starter installasjonen.
+$PRELIST$
+$TITLE$
+Avbryt
+< &Tilbake
+&Neste >
+ProgressLabel                     Framdrift
+$GLASS$
+InstallAware
+InstallAware
+Status:
+Instalerer $TITLE$
+Programfunksjonene du valgte blir konfigurert.
+$REMOVE$
+Vennligs vent mens InstallAware veiviseren avinstaleres $TITLE$. Dette kan ta flere minutter
+Vennligst vent mens InstallAware veiviseren instaleres $TITLE$. Dette kan ta flere minutter  
+$TITLE$
+Avbryt
+< &Tilbake
+&Neste >
+ProgressLabel                     Framdrift
+$GLASS$
+InstallAware
+InstallAware
+Status:
+Instalasjons $TITLE$ Krav
+Programkravene blir konfigurert.
+Vennligst vent mens InstallAware veiviseren instalerer $TITLE$ kravene. Dette kan ta flere minutter
+$TITLE$
+Avbryt
+< &Tilbake
+&Neste >
+$GLASS$
+InstallAware
+InstallAware
+Lese følgende informasjon om programmet nøye.
+Viktig informasjon
+$TITLE$
+Avbryt
+< &Tilbake
+&Neste >
+
+
+$GLASS$
+InstallAware
+InstallAware
+Kunderegistrering
+Fyll inn informasjon om deg selv.
+&Organisasjon:
+&Bruker navn:
+$TITLE$
+&Neste >
+< &Tilbake
+Avbryt
+
+
+
+
+
+
+
+$GLASS$
+InstallAware
+InstallAware
+Kunderegistrering
+Vennligst oppgi følgende informasjon.
+&Bruker navn:
+&Organisasjon:
+&Produktlisens Nøkkel:
+$TITLE$
+Avbryt
+< &Tilbake
+&Neste >
+&Fullført
+K&ompakt
+Til&passet
+$GLASS$
+InstallAware
+InstallAware
+Velge hvilke programfunksjoner du vil ha installert. Anbefales for avanserte brukere.
+Programmet vil bli installert med et minimum av nødvendige funksjoner. Dette kan deaktivere enkelte program funksjonalitet.
+Alle programfunksjoner vil bli installert. Dette alternativet krever mest diskplass.
+Installasjonstype
+Velg den installasjonstypen som er best for dine behov.
+Velg en installasjonstype.
+$TITLE$
+Avbryt
+< &Tilbake
+&Neste >
+$GLASS$
+InstallAware
+- Klikk Avbryt for å avslutte
+Fullfører InstallAware veiviseren for$TITLE$
+Den InstallAwareVeiviseren er nå klar til å konfigurere $TITLE$ på denne datamaskinen.
+- Klikk på Neste for å starte konfigurasjonen
+- Klikk Tilbake for å endre innstillinger  
+$TITLE$
+Avbryt
+< &Tilbake
+&Neste >
+Bare for &meg (gjeldende bruker)
+&Alle som bruker denne datamaskinen (alle brukere)
+
+$GLASS$
+InstallAware
+InstallAware
+Velg programmappe 
+Velg hvor du vil opprette nye snarveier.
+Installeingen vil legge programmet snarveier til programmappen oppført nedenfor. Du kan skrive inn et nytt navn på mappen eller godta det foreslåtte navnet. Klikk på Neste for å fortsette.
+&Program Mappe:
+$ISNT$
+Installere dette programmet på:
+$TITLE$
+Avbryt
+< &Tilbake
+&Neste >
+$GLASS$
+InstallAware
+For å fortsette, klikker du Neste.
+ADVARSEL: Dette programmet er beskyttet av lov om opphavsrett og internasjonale avtaler.
+Den InstallAware veiviseren vil installere $TITLE$ på din datamaskin.
+Velkommen til InstallAware veiviseren for $TITLE$
+$TITLE$
+Avbryt
+< &Tilbake
+&Neste >
+$GLASS$
+InstallAware
+InstallAware
+Veiviserens skritt
+Beskrivelse av veiviserens skritt
+FALSE
+
+TRUE
+$PRELIST$$NEWLINE$Forrige versjon av installasjonsprosessen
+
+
+FALSE
+$SHORTCUTFILES$
+$PROGRAMFILES$\$TITLE$
+$TITLE$
+Instalerer $TITLE$
+
+
+$SHORTCUTFILESALL$\$STARTMENU$
+$SHORTCUTFILES$\$STARTMENU$
+Uninstalling $TITLE$
+100
+100
+Avinstaller #TITLE#
+Removes this EggSoft product
+Default
+Beskrivelse av #TITLE#
+Default
+$TITLE$ Setup
+Kan ikke avinstallere gammel versjon av $TITLE$. Avinstaller det selv ved hjelp av Kontrollpanel legg til eller fjern programmer før du prøver å installere dette produktet.$NEWLINE$$NEWLINE$$ERROROLD$
+$TITLE$ Setup
+Datamaskinen må startes før $TITLE$ Installasjonsprogrammet kan fortsette.$NEWLINE$$NEWLINE$  Vennligst lagre arbeidet i alle programmer som kjøres og klikk OK for å starte datamaskinen på nytt. Installasjonsprogrammet fortsetter når datamaskinen startes på nytt. $NEWLINE$$NEWLINE$Hvis du trykker AVBRYT, will setup avslutte. Du må da kjøre setup senere for å installere $TITLE$.
+$TITLE$ Setup Feil
+Dette produktet krever minst en ikke-vertifisert maskinvaresystemet.$NEWLINE$$NEWLINE$Installeringen kan ikke fortsette      
+Default
+Default
+BUILDMODE
+PATCH
+NEEDSUPGRADE
+TRUE
+PREREQ
+FALSE
+WIZARD
+CANCEL
+BUILDMODE
+PATCH
+NEEDSUPGRADE
+TRUE
+REMOVEOLD
+ERROR
+REMOVEOLD
+REBOOT
+REBOOTNOW
+OK
+SHORTCUTFILESALL
+
+MAINTENANCE
+TRUE
+BUILDMODE
+PATCH
+WIZARD
+CANCEL
+BUILDMODE
+PATCH
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+MINIMUM
+TRUE
+COMPLETE
+TRUE
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+BUILDMODE
+PATCH
+WIZARD
+CANCEL
+ALLUSERS
+TRUE
+REMOVE
+TRUE
+SELECTED
+TRUE
+BUILDMODE
+PATCH
+ADVERTISE
+TRUE
+SILENT
+FALSE
+REBOOTCOMPUTER
+TRUE
+SUCCESS
+REBOOT
+RUNAPP
+TRUE
+REMOVE
+FALSE
+SUCCESS
+COMPLETE
+CHECKSYSTEM
+TRUE
+Installerer Microsoft Windows Installer 2.0
+TRUE
+TRUE
+MSI20
+FALSE
+Windows Installer 2.0 Kunne ikke installeres Vennligst bruk Windows oppdatering for å manuelt installere denne oppgraderingen på sitt system$NEWLINE$$NEWLINE$$TITLE$ Installeringen kan ikke fortsette      
+MARQUEE
+
+$TITLE$ Setup
+$PRELIST$$NEWLINE$Microsoft .NET Framework 1.1 Service pakke 1
+$TITLE$ Setup
+Datamaskinen må startes før $TITLE$ Installasjonsprogrammet kan fortsette.$NEWLINE$$NEWLINE$  Vennligst lagre arbeidet i alle programmer som kjøres og klikk OK for å starte datamaskinen på nytt. Installasjonsprogrammet fortsetter når datamaskinen startes på nytt. $NEWLINE$$NEWLINE$Hvis du trykker AVBRYT, will setup avslutte. Du må da kjøre setup senere for å installere $TITLE$.
+$TITLE$ Setup
+Datamaskinen må startes før $TITLE$ Installasjonsprogrammet kan fortsette.$NEWLINE$$NEWLINE$  Vennligst lagre arbeidet i alle programmer som kjøres og klikk OK for å starte datamaskinen på nytt. Installasjonsprogrammet fortsetter når datamaskinen startes på nytt. $NEWLINE$$NEWLINE$Hvis du trykker AVBRYT, will setup avslutte. Du må da kjøre setup senere for å installere $TITLE$.
+MSI20
+ERROR
+REBOOTNOW
+OK
+MSI20
+REBOOT
+MSI20
+FALSE
+PLATFORM
+FALSE
+REBOOTNOW
+OK

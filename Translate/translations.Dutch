@@ -1,0 +1,359 @@
+﻿$TITLE$
+Volge&nde >
+< &Terug
+Annuleren
+TotaleVereisteRuimte
+RedterendeRuimte
+Beschrijving
+Resterende:
+Vereiste:
+ Functie Beschrijving 
+InstallAware
+$GLASS$
+InstallAware
+Aangepaste installatie 
+Kies de programmafuncties die u wilt installeren. 
+Klik op een pictogram in de lijst hieronder om te veranderen hoe een functie wordt geïnstalleerd. 
+$TITLE$
+Annuleren
+< &Terug
+Volge&nde >
+
+&Wijzigen ... 
+TotaleVereisteRuimte
+RedterendeRuimte
+Vereiste schijfruimte: 
+Resterende schijfruimte: 
+  Bestemmingsmap 
+$GLASS$
+InstallAware
+InstallAware
+Bestemmingsmap 
+Selecteer de map waar de installatie zal installeren bestanden.
+Installeer $TITLE$ naar:
+$TITLE$
+Annuleren
+< &Terug
+&Finish
+&Run $TITLE$ nu
+&Herstart nu
+$GLASS$
+InstallAware
+Om wizard af te sluiten, klik op Voltooien.
+Voltooiing van de InstallAware Wizard voor $TITLE$
+$SUCCESS$
+$REMOVE$
+U hebt de InstallAware Wizard voor $TITLE$ voltooid.
+De InstallAware Wizard voor $TITLE$ is mislukt: "$LASTERROR$". Controleer uw instellingen en probeer het opnieuw.
+U hebt de InstallAware Wizard voor $TITLE$ voltooid. Om de wijzigingen toe te passen, de wizard moet Windows herstarten. Om Windows automatisch te herstarten, klik op Voltooien. Als u wilt de computer later herstarten, schakel het selectievakje Herstart nu uit en klik op Voltooien.
+De InstallAware Wizard voor $TITLE$ is geannuleerd. U kunt de wizard later nogmaals uitvoeren om de installatie te voltooien.
+U hebt de InstallAware Wizard voor $TITLE$ voltooid.
+$TITLE$
+Annuleren
+< &Terug
+Volge&nde >
+Ik ga &akkoord met de voorwaarden van de licentieovereenkomst
+$GLASS$
+InstallAware
+InstallAware
+Lees zorgvuldig de volgende licentieovereenkomst. 
+Licentieovereenkomst 
+$TITLE$
+Annuleren
+< &Terug
+Volge&nde >
+&Wijzigen Beschikbare opties 
+&Herstel Toepassing 
+&Deïnstalleer 
+$GLASS$
+InstallAware
+Om verder te gaan, klik op Volgende.
+Welkom op de InstallAware Wizard voor $TITLE$
+Kies een onderhoudsoperatie voor uitvoering:
+$TITLE$
+Annuleren
+< &Terug
+Volge&nde >
+$GLASS$
+InstallAware
+InstallAware
+Om verder te gaan, klik op Volgende.
+Gebruikseisen
+De volgende voorschriften moeten worden verwerkt voordat u met de installatie begint.
+$PRELIST$
+$TITLE$
+Annuleren
+< &Terug
+Volge&nde >
+Voortgang
+$GLASS$
+InstallAware
+InstallAware
+Status:
+Installatie $TITLE$
+De geselecteerde programmafuncties worden geconfigureerd.
+$REMOVE$
+Gelieve even te wachten terwijl de InstallAware Wizard Deïnstalleert $TITLE$. Dit kan enkele minuten duren.
+Gelieve even te wachten terwijl de InstallAware Wizard installeert $TITLE$. Dit kan enkele minuten duren.
+$TITLE$
+Annuleren
+< &Terug
+Volge&nde >
+Voortgang
+$GLASS$
+InstallAware
+InstallAware
+Status:
+Installatie van $TITLE$ Vereisten
+Vereisten voor het programma worden geconfigureerd.
+Gelieve even te wachten terwijl de InstallAware Wizard installeert $TITLE$ vereisten. Dit kan enkele minuten duren.
+$TITLE$
+Annuleren
+< &Terug
+Volge&nde >
+$GLASS$
+InstallAware
+InstallAware
+Lees zorgvuldig de volgende programma-informatie. 
+Belangrijke informatie 
+$TITLE$
+Annuleren
+< &Terug
+Volge&nde >
+
+
+$GLASS$
+InstallAware
+InstallAware
+Klant Registratie 
+Geef informatie over uzelf. 
+&Organisatie: 
+Gebr&uikersnaam: 
+$TITLE$
+Volge&nde >
+< &Terug
+Annuleren
+
+
+
+
+
+
+
+$GLASS$
+InstallAware
+InstallAware
+Klant Registratie 
+Geef de volgende informatie. 
+Gebr&uikersnaam: 
+&Organisatie: 
+&Product Licentiecode: 
+$TITLE$
+Annuleren
+< &Terug
+Volge&nde >
+&Volledig 
+C&ompact
+Aangepa&st
+$GLASS$
+InstallAware
+InstallAware
+Kies de programmafuncties die u wilt installeren. Aanbevolen voor gevorderde gebruikers. 
+Programma zal worden geïnstalleerd met minimaal vereiste functies. Dit kan einige toepassingsfunctionaliteit uitschakelen. 
+Alle programmafuncties worden geïnstalleerd. Deze optie vereist de meeste schijfruimte. 
+Het type van opstelling
+Kies het setup type dat het beste bij uw behoeften past. 
+Selecteer een installatietype. 
+$TITLE$
+Annuleren
+< &Terug
+Volge&nde >
+$GLASS$
+InstallAware
+- Klik op Annuleren om af te sluiten 
+Voltooiing van de InstallAware Wizard voor $TITLE$
+De InstallAware Wizard is nu klaar om $TITLE$ op deze computer te configureren.
+- Klik op Volgende om te beginnen met de configuratie 
+- Klik op Terug om instellingen te wijzigen 
+$TITLE$
+Annuleren
+< &Terug
+Volge&nde >
+Alleen voor &mij (huidige gebruiker) 
+&Iedereen die gebruik maakt van deze computer (alle gebruikers) 
+
+$GLASS$
+InstallAware
+InstallAware
+Selecteer Programma Map 
+Selecteer een locatie waar u nieuwe snelkoppelingen wenst aan te maken. 
+Setup zal een programma snelkoppelingen naar de Programmamap toevoegen die hieronder opgenomen. U kunt een nieuwe mapnaam creeren, of de voorgestelde naam aannemen. Klik op Volgende om verder te gaan. 
+&Programma Map: 
+$ISNT$
+Installeer deze toepassing voor:
+$TITLE$
+Annuleren
+< &Terug
+Volge&nde >
+$GLASS$
+InstallAware
+Om verder te gaan, klik op Volgende.
+WAARSCHUWING: Dit programma is beschermd door auteursrecht en internationale verdragen.
+De InstallAware Wizard zal $TITLE$ op uw computer installeren.
+Welkom op de InstallAware Wizard voor $TITLE$
+$TITLE$
+Annuleren
+< &Terug
+Volge&nde >
+$GLASS$
+InstallAware
+InstallAware
+De stap van de tovenaar
+Omschrijving voor Wizard Step
+FALSE
+
+TRUE
+$PRELIST$$NEWLINE$Vorige versie deïnstallatie
+
+
+FALSE
+$SHORTCUTFILES$
+$PROGRAMFILES$\$TITLE$
+$TITLE$
+Installatie $TITLE$
+
+
+$SHORTCUTFILESALL$\$STARTMENU$
+$SHORTCUTFILES$\$STARTMENU$
+Uninstalling $TITLE$
+100
+100
+Deïnstalleer #TITLE#
+Removes this EggSoft product
+Default
+Omschrijving voor #TITLE#
+Default
+$TITLE$ Opstelling
+Oude versie van $TITLE$ is onmogelijk te deïnstalleren. Deïnstaleer het uzelf met behulp van Controlepaneel om Programma's toe te voegen en te verwijderen voordat u dit product probeert te installeren.$NEWLINE$$NEWLINE$$ERROROLD$
+$TITLE$ Opstelling
+U moet de computer herstarten voordat $TITLE$ Setup kan doorgaan.$NEWLINE$$NEWLINE$Sla uw werk op in alle gebruikte programma's en klik OK om uw computer te herstarten. Setup zal hervat worden wanneer uw computer opgestart wordt.$NEWLINE$$NEWLINE$Als u op Annuleren klikt, wordt Setup verlaten. Om te installeren zou U Setup opnieuw later uitvoeren $TITLE$.
+$TITLE$ Setup Fout
+Dit product vereist ten minste een 64 bit besturingssysteem.$NEWLINE$$NEWLINE$Setup kan niet doorgaan.
+Default
+Default
+BUILDMODE
+PATCH
+NEEDSUPGRADE
+TRUE
+PREREQ
+FALSE
+WIZARD
+CANCEL
+BUILDMODE
+PATCH
+NEEDSUPGRADE
+TRUE
+REMOVEOLD
+ERROR
+REMOVEOLD
+REBOOT
+REBOOTNOW
+OK
+SHORTCUTFILESALL
+
+MAINTENANCE
+TRUE
+BUILDMODE
+PATCH
+WIZARD
+CANCEL
+BUILDMODE
+PATCH
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+MINIMUM
+TRUE
+COMPLETE
+TRUE
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+BUILDMODE
+PATCH
+WIZARD
+CANCEL
+ALLUSERS
+TRUE
+REMOVE
+TRUE
+SELECTED
+TRUE
+BUILDMODE
+PATCH
+ADVERTISE
+TRUE
+SILENT
+FALSE
+REBOOTCOMPUTER
+TRUE
+SUCCESS
+REBOOT
+RUNAPP
+TRUE
+REMOVE
+FALSE
+SUCCESS
+COMPLETE
+CHECKSYSTEM
+TRUE
+$PRELIST$$NEWLINE$Microsoft Windows Installer 2.0
+TRUE
+TRUE
+MSI20
+FALSE
+Installatie van Microsoft Windows Installer 2.0
+MARQUEE
+
+$TITLE$ Opstelling
+Windows Installer 2.0 kan niet worden geïnstalleerd. Gebruik Windows Update om handmatig deze update op uw systeem te installeren.$NEWLINE$$NEWLINE$$TITLE$ Setup kan niet doorgaan.
+$TITLE$ Opstelling
+U moet de computer herstarten voordat $TITLE$ Setup kan doorgaan.$NEWLINE$$NEWLINE$Sla uw werk op in alle gebruikte programma's en klik OK om uw computer te herstarten. Setup zal hervat worden wanneer uw computer opgestart wordt.$NEWLINE$$NEWLINE$Als u op Annuleren klikt, wordt Setup verlaten. Om te installeren zou U Setup opnieuw later uitvoeren $TITLE$.
+$TITLE$ Opstelling
+U moet de computer herstarten voordat $TITLE$ Setup kan doorgaan.$NEWLINE$$NEWLINE$Sla uw werk op in alle gebruikte programma's en klik OK om uw computer te herstarten. Setup zal hervat worden wanneer uw computer opgestart wordt.$NEWLINE$$NEWLINE$Als u op Annuleren klikt, wordt Setup verlaten. Om te installeren zou U Setup opnieuw later uitvoeren $TITLE$.
+MSI20
+ERROR
+REBOOTNOW
+OK
+MSI20
+REBOOT
+MSI20
+FALSE
+PLATFORM
+FALSE
+REBOOTNOW
+OK

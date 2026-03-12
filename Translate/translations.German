@@ -1,0 +1,359 @@
+﻿$TITLE$
+&Weiter >
+< &Zurück
+Abbrechen
+BenötigterSpeicherplatz
+VerbleibenderSpeicherplatz
+Beschreibung
+Restdauer:
+Erforderlich:
+ Feature-Beschreibung 
+InstallAware
+$GLASS$
+InstallAware
+Benutzerdefinierte Installation
+Wählen Sie die Programm-Funktionen, die Sie installieren möchten.
+Klicken Sie auf ein Symbol in der Liste, um die Installationsart einer Funktion zu ändern.
+$TITLE$
+Abbrechen
+< &Zurück
+&Weiter >
+
+&Ändern...
+BenötigterSpeicherplatz
+VerbleibenderSpeicherplatz
+Benötigter Speicherplatz:
+Verbleibender Speicherplatz:
+ Zielordner 
+$GLASS$
+InstallAware
+InstallAware
+Zielordner
+Wählen Sie den Ordner, in dem das Setup die Dateien installiert.
+Installiere $TITLE$ nach:
+$TITLE$
+Abbrechen
+< &Zurück
+&Finish
+&Jetzt $TITLE$ starten
+&Neustart
+$GLASS$
+InstallAware
+Klicken Sie auf Fertig stellen, um den Assistenten zu schließen.
+Fertigstellen des InstallAware Assistenten für $TITLE$
+$SUCCESS$
+$REMOVE$
+Sie haben den InstallAware Assistenten für $TITLE$ erfolgreich fertig gestellt.
+Der InstallAware Assistent für $TITLE$ ist fehlgeschlagen: "$LASTERROR$". Bitte überprüfen Sie Ihre Einstellungen und versuchen Sie es erneut.
+Sie haben den InstallAware Assistenten für $TITLE$ rfolgreich fertig gestellt. Um die Änderungen zu übernehmen startet der Assistent Windows neu. Um Windows automatisch neu zu starten, klicken Sie auf Fertig stellen. Wenn Sie den Computer später neu starten möchten, deaktivieren Sie das Kontrollkästchen Jetzt neu starten, und klicken Sie anschließend auf Fertig stellen.
+Der InstallAware Assistent für $TITLE$ wurde abgebrochen. Sie können den Assistenten zu einem späteren Zeitpunkt erneut starten, um das Setup fertig zu stellen.
+Sie haben den InstallAware Assistenten für $TITLE$ erfolgreich fertig gestellt.
+$TITLE$
+Abbrechen
+< &Zurück
+&Weiter >
+Ich habe die Lizenzvereinbarung gelesen und &akzeptiere die Bedingungen
+$GLASS$
+InstallAware
+InstallAware
+Bitte lesen Sie die folgende Lizenzvereinbarung.
+Lizenzvereinbarung
+$TITLE$
+Abbrechen
+< &Zurück
+&Weiter >
+&Ändern der verfügbaren Optionen
+Re&parieren der Anwendung
+&Deinstallieren
+$GLASS$
+InstallAware
+Um fortzufahren, klicken Sie auf Weiter.
+Willkommen beim InstallAware Assistenten für $TITLE$
+Bitte wählen Sie einen Wartungsbetrieb:
+$TITLE$
+Abbrechen
+< &Zurück
+&Weiter >
+$GLASS$
+InstallAware
+InstallAware
+Um fortzufahren, klicken Sie auf Weiter.
+Anwendungsvoraussetzungen
+Die folgenden Anforderungen müssen erfüllt sein, bevor das Setup gestartet werden kann.
+$PRELIST$
+$TITLE$
+Abbrechen
+< &Zurück
+&Weiter >
+Fortschritt
+$GLASS$
+InstallAware
+InstallAware
+Status:
+Installiere $TITLE$
+Die ausgewählten Programm-Funktionen werden konfiguriert.
+$REMOVE$
+Bitte warten Sie, während der InstallAware Assistent $TITLE$ deinstalliert. Dies kann einige Minuten dauern.
+Bitte warten Sie, während der InstallAware Assistent $TITLE$ deinstalliert. Dies kann einige Minuten dauern.
+$TITLE$
+Abbrechen
+< &Zurück
+&Weiter >
+Fortschritt
+$GLASS$
+InstallAware
+InstallAware
+Status:
+Installation $TITLE$ der erforderlichen Elemente
+Das Programm Anforderungen sind konfiguriert wird.
+Bitte warten Sie, während der InstallAware Assistent $TITLE$ die erforderlichen Elemente installiert. Dies kann einige Minuten dauern.
+$TITLE$
+Abbrechen
+< &Zurück
+&Weiter >
+$GLASS$
+InstallAware
+InstallAware
+Bitte lesen Sie sorgfältig die folgenden Informationen.
+Wichtige Informationen
+$TITLE$
+Abbrechen
+< &Zurück
+&Weiter >
+
+
+$GLASS$
+InstallAware
+InstallAware
+Kunden-Anmeldung
+Bitte geben Sie Ihre Informationen ein.
+&Firma:
+&Benutzername:
+$TITLE$
+&Weiter >
+< &Zurück
+Abbrechen
+
+
+
+
+
+
+
+$GLASS$
+InstallAware
+InstallAware
+Kunden-Anmeldung
+Bitte geben Sie die folgenden Informationen ein.
+&Benutzername:
+&Firma:
+&Produkt-Lizenzschlüssel:
+$TITLE$
+Abbrechen
+< &Zurück
+&Weiter >
+&Vollständig
+K&ompakt
+Be&nutzerdefiniert
+$GLASS$
+InstallAware
+InstallAware
+Wählen Sie die Funktionen, die Sie installieren möchten. Empfohlen für fortgeschrittene Benutzer.
+Das Programm wird mit den minimalen benötigten Funktionen installiert. Dies kann zu Beeinträchtigungen anderer Anwendungen führen.
+Alle Programmfeatures werden installiert. Diese Option benötigt den meisten Speicherplatz.
+Setup-Typ
+Wählen Sie den Setup-Typ, der am besten geeignet ist.
+Bitte wählen Sie eine Setup-Typ.
+$TITLE$
+Abbrechen
+< &Zurück
+&Weiter >
+$GLASS$
+InstallAware
+- Klicken Sie auf Abbrechen, um das Menü zu verlassen
+Fertigstellen des InstallAware Assistenten für $TITLE$
+Der InstallAware Assistent ist nun bereit zur Konfiguration von $TITLE$ auf diesem Computer.
+- Klicken Sie auf Weiter, um mit der Konfiguration zu beginnen
+- Klicken Sie auf Zurück, um die Einstellungen zu ändern
+$TITLE$
+Abbrechen
+< &Zurück
+&Weiter >
+Nur für &mich (aktueller Benutzer)
+&Jeder, der diesen Computer verwendet (alle Benutzer)
+
+$GLASS$
+InstallAware
+InstallAware
+Programmordner auswählen
+Wählen Sie die Stelle, an der Sie neue Verknüpfungen erstellen möchten.
+Das Setup-Programm wird Verknüpfungen zu dem unten aufgeführten Programm-Ordner hinzufügen. Sie können einen neuen Ordner-Namen eingeben, oder Sie bestätigen den vorgeschlagenen Namen. Klicken Sie auf Weiter, um fortzufahren.
+&Programmordner:
+$ISNT$
+Installation dieser Anwendung für:
+$TITLE$
+Abbrechen
+< &Zurück
+&Weiter >
+$GLASS$
+InstallAware
+Um fortzufahren, klicken Sie auf Weiter.
+WARNUNG: Dieses Programm ist durch Urheberrechtsgesetze und internationale Verträge geschützt.
+Der InstallAware Assistent installiert $TITLE$ auf Ihrem Computer.
+Willkommen beim InstallAware Assistenten für $TITLE$
+$TITLE$
+Abbrechen
+< &Zurück
+&Weiter >
+$GLASS$
+InstallAware
+InstallAware
+Schritt-für-Schritt-Assistent
+Beschreibung für den Schritt-für-Schritt-Assistenten
+FALSE
+
+TRUE
+$PRELIST$$NEWLINE$Deinstallation der vorherigen Version
+
+
+FALSE
+$SHORTCUTFILES$
+$PROGRAMFILES$\$TITLE$
+$TITLE$
+Installiere $TITLE$
+
+
+$SHORTCUTFILESALL$\$STARTMENU$
+$SHORTCUTFILES$\$STARTMENU$
+Uninstalling $TITLE$
+100
+100
+Deinstallation von #TITLE#
+Removes this EggSoft product
+Default
+Beschreibung für das #TITLE#
+Default
+$TITLE$ Aufbau
+Die alte Version von $TITLE$ kann nicht deinstalliert werden. Bitte deinstallieren Sie es manuell mit der Hinzufügen/Entfernen Funktion in der Systemsteuerung, bevor Sie dieses Produkt installieren.$NEWLINE$$NEWLINE$$ERROROLD$
+$TITLE$ Aufbau
+Ihr Computer muss neu gestartet werden, bevor das $TITLE$ Setup fortsesetzt werden kann.$NEWLINE$$NEWLINE$Bitte speichern Sie Ihre Arbeit in allen geöffneten Programmen und klicken Sie OK, um den Computer neu zu starten. Das Setup wird fortgesetzt, sobald Ihr Computer neu startet.$NEWLINE$$NEWLINE$Wenn Sie auf ABRECHEN klicken, wird das Setup beendet. Sie müssen für die Installation das Setup-Programm erneut zu einem späteren Zeitpunkt starten $TITLE$.
+$TITLE$ Setup-Fehler
+Dieses Produkt erfordert mindestens ein 64-Bit-Betriebssystem system.$NEWLINE$$NEWLINE$Das Setup kann nicht fortgesetzt werden.
+Default
+Default
+BUILDMODE
+PATCH
+NEEDSUPGRADE
+TRUE
+PREREQ
+FALSE
+WIZARD
+CANCEL
+BUILDMODE
+PATCH
+NEEDSUPGRADE
+TRUE
+REMOVEOLD
+ERROR
+REMOVEOLD
+REBOOT
+REBOOTNOW
+OK
+SHORTCUTFILESALL
+
+MAINTENANCE
+TRUE
+BUILDMODE
+PATCH
+WIZARD
+CANCEL
+BUILDMODE
+PATCH
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+MINIMUM
+TRUE
+COMPLETE
+TRUE
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+BUILDMODE
+PATCH
+WIZARD
+CANCEL
+ALLUSERS
+TRUE
+REMOVE
+TRUE
+SELECTED
+TRUE
+BUILDMODE
+PATCH
+ADVERTISE
+TRUE
+SILENT
+FALSE
+REBOOTCOMPUTER
+TRUE
+SUCCESS
+REBOOT
+RUNAPP
+TRUE
+REMOVE
+FALSE
+SUCCESS
+COMPLETE
+CHECKSYSTEM
+TRUE
+$PRELIST$$NEWLINE$Microsoft Windows Installer 2.0
+TRUE
+TRUE
+MSI20
+FALSE
+Installiere Microsoft Windows Installer 2.0
+MARQUEE
+
+$TITLE$ Aufbau
+Windows Installer 2.0 konnte nicht installiert werden. Bitte verwenden Sie Windows Update, um dieses Update manuell auf Ihrem System zu installieren.$NEWLINE$$NEWLINE$$TITLE$ Das Setup kann nicht fortgesetzt werden.
+$TITLE$ Aufbau
+Ihr Computer muss neu gestartet werden, bevor das $TITLE$ Setup fortsesetzt werden kann.$NEWLINE$$NEWLINE$Bitte speichern Sie Ihre Arbeit in allen geöffneten Programmen und klicken Sie OK, um den Computer neu zu starten. Das Setup wird fortgesetzt, sobald Ihr Computer neu startet.$NEWLINE$$NEWLINE$Wenn Sie auf ABRECHEN klicken, wird das Setup beendet. Sie müssen für die Installation das Setup-Programm erneut zu einem späteren Zeitpunkt starten $TITLE$.
+$TITLE$ Aufbau
+Ihr Computer muss neu gestartet werden, bevor das $TITLE$ Setup fortsesetzt werden kann.$NEWLINE$$NEWLINE$Bitte speichern Sie Ihre Arbeit in allen geöffneten Programmen und klicken Sie OK, um den Computer neu zu starten. Das Setup wird fortgesetzt, sobald Ihr Computer neu startet.$NEWLINE$$NEWLINE$Wenn Sie auf ABRECHEN klicken, wird das Setup beendet. Sie müssen für die Installation das Setup-Programm erneut zu einem späteren Zeitpunkt starten $TITLE$.
+MSI20
+ERROR
+REBOOTNOW
+OK
+MSI20
+REBOOT
+MSI20
+FALSE
+PLATFORM
+FALSE
+REBOOTNOW
+OK

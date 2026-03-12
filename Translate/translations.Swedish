@@ -1,0 +1,359 @@
+﻿$TITLE$
+&Nästa >
+< &Bakåt
+Annullera
+TotaltKrävtUtrymme
+ÅterståendeUtrymme
+Beskrivning
+Återstående:
+Erfordrat:
+ Egenskapsbeskrivning 
+InstallAware
+$GLASS$
+InstallAware
+Allmän installering
+Välj de programegenskaper du skulle vilja installera.
+Klicka på en ikon i listan nedanför för att ändra hur en egenskap installeras.
+$TITLE$
+Annullera
+< &Bakåt
+&Nästa >
+
+&Ändra...
+TotaltKrävtUtrymme
+ÅterståendeUtrymme
+Erfordrat diskutrymme:
+Återstående diskutrymme:
+ Målmapp 
+$GLASS$
+InstallAware
+InstallAware
+Målmapp
+Välj den mapp där filerna ska installeras.
+Installera $TITLE$ till:
+$TITLE$
+Annullera
+< &Bakåt
+&Finish
+&Kör $TITLE$ nu
+&Starta om nu
+$GLASS$
+InstallAware
+För att stänga installationsguiden, klicka på Slutför.
+Avsluta InstallAware installationsguiden för $TITLE$
+$SUCCESS$
+$REMOVE$
+Du har framgångsrikt avslutat InstallAware installationsguiden för $TITLE$.
+Installationsguiden InstallAware för $TITLE$ har misslyckats: "$LASTERROR$". Vänligen kontrollera dina inställningar och försök igen.
+Du har framgångsrikt avslutat InstallAware installationsguiden för $TITLE$. För att ändringarna ska gälla måste installationsguiden starta om Windows. För att starta om Windows automatiskt, klicka på Slutför. Om du vill starta om senare ska du avmarkera rutan där det står starta om nu och klicka sedan på Slutför. 
+Installationsguiden InstallAware för $TITLE$ annullerades. Du kan köra installationsguiden igen vid ett senare tillfälle för att slutföra installationen.
+Du har framgångsrikt avslutat InstallAware installationsguiden för $TITLE$.
+$TITLE$
+Annullera
+< &Bakåt
+&Nästa >
+Jag &accepterar villkoren i licensavtalet
+$GLASS$
+InstallAware
+InstallAware
+Vänligen läs noga igenom följande licensavtal.
+Licensavtal
+$TITLE$
+Annullera
+< &Bakåt
+&Nästa >
+&Modifiera tillgängliga valmöjligheter
+Re&parera applikation
+&Avinstallera
+$GLASS$
+InstallAware
+För att fortsätta, klicka på Nästa.
+Välkommen till InstallAware installationsguiden för $TITLE$
+Vänligen välj en underhållshandling att genomföra:
+$TITLE$
+Annullera
+< &Bakåt
+&Nästa >
+$GLASS$
+InstallAware
+InstallAware
+För att fortsätta, klicka på Nästa.
+Applikationskrav
+Följande krav måste hanteras innan installationen startas.
+$PRELIST$
+$TITLE$
+Annullera
+< &Bakåt
+&Nästa >
+Avancemangsbeteckning
+$GLASS$
+InstallAware
+InstallAware
+Status:
+Installerar $TITLE$
+Programegenskaperna du valde konfigureras.
+$REMOVE$
+Vänligen vänta medan InstallAware installationsguiden avinstallerar $TITLE$. Detta kan ta flera minuter.
+Vänligen vänta medan InstallAware installationsguiden installerar $TITLE$. Detta kan ta flera minuter.
+$TITLE$
+Annullera
+< &Bakåt
+&Nästa >
+Avancemangsbeteckning
+$GLASS$
+InstallAware
+InstallAware
+Status:
+Installerar $TITLE$ Krav
+Programkraven konfigureras.
+Vänligen vänta medan InstallAware installationsguiden installerar $TITLE$ krav. Detta kan ta flera minuter.
+$TITLE$
+Annullera
+< &Bakåt
+&Nästa >
+$GLASS$
+InstallAware
+InstallAware
+Vänligen läs igenom följande programinformation noga.
+Viktig information
+$TITLE$
+Annullera
+< &Bakåt
+&Nästa >
+
+
+$GLASS$
+InstallAware
+InstallAware
+Kundregistrering
+Vänligen fyll i information om dig själv.
+&Organisation:
+&Användarnamn:
+$TITLE$
+&Nästa >
+< &Bakåt
+Annullera
+
+
+
+
+
+
+
+$GLASS$
+InstallAware
+InstallAware
+Kundregistrering
+Vänligen fyll i följande information.
+&Användarnamn:
+&Organisation:
+&Produktens licensnyckel:
+$TITLE$
+Annullera
+< &Bakåt
+&Nästa >
+&Fullständig
+&Kompakt
+&Allmän
+$GLASS$
+InstallAware
+InstallAware
+Välj vilka programegenskaper du vill installera. Rekommenderas för avancerade användare.
+Programmet kommer att installeras med minimalt erfordrade egenskaper. Detta kan ta bort vissa applikationsfunktioner.
+Alla programegenskaper kommer att installeras. Detta val kräver mest diskutrymme.
+Inställningstyp
+Välj den installationstyp som är bäst för dina behov.
+Vänligen välj en installationstyp.
+$TITLE$
+Annullera
+< &Bakåt
+&Nästa >
+$GLASS$
+InstallAware
+- Klicka Annullera för att avsluta
+Avsluta InstallAware installationsguiden för $TITLE$
+Installationsguiden InstallAware är nu redo att konfigurera $TITLE$ på denna dator.
+- Klicka Nästa för att börja konfigurationen
+- Klicka Bakåt för att ändra inställningarna
+$TITLE$
+Annullera
+< &Bakåt
+&Nästa >
+Bara för &mig (nuvarande användare)
+&Alla som använder denna dator (alla användare)
+
+$GLASS$
+InstallAware
+InstallAware
+Välj programmapp
+Välj den plats där du skulle vilja skapa nya genvägar.
+Installationen kommer att lägga till genvägar till programmappen som finns angiven. Du kan skriva ett nytt mappnamn eller acceptera det föreslagna namnet. Klicka på Nästa för att fortsätta.
+&Programmapp:
+$ISNT$
+Installera denna applikation för:
+$TITLE$
+Annullera
+< &Bakåt
+&Nästa >
+$GLASS$
+InstallAware
+För att fortsätta, klicka på Nästa.
+VARNING: Detta program är skyddat av copyrightlag och internationella bestämmelser.
+Installationsguiden InstallAware kommer att installera $TITLE$ på din dator.
+Välkommen till InstallAware installationsguiden för $TITLE$
+$TITLE$
+Annullera
+< &Bakåt
+&Nästa >
+$GLASS$
+InstallAware
+InstallAware
+Installationsguide steg
+Beskrivning över installationsguide steg
+FALSE
+
+TRUE
+$PRELIST$$NEWLINE$Avinstallation av tidigare version
+
+
+FALSE
+$SHORTCUTFILES$
+$PROGRAMFILES$\$TITLE$
+$TITLE$
+Installerar $TITLE$
+
+
+$SHORTCUTFILESALL$\$STARTMENU$
+$SHORTCUTFILES$\$STARTMENU$
+Uninstalling $TITLE$
+100
+100
+Avinstallera #TITLE#
+Removes this EggSoft product
+Default
+Beskrivning för #TITLE#
+Default
+$TITLE$ Installation
+Kan inte avinstallera gamla versioner av $TITLE$. Vänligen avinstallera dem själv genom att använda Kontrollpanelens Lägg till-Ta bort program innan du försöker att installera denna produkt.$NEWLINE$$NEWLINE$$ERROROLD$
+$TITLE$ Installation
+Din dator behöver startas om innan $TITLE$ installationen kan fortsätta.$NEWLINE$$NEWLINE$Vänligen spara ditt arbete i alla program som används och klicka på OK för att starta om datorn. Installationen kommer att fortsätta när datorn startar om.$NEWLINE$$NEWLINE$Om du klickar på ANNULLERA kommer installationen att avslutas. Du kommer att behöva köra installationen igen vid ett senare tillfälle för att installera $TITLE$.
+$TITLE$ Installationsfel
+Denna produkt kräver minst ett 64 bit operativsystem.$NEWLINE$$NEWLINE$Installationen kan inte fortsätta.
+Default
+Default
+BUILDMODE
+PATCH
+NEEDSUPGRADE
+TRUE
+PREREQ
+FALSE
+WIZARD
+CANCEL
+BUILDMODE
+PATCH
+NEEDSUPGRADE
+TRUE
+REMOVEOLD
+ERROR
+REMOVEOLD
+REBOOT
+REBOOTNOW
+OK
+SHORTCUTFILESALL
+
+MAINTENANCE
+TRUE
+BUILDMODE
+PATCH
+WIZARD
+CANCEL
+BUILDMODE
+PATCH
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+MINIMUM
+TRUE
+COMPLETE
+TRUE
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+WIZARD
+CANCEL
+WIZARD
+BACK
+BUILDMODE
+PATCH
+WIZARD
+CANCEL
+ALLUSERS
+TRUE
+REMOVE
+TRUE
+SELECTED
+TRUE
+BUILDMODE
+PATCH
+ADVERTISE
+TRUE
+SILENT
+FALSE
+REBOOTCOMPUTER
+TRUE
+SUCCESS
+REBOOT
+RUNAPP
+TRUE
+REMOVE
+FALSE
+SUCCESS
+COMPLETE
+CHECKSYSTEM
+TRUE
+$PRELIST$$NEWLINE$Microsoft Windows Installer 2.0
+TRUE
+TRUE
+MSI20
+FALSE
+Installerar Microsoft Windows Installer 2.0
+MARQUEE
+
+$TITLE$ Installation
+Windows Installer 2.0 Kunde inte installeras. Vänligen använd Windows Update för att installera den här uppdateringen manuellt på ditt system.$NEWLINE$$NEWLINE$$TITLE$ Installationen kan inte fortsätta.
+$TITLE$ Installation
+Din dator behöver startas om innan $TITLE$ installationen kan fortsätta.$NEWLINE$$NEWLINE$Vänligen spara ditt arbete i alla program som används och klicka på OK för att starta om datorn. Installationen kommer att fortsätta när datorn startar om.$NEWLINE$$NEWLINE$Om du klickar på ANNULLERA kommer installationen att avslutas. Du kommer att behöva köra installationen igen vid ett senare tillfälle för att installera $TITLE$.
+$TITLE$ Installation
+Din dator behöver startas om innan $TITLE$ installationen kan fortsätta.$NEWLINE$$NEWLINE$Vänligen spara ditt arbete i alla program som används och klicka på OK för att starta om datorn. Installationen kommer att fortsätta när datorn startar om.$NEWLINE$$NEWLINE$Om du klickar på ANNULLERA kommer installationen att avslutas. Du kommer att behöva köra installationen igen vid ett senare tillfälle för att installera $TITLE$.
+MSI20
+ERROR
+REBOOTNOW
+OK
+MSI20
+REBOOT
+MSI20
+FALSE
+PLATFORM
+FALSE
+REBOOTNOW
+OK
