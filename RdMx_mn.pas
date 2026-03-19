@@ -4,7 +4,7 @@ interface
 
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
-  System.Math,
+  System.Math, IniFiles, System.IOUtils,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
   FMXTee.Commander, FMXTee.Engine, FMXTee.Procs, FMXTee.Chart, FMX.ListBox,
   FMX.Edit, FMX.TabControl, FMX.Menus, FMX.Controls.Presentation, FMXTee.Series,
@@ -74,9 +74,7 @@ type
     Panel17: TPanel;
     ChartInitial: TChart;
     TeeCommanderInitial: TTeeCommander;
-    pChartChemistry: TPanel;
-    Panel19: TPanel;
-    Panel21: TPanel;
+    pChartChemistryT2DM: TPanel;
     pChartEpsilon: TPanel;
     Panel23: TPanel;
     TeeCommanderEpsilon: TTeeCommander;
@@ -122,8 +120,6 @@ type
     Label18: TLabel;
     Label19: TLabel;
     Label20: TLabel;
-    eMelt_SmNd_Age2: TEdit;
-    Label21: TLabel;
     Label22: TLabel;
     eMix_Sm_Age2: TEdit;
     eMix_Nd_Age1: TEdit;
@@ -136,7 +132,6 @@ type
     lMixAFCYY_Age2: TLabel;
     eMelt_Sm_Age1: TEdit;
     eMix_Sm_Age1: TEdit;
-    eMelt_SmNd_Age1: TEdit;
     lMixAFCYY_Age1: TLabel;
     lMixAFCXX_Age1: TLabel;
     eProportionMeltDefined: TEdit;
@@ -236,12 +231,33 @@ type
     eKd_YY_Cpx: TEdit;
     eKd_YY_Opx: TEdit;
     eKd_YY_Ol: TEdit;
-    ChartChemistry: TChart;
-    PointSeries4: TPointSeries;
-    PointSeries5: TPointSeries;
-    PointSeries6: TPointSeries;
-    PointSeries7: TPointSeries;
-    TeeCommander1: TTeeCommander;
+    eMassAssimilatedMassCrystallised: TEdit;
+    Label55: TLabel;
+    eRatioY_melt_Age2: TEdit;
+    eRatioY_melt_Age1: TEdit;
+    Label56: TLabel;
+    eProportionMelt: TEdit;
+    eCalculatedProportionJuvenile: TEdit;
+    Label57: TLabel;
+    eeRatioY: TEdit;
+    Series15: TLineSeries;
+    Series16: TLineSeries;
+    Series19: TLineSeries;
+    Series20: TLineSeries;
+    eMixRatioY_m_Age2: TEdit;
+    Label14: TLabel;
+    Label15: TLabel;
+    Label24: TLabel;
+    eMaximumRatioAge2: TEdit;
+    eMinimumRatioAge2: TEdit;
+    mi_Options: TMenuItem;
+    mi_Options_RandomPoints: TMenuItem;
+    Series23: TPointSeries;
+    Series24: TPointSeries;
+    eMaximumRatioAge1: TEdit;
+    eMinimumRatioAge1: TEdit;
+    Label25: TLabel;
+    Label26: TLabel;
     ChartEpsilon: TChart;
     PointSeries1: TPointSeries;
     PointSeries2: TPointSeries;
@@ -253,28 +269,37 @@ type
     LineSeries4: TLineSeries;
     LineSeries5: TLineSeries;
     LineSeries6: TLineSeries;
-    eMassAssimilatedMassCrystallised: TEdit;
-    Label55: TLabel;
+    LineSeries7: TLineSeries;
+    LineSeries8: TLineSeries;
+    LineSeries9: TLineSeries;
+    LineSeries10: TLineSeries;
+    PointSeries9: TPointSeries;
+    PointSeries10: TPointSeries;
+    pChartChemistry: TPanel;
+    Panel19: TPanel;
+    TeeCommanderChemistry: TTeeCommander;
+    Panel21: TPanel;
+    ChartChemistry: TChart;
+    PointSeries4: TPointSeries;
+    PointSeries5: TPointSeries;
+    PointSeries6: TPointSeries;
+    PointSeries7: TPointSeries;
     Series11: TLineSeries;
-    Series12: TLineSeries;
     Series13: TLineSeries;
+    Series12: TLineSeries;
     Series14: TLineSeries;
-    eRatioY_melt_Age2: TEdit;
-    eRatioY_melt_Age1: TEdit;
-    Label56: TLabel;
-    eProportionMelt: TEdit;
-    eCalculatedProportionJuvenile: TEdit;
-    Label57: TLabel;
-    eeRatioY: TEdit;
-    Series15: TLineSeries;
-    Series16: TLineSeries;
+    Splitter3: TSplitter;
+    pT2DM: TPanel;
+    ChartT2DM: TChart;
+    PointSeries11: TPointSeries;
+    PointSeries12: TPointSeries;
+    PointSeries13: TPointSeries;
+    PointSeries14: TPointSeries;
+    TeeCommanderT2DM: TTeeCommander;
     Series17: TLineSeries;
     Series18: TLineSeries;
-    Series19: TLineSeries;
-    Series20: TLineSeries;
-    Series21: TLineSeries;
-    Series22: TLineSeries;
-    eMixRatioY_m_Age2: TEdit;
+    eKc: TEdit;
+    Label27: TLabel;
     procedure bCalculateSiO2Click(Sender: TObject);
     procedure cbIsotopeSystemChange(Sender: TObject);
     procedure eKd_YY_OlChange(Sender: TObject);
@@ -287,14 +312,25 @@ type
     procedure mi_CalculateClick(Sender: TObject);
     procedure mi_File_ExitClick(Sender: TObject);
     procedure mi_Help_AboutClick(Sender: TObject);
+    procedure mi_Options_RandomPointsClick(Sender: TObject);
   private
     { Private declarations }
+    const
+      MaxPoints = 20;
+
+    type
+      TPointsArray = array[1..2,1..MaxPoints,1..4] of double;
+
+    procedure GetIniFile;
+    procedure SetIniFile;
+    procedure PopulateFields(tIsotopeSystem : string);
     procedure CalculateCHURValues(Age : double; DC, RatioX, RatioY : double; var CHURY : double);
     procedure CalculateDMValues(ModelStartingAge, ModelEndingAge : double; ModelRatioY, ModelRatioX, DC : double);
     procedure CalculateMixtureValues(ProportionA, RatioYA, RatioYB, ElementYYA, ElementYYB : double; var MixRatio : double; var MixElement : double);
     procedure UpdateChartInitial(SeriesID : string; Age, Ratio : double);
     procedure UpdateChartEpsilon(SeriesID : string; Age, Epsilon : double);
     procedure UpdateChartChemistry(SeriesID : string; X, Y : double);
+    procedure UpdateChartT2DM(SeriesID : string; Age, Probability : double);
     procedure CalculateEvolvedValues(ModelStartingAge, ModelEndingAge : double; ModelRatioY, ModelRatioX, DC : double);
     procedure CalculatePresentRatio(IsotopeSystem : string; Age : double; ElementXX, ElementYY, RatioY, DC : double; var PresentRatioY : double; var PresentRatioX : double);
     procedure CalculateMixtureEvolutionValues(ModelID : string; StartingAge, ModelEndingAge : double; ModelRatioY, ModelRatioX, DC : double);
@@ -313,6 +349,12 @@ type
       Bulk_Kd_Nd,Bulk_Kd_Sm,
       ElementYY_InitialMagma,ElementXX_InitialMagma, RatioY_InitialMagma,
       ElementYY_Assimilated, ElementXX_Assimilated,  RatioY_Assimilated : double);
+    procedure CreateRandomPoints(SeriesID : string;Age,DC,CHURX,CHURY_present : double; NPoints : integer; RatioStartMin, RatioEndMax : double; var PointsArray : TPointsArray);
+    function DM2_Age_From_Ration(Age, DC, tKdm, tRdm, tRsmp, tKc : double) : double;
+    procedure CalculateExampleDataT2DMCurves(SeriesID : string;iAgeSeq : integer; Age, DC, tKdm, tRdm, tKc : double);
+    function Gauss(Ratio, Mean, Dev : double) : double;
+    var
+      PointsArray : TPointsArray;
   public
     { Public declarations }
   end;
@@ -325,6 +367,215 @@ implementation
 {$R *.fmx}
 
 uses RdMx_variables;
+
+procedure Tfm_RdMx_Main.GetIniFile;
+var
+  PublicPath : string;
+  AppIni   : TIniFile;
+  tmpStr   : string;
+  iCode    : integer;
+  tmpIsotopeSystem : string;
+begin
+  PublicPath := TPath.GetHomePath;
+  CommonFilePath := IncludeTrailingPathDelimiter(PublicPath) + 'EggSoft\';
+  IniFilename := CommonFilePath + 'RadMix.ini';
+  AppIni := TIniFile.Create(IniFileName);
+  try
+    CommonFilePath := AppIni.ReadString('Paths','Base EggSoft path',CommonFilePath);
+    ExportPath := AppIni.ReadString('Paths','Spreadsheet exports path',CommonFilePath);
+    FlexTemplatePath := AppIni.ReadString('Paths','Spreadsheet template path',CommonFilePath);
+    tmpIsotopeSystem := AppIni.ReadString('IsotopeSystem','Isotope System',cbIsotopeSystem.Text);
+    if (tmpIsotopeSystem = 'Sm-Nd') then cbIsotopeSystem.ItemIndex := 0;
+    if (tmpIsotopeSystem = 'Lu-Hf') then cbIsotopeSystem.ItemIndex := 1;
+    cbIsotopeSystemChange(nil);
+    ModelStartingAge := AppIni.ReadFloat('Model constants','Model starting age',ModelStartingAge);
+    ModelEndingAge := AppIni.ReadFloat('Model constants','Model ending age',ModelEndingAge);
+
+    tKc_SmNd := AppIni.ReadFloat('Model constants SmNd','tKc',tKc_SmNd);
+    CHURX_SmNd := AppIni.ReadFloat('Model constants SmNd','CHURX',CHURX_SmNd);
+    CHURY_present_SmNd := AppIni.ReadFloat('Model constants SmNd','CHURY_present',CHURY_present_SmNd);
+    DC1_SmNd := AppIni.ReadFloat('Model constants SmNd','Decay constant',DC1_SmNd);
+    DMModelRatioX_SmNd := AppIni.ReadFloat('Model constants SmNd','DMModelRatioX',DMModelRatioX_SmNd);
+    DMModelRatioY_SmNd := AppIni.ReadFloat('Model constants SmNd','DMModelRatioY',DMModelRatioY_SmNd);
+    RatioX_j_SmNd := AppIni.ReadFloat('Model constants SmNd','JuvenileRatioX',RatioX_j_SmNd);
+    RatioY_j_SmNd := AppIni.ReadFloat('Model constants SmNd','JuvenileRatioY',RatioY_j_SmNd);
+    ElementXX_j_SmNd := AppIni.ReadFloat('Model constants SmNd','ElementXX_j',ElementXX_j_SmNd);
+    ElementYY_j_SmNd := AppIni.ReadFloat('Model constants SmNd','ElementYY_j',ElementYY_j_SmNd);
+    RatioX_e_SmNd := AppIni.ReadFloat('Model constants SmNd','EvolvedRatioX',RatioX_e_SmNd);
+    RatioY_e_SmNd := AppIni.ReadFloat('Model constants SmNd','EvolvedRatioY',RatioY_e_SmNd);
+    ElementXX_e_SmNd := AppIni.ReadFloat('Model constants SmNd','ElementXX_e',ElementXX_e_SmNd);
+    ElementYY_e_SmNd := AppIni.ReadFloat('Model constants SmNd','ElementYY_e',ElementYY_e_SmNd);
+
+    tKc_LuHf := AppIni.ReadFloat('Model constants LuHf','tKc',tKc_LuHf);
+    CHURX_LuHf := AppIni.ReadFloat('Model constants LuHf','CHURX',CHURX_LuHf);
+    CHURY_present_LuHf := AppIni.ReadFloat('Model constants LuHf','CHURY_present',CHURY_present_LuHf);
+    DC1_LuHf := AppIni.ReadFloat('Model constants LuHf','Decay constant',DC1_LuHf);
+    DMModelRatioX_LuHf := AppIni.ReadFloat('Model constants LuHf','DMModelRatioX',DMModelRatioX_LuHf);
+    DMModelRatioY_LuHf := AppIni.ReadFloat('Model constants LuHf','DMModelRatioY',DMModelRatioY_LuHf);
+    RatioX_j_LuHf := AppIni.ReadFloat('Model constants LuHf','JuvenileRatioX',RatioX_j_LuHf);
+    RatioY_j_LuHf := AppIni.ReadFloat('Model constants LuHf','JuvenileRatioY',RatioY_j_LuHf);
+    ElementXX_j_LuHf := AppIni.ReadFloat('Model constants LuHf','ElementXX_j',ElementXX_j_LuHf);
+    ElementYY_j_LuHf := AppIni.ReadFloat('Model constants LuHf','ElementYY_j',ElementYY_j_LuHf);
+    RatioX_e_LuHf := AppIni.ReadFloat('Model constants LuHf','EvolvedRatioX',RatioX_e_LuHf);
+    RatioY_e_LuHf := AppIni.ReadFloat('Model constants LuHf','EvolvedRatioY',RatioY_e_LuHf);
+    ElementXX_e_LuHf := AppIni.ReadFloat('Model constants LuHf','ElementXX_e',ElementXX_e_LuHf);
+    ElementYY_e_LuHf := AppIni.ReadFloat('Model constants LuHf','ElementYY_e',ElementYY_e_LuHf);
+
+    Kd_SmNd_XX_Ol := AppIni.ReadFloat('Model constants SmNd','Kd_SmNd_XX_Ol',Kd_SmNd_XX_Ol);
+    Kd_SmNd_XX_Opx := AppIni.ReadFloat('Model constants SmNd','Kd_SmNd_XX_Opx',Kd_SmNd_XX_Opx);
+    Kd_SmNd_XX_Cpx := AppIni.ReadFloat('Model constants SmNd','Kd_SmNd_XX_Cpx',Kd_SmNd_XX_Cpx);
+    Kd_SmNd_XX_Hbl := AppIni.ReadFloat('Model constants SmNd','Kd_SmNd_XX_Hbl',Kd_SmNd_XX_Hbl);
+    Kd_SmNd_XX_Gt := AppIni.ReadFloat('Model constants SmNd','Kd_SmNd_XX_Gt',Kd_SmNd_XX_Gt);
+    Kd_SmNd_XX_Pg := AppIni.ReadFloat('Model constants SmNd','Kd_SmNd_XX_Pg',Kd_SmNd_XX_Pg);
+    Kd_SmNd_XX_Mt := AppIni.ReadFloat('Model constants SmNd','Kd_SmNd_XX_Mt',Kd_SmNd_XX_Mt);
+    Kd_SmNd_XX_Tit := AppIni.ReadFloat('Model constants SmNd','Kd_SmNd_XX_Tit',Kd_SmNd_XX_Tit);
+    Kd_SmNd_YY_Ol := AppIni.ReadFloat('Model constants SmNd','Kd_SmNd_YY_Ol',Kd_SmNd_YY_Ol);
+    Kd_SmNd_YY_Opx := AppIni.ReadFloat('Model constants SmNd','Kd_SmNd_YY_Opx',Kd_SmNd_YY_Opx);
+    Kd_SmNd_YY_Cpx := AppIni.ReadFloat('Model constants SmNd','Kd_SmNd_YY_Cpx',Kd_SmNd_YY_Cpx);
+    Kd_SmNd_YY_Hbl := AppIni.ReadFloat('Model constants SmNd','Kd_SmNd_YY_Hbl',Kd_SmNd_YY_Hbl);
+    Kd_SmNd_YY_Gt := AppIni.ReadFloat('Model constants SmNd','Kd_SmNd_YY_Gt',Kd_SmNd_YY_Gt);
+    Kd_SmNd_YY_Pg := AppIni.ReadFloat('Model constants SmNd','Kd_SmNd_YY_Pg',Kd_SmNd_YY_Pg);
+    Kd_SmNd_YY_Mt := AppIni.ReadFloat('Model constants SmNd','Kd_SmNd_YY_Mt',Kd_SmNd_YY_Mt);
+    Kd_SmNd_YY_Tit := AppIni.ReadFloat('Model constants SmNd','Kd_SmNd_YY_Tit',Kd_SmNd_YY_Tit);
+
+    Kd_LuHf_XX_Ol := AppIni.ReadFloat('Model constants LuHf','Kd_LuHf_XX_Ol',Kd_LuHf_XX_Ol);
+    Kd_LuHf_XX_Opx := AppIni.ReadFloat('Model constants LuHf','Kd_LuHf_XX_Opx',Kd_LuHf_XX_Opx);
+    Kd_LuHf_XX_Cpx := AppIni.ReadFloat('Model constants LuHf','Kd_LuHf_XX_Cpx',Kd_LuHf_XX_Cpx);
+    Kd_LuHf_XX_Hbl := AppIni.ReadFloat('Model constants LuHf','Kd_LuHf_XX_Hbl',Kd_LuHf_XX_Hbl);
+    Kd_LuHf_XX_Gt := AppIni.ReadFloat('Model constants LuHf','Kd_LuHf_XX_Gt',Kd_LuHf_XX_Gt);
+    Kd_LuHf_XX_Pg := AppIni.ReadFloat('Model constants LuHf','Kd_LuHf_XX_Pg',Kd_LuHf_XX_Pg);
+    Kd_LuHf_XX_Mt := AppIni.ReadFloat('Model constants LuHf','Kd_LuHf_XX_Mt',Kd_LuHf_XX_Mt);
+    Kd_LuHf_XX_Tit := AppIni.ReadFloat('Model constants LuHf','Kd_LuHf_XX_Tit',Kd_LuHf_XX_Tit);
+    Kd_LuHf_YY_Ol := AppIni.ReadFloat('Model constants LuHf','Kd_LuHf_YY_Ol',Kd_LuHf_YY_Ol);
+    Kd_LuHf_YY_Opx := AppIni.ReadFloat('Model constants LuHf','Kd_LuHf_YY_Opx',Kd_LuHf_YY_Opx);
+    Kd_LuHf_YY_Cpx := AppIni.ReadFloat('Model constants LuHf','Kd_LuHf_YY_Cpx',Kd_LuHf_YY_Cpx);
+    Kd_LuHf_YY_Hbl := AppIni.ReadFloat('Model constants LuHf','Kd_LuHf_YY_Hbl',Kd_LuHf_YY_Hbl);
+    Kd_LuHf_YY_Gt := AppIni.ReadFloat('Model constants LuHf','Kd_LuHf_YY_Gt',Kd_LuHf_YY_Gt);
+    Kd_LuHf_YY_Pg := AppIni.ReadFloat('Model constants LuHf','Kd_LuHf_YY_Pg',Kd_LuHf_YY_Pg);
+    Kd_LuHf_YY_Mt := AppIni.ReadFloat('Model constants LuHf','Kd_LuHf_YY_Mt',Kd_LuHf_YY_Mt);
+    Kd_LuHf_YY_Tit := AppIni.ReadFloat('Model constants LuHf','Kd_LuHf_YY_Tit',Kd_LuHf_YY_Tit);
+
+    emMixingAge1.Text := AppIni.ReadString('Model parameters','Age1',emMixingAge1.Text);
+    emMixingAge2.Text := AppIni.ReadString('Model parameters','Age2',emMixingAge2.Text);
+    emProportionJuvenile.Text := AppIni.ReadString('Model parameters','Proportion juvenile',emProportionJuvenile.Text);
+    eMassAssimilatedMassCrystallised.Text := AppIni.ReadString('Model parameters','MassAssimilated MassCrystallised',eMassAssimilatedMassCrystallised.Text);
+    eProportionMeltDefined.Text := AppIni.ReadString('Model parameters','Proportion Melt Defined',eProportionMeltDefined.Text);
+
+    MaximumRatioAge2_SmNd := AppIni.ReadFloat('Comparative data SmNd','Maximum Ratio Age2',MaximumRatioAge2_SmNd);
+    MinimumRatioAge2_SmNd := AppIni.ReadFloat('Comparative data SmNd','Minimum Ratio Age2',MinimumRatioAge2_SmNd);
+    MaximumRatioAge1_SmNd := AppIni.ReadFloat('Comparative data SmNd','Maximum Ratio Age1',MaximumRatioAge1_SmNd);
+    MinimumRatioAge1_SmNd := AppIni.ReadFloat('Comparative data SmNd','Minimum Ratio Age1',MinimumRatioAge1_SmNd);
+
+    MaximumRatioAge2_LuHf := AppIni.ReadFloat('Comparative data LuHf','Maximum Ratio Age2',MaximumRatioAge2_LuHf);
+    MinimumRatioAge2_LuHf := AppIni.ReadFloat('Comparative data LuHf','Minimum Ratio Age2',MinimumRatioAge2_LuHf);
+    MaximumRatioAge1_LuHf := AppIni.ReadFloat('Comparative data LuHf','Maximum Ratio Age1',MaximumRatioAge1_LuHf);
+    MinimumRatioAge1_LuHf := AppIni.ReadFloat('Comparative data LuHf','Minimum Ratio Age1',MinimumRatioAge1_LuHf);
+  finally
+    AppIni.Free;
+  end;
+end;
+
+procedure Tfm_RdMx_Main.SetIniFile;
+var
+  PublicPath : string;
+  AppIni   : TIniFile;
+begin
+  PublicPath := TPath.GetHomePath;
+  CommonFilePath := IncludeTrailingPathDelimiter(PublicPath) + 'EggSoft\';
+  IniFilename := CommonFilePath + 'RadMix.ini';
+  AppIni := TIniFile.Create(IniFileName);
+  try
+    AppIni.WriteString('Paths','Base EggSoft path',CommonFilePath);
+    AppIni.WriteString('Paths','Spreadsheet exports path',ExportPath);
+    AppIni.WriteString('Paths','Spreadsheet template path',FlexTemplatePath);
+
+    AppIni.WriteString('IsotopeSystem','Isotope System',cbIsotopeSystem.Text);
+    AppIni.WriteFloat('Model constants','Model starting age',ModelStartingAge);
+    AppIni.WriteFloat('Model constants','Model ending age',ModelEndingAge);
+
+    AppIni.WriteFloat('Model constants SmNd','tKc',tKc_SmNd);
+    AppIni.WriteFloat('Model constants SmNd','CHURX',CHURX_SmNd);
+    AppIni.WriteFloat('Model constants SmNd','CHURY_present',CHURY_present_SmNd);
+    AppIni.WriteFloat('Model constants SmNd','Decay constant',DC1_SmNd);
+    AppIni.WriteFloat('Model constants SmNd','DMModelRatioX',DMModelRatioX_SmNd);
+    AppIni.WriteFloat('Model constants SmNd','DMModelRatioY',DMModelRatioY_SmNd);
+    AppIni.WriteFloat('Model constants SmNd','JuvenileRatioX',RatioX_j_SmNd);
+    AppIni.WriteFloat('Model constants SmNd','JuvenileRatioY',RatioY_j_SmNd);
+    AppIni.WriteFloat('Model constants SmNd','ElementXX_j',ElementXX_j_SmNd);
+    AppIni.WriteFloat('Model constants SmNd','ElementYY_j',ElementYY_j_SmNd);
+    AppIni.WriteFloat('Model constants SmNd','EvolvedRatioX',RatioX_e_SmNd);
+    AppIni.WriteFloat('Model constants SmNd','EvolvedRatioY',RatioY_e_SmNd);
+    AppIni.WriteFloat('Model constants SmNd','ElementXX_e',ElementXX_e_SmNd);
+    AppIni.WriteFloat('Model constants SmNd','ElementYY_e',ElementYY_e_SmNd);
+
+    AppIni.WriteFloat('Model constants LuHf','tKc',tKc_LuHf);
+    AppIni.WriteFloat('Model constants LuHf','CHURX',CHURX_LuHf);
+    AppIni.WriteFloat('Model constants LuHf','CHURY_present',CHURY_present_LuHf);
+    AppIni.WriteFloat('Model constants LuHf','Decay constant',DC1_LuHf);
+    AppIni.WriteFloat('Model constants LuHf','DMModelRatioX',DMModelRatioX_LuHf);
+    AppIni.WriteFloat('Model constants LuHf','DMModelRatioY',DMModelRatioY_LuHf);
+    AppIni.WriteFloat('Model constants LuHf','JuvenileRatioX',RatioX_j_LuHf);
+    AppIni.WriteFloat('Model constants LuHf','JuvenileRatioY',RatioY_j_LuHf);
+    AppIni.WriteFloat('Model constants LuHf','ElementXX_j',ElementXX_j_LuHf);
+    AppIni.WriteFloat('Model constants LuHf','ElementYY_j',ElementYY_j_LuHf);
+    AppIni.WriteFloat('Model constants LuHf','EvolvedRatioX',RatioX_e_LuHf);
+    AppIni.WriteFloat('Model constants LuHf','EvolvedRatioY',RatioY_e_LuHf);
+    AppIni.WriteFloat('Model constants LuHf','ElementXX_e',ElementXX_e_LuHf);
+    AppIni.WriteFloat('Model constants LuHf','ElementYY_e',ElementYY_e_LuHf);
+
+    AppIni.WriteFloat('Model constants SmNd','Kd_SmNd_XX_Ol',Kd_SmNd_XX_Ol);
+    AppIni.WriteFloat('Model constants SmNd','Kd_SmNd_XX_Opx',Kd_SmNd_XX_Opx);
+    AppIni.WriteFloat('Model constants SmNd','Kd_SmNd_XX_Cpx',Kd_SmNd_XX_Cpx);
+    AppIni.WriteFloat('Model constants SmNd','Kd_SmNd_XX_Hbl',Kd_SmNd_XX_Hbl);
+    AppIni.WriteFloat('Model constants SmNd','Kd_SmNd_XX_Gt',Kd_SmNd_XX_Gt);
+    AppIni.WriteFloat('Model constants SmNd','Kd_SmNd_XX_Pg',Kd_SmNd_XX_Pg);
+    AppIni.WriteFloat('Model constants SmNd','Kd_SmNd_XX_Mt',Kd_SmNd_XX_Mt);
+    AppIni.WriteFloat('Model constants SmNd','Kd_SmNd_XX_Tit',Kd_SmNd_XX_Tit);
+    AppIni.WriteFloat('Model constants SmNd','Kd_SmNd_YY_Ol',Kd_SmNd_YY_Ol);
+    AppIni.WriteFloat('Model constants SmNd','Kd_SmNd_YY_Opx',Kd_SmNd_YY_Opx);
+    AppIni.WriteFloat('Model constants SmNd','Kd_SmNd_YY_Cpx',Kd_SmNd_YY_Cpx);
+    AppIni.WriteFloat('Model constants SmNd','Kd_SmNd_YY_Hbl',Kd_SmNd_YY_Hbl);
+    AppIni.WriteFloat('Model constants SmNd','Kd_SmNd_YY_Gt',Kd_SmNd_YY_Gt);
+    AppIni.WriteFloat('Model constants SmNd','Kd_SmNd_YY_Pg',Kd_SmNd_YY_Pg);
+    AppIni.WriteFloat('Model constants SmNd','Kd_SmNd_YY_Mt',Kd_SmNd_YY_Mt);
+    AppIni.WriteFloat('Model constants SmNd','Kd_SmNd_YY_Tit',Kd_SmNd_YY_Tit);
+
+    AppIni.WriteFloat('Model constants LuHf','Kd_LuHf_XX_Ol',Kd_LuHf_XX_Ol);
+    AppIni.WriteFloat('Model constants LuHf','Kd_LuHf_XX_Opx',Kd_LuHf_XX_Opx);
+    AppIni.WriteFloat('Model constants LuHf','Kd_LuHf_XX_Cpx',Kd_LuHf_XX_Cpx);
+    AppIni.WriteFloat('Model constants LuHf','Kd_LuHf_XX_Hbl',Kd_LuHf_XX_Hbl);
+    AppIni.WriteFloat('Model constants LuHf','Kd_LuHf_XX_Gt',Kd_LuHf_XX_Gt);
+    AppIni.WriteFloat('Model constants LuHf','Kd_LuHf_XX_Pg',Kd_LuHf_XX_Pg);
+    AppIni.WriteFloat('Model constants LuHf','Kd_LuHf_XX_Mt',Kd_LuHf_XX_Mt);
+    AppIni.WriteFloat('Model constants LuHf','Kd_LuHf_XX_Tit',Kd_LuHf_XX_Tit);
+    AppIni.WriteFloat('Model constants LuHf','Kd_LuHf_YY_Ol',Kd_LuHf_YY_Ol);
+    AppIni.WriteFloat('Model constants LuHf','Kd_LuHf_YY_Opx',Kd_LuHf_YY_Opx);
+    AppIni.WriteFloat('Model constants LuHf','Kd_LuHf_YY_Cpx',Kd_LuHf_YY_Cpx);
+    AppIni.WriteFloat('Model constants LuHf','Kd_LuHf_YY_Hbl',Kd_LuHf_YY_Hbl);
+    AppIni.WriteFloat('Model constants LuHf','Kd_LuHf_YY_Gt',Kd_LuHf_YY_Gt);
+    AppIni.WriteFloat('Model constants LuHf','Kd_LuHf_YY_Pg',Kd_LuHf_YY_Pg);
+    AppIni.WriteFloat('Model constants LuHf','Kd_LuHf_YY_Mt',Kd_LuHf_YY_Mt);
+    AppIni.WriteFloat('Model constants LuHf','Kd_LuHf_YY_Tit',Kd_LuHf_YY_Tit);
+
+    AppIni.WriteString('Model parameters','Age1',emMixingAge1.Text);
+    AppIni.WriteString('Model parameters','Age2',emMixingAge2.Text);
+    AppIni.WriteString('Model parameters','Proportion juvenile',emProportionJuvenile.Text);
+    AppIni.WriteString('Model parameters','MassAssimilated MassCrystallised',eMassAssimilatedMassCrystallised.Text);
+    AppIni.WriteString('Model parameters','Proportion Melt Defined',eProportionMeltDefined.Text);
+
+    AppIni.WriteFloat('Comparative data SmNd','Maximum Ratio Age2',MaximumRatioAge2_SmNd);
+    AppIni.WriteFloat('Comparative data SmNd','Minimum Ratio Age2',MinimumRatioAge2_SmNd);
+    AppIni.WriteFloat('Comparative data SmNd','Maximum Ratio Age1',MaximumRatioAge1_SmNd);
+    AppIni.WriteFloat('Comparative data SmNd','Minimum Ratio Age1',MinimumRatioAge1_SmNd);
+
+    AppIni.WriteFloat('Comparative data LuHf','Maximum Ratio Age2',MaximumRatioAge2_LuHf);
+    AppIni.WriteFloat('Comparative data LuHf','Minimum Ratio Age2',MinimumRatioAge2_LuHf);
+    AppIni.WriteFloat('Comparative data LuHf','Maximum Ratio Age1',MaximumRatioAge1_LuHf);
+    AppIni.WriteFloat('Comparative data LuHf','Minimum Ratio Age1',MinimumRatioAge1_LuHf);
+  finally
+    AppIni.Free;
+  end;
+end;
 
 procedure Tfm_RdMx_Main.bCalculateSiO2Click(Sender: TObject);
 var
@@ -343,19 +594,88 @@ end;
 
 procedure Tfm_RdMx_Main.FormCreate(Sender: TObject);
 begin
-  DMModelRatioX := 0.2136;
-  DMModelRatioY := 0.513075;
-  ElementXX_j := 1.0;
-  ElementYY_j := 1.0;
-  ProportionJuvenile := 0.4;
-  ProportionMelt := 0.5;
-  CHURY_present := 0.512630;
-  CHURX := 0.1960;
+  NPoints := 20;
+  Age1 := 2600.00;
+  Age2 := 1400.00;
+  ModelStartingAge := 4000.00;
+  ModelEndingAge := 0.00;
+  CHURY_present_SmNd := 0.512630;
+  CHURX_SmNd:= 0.1960;
+  DMModelRatioX_SmNd := 0.2136;
+  DMModelRatioY_SmNd := 0.513075;
+  RatioX_j_SmNd := DMModelRatioX_SmNd;
+  RatioY_j_SmNd := DMModelRatioY_SmNd;
+  ElementXX_j_SmNd := 2.99;
+  ElementYY_j_SmNd := 8.48;
+  DC1_SmNd := 6.524e-12;
+  RatioX_e_SmNd := 0.1180;
+  RatioY_e_SmNd := 0.510500;
+  ElementXX_e_SmNd := 2.80;
+  ElementYY_e_SmNd := 11.0;
+  ProportionJuvenile := 0.7;
+  ProportionMelt := 0.7;
+  MassAssimilatedMassCrystallised := 0.5;
   AtNumNd := 60.0;
   AtNumSm := 61.0;
   NormaliseValueXX := 1.0;
   NormaliseValueYY := 1.0;
-  //checking Github changes
+  tKc_SmNd := 0.1500;
+
+  Kd_SmNd_XX_Ol := 0.0013;
+  Kd_SmNd_XX_Opx := 0.0100;
+  Kd_SmNd_XX_Cpx := 0.7000;
+  Kd_SmNd_XX_Hbl := 0.8500;
+  Kd_SmNd_XX_Gt := 0.2170;
+  Kd_SmNd_XX_Pg := 0.1100;
+  Kd_SmNd_XX_Mt := 1.1000;
+  Kd_SmNd_XX_Tit := 10.000;
+  Kd_SmNd_YY_Ol := 0.0010;
+  Kd_SmNd_YY_Opx := 0.0050;
+  Kd_SmNd_YY_Cpx := 0.300;
+  Kd_SmNd_YY_Hbl := 0.6500;
+  Kd_SmNd_YY_Gt := 0.0870;
+  Kd_SmNd_YY_Pg := 0.1400;
+  Kd_SmNd_YY_Mt := 1.0000;
+  Kd_SmNd_YY_Tit := 10.000;
+  MaximumRatioAge2_SmNd := 0.530000;
+  MinimumRatioAge2_SmNd := 0.510000;
+  MaximumRatioAge1_SmNd := 0.530000;
+  MinimumRatioAge1_SmNd := 0.510000;
+
+  CHURX_LuHf := 0.0336;
+  CHURY_present_LuHf := 0.282785;
+  DC1_LuHf := 1.867e-11;
+  DMModelRatioX_LuHf := 0.0384;
+  DMModelRatioY_LuHf := 0.283238;
+  RatioX_j_LuHf:= DMModelRatioX_LuHf;
+  RatioY_j_LuHf := DMModelRatioY_LuHf;
+  ElementXX_j_LuHf := 0.470;
+  ElementYY_j_LuHf := 2.20;
+  RatioX_e_LuHf := 0.0150;
+  RatioY_e_LuHf := 0.283000;
+  ElementXX_e_LuHf := 0.29;
+  ElementYY_e_LuHf := 2.1;
+  tKc_LuHf := 0.015;
+
+  Kd_LuHf_XX_Ol := 0.0015;
+  Kd_LuHf_XX_Opx := 0.0600;
+  Kd_LuHf_XX_Cpx := 0.2650;
+  Kd_LuHf_XX_Gt := 5.5000;
+  Kd_LuHf_XX_Pg := 0.0250;
+  Kd_LuHf_XX_Mt := 1.0000;
+  Kd_LuHf_XX_Tit := 10.000;
+  Kd_LuHf_YY_Ol := 0.0037;
+  Kd_LuHf_YY_Opx := 0.0550;
+  Kd_LuHf_YY_Cpx := 0.2630;
+  Kd_LuHf_YY_Hbl := 0.5000;
+  Kd_LuHf_YY_Gt := 0.3000;
+  Kd_LuHf_YY_Pg := 0.0510;
+  Kd_LuHf_YY_Mt := 3.000;
+  Kd_LuHf_YY_Tit := 10.000;
+  MaximumRatioAge2_LuHf := 0.282200;
+  MinimumRatioAge2_LuHf := 0.281850;
+  MaximumRatioAge1_LuHf := 0.281300;
+  MinimumRatioAge1_LuHf := 0.280750;
 end;
 
 procedure Tfm_RdMx_Main.mi_CalculateClick(Sender: TObject);
@@ -392,22 +712,69 @@ begin
   for i := 0 to ChartInitial.SeriesList.Count-1 do
   begin
     ChartInitial.Series[i].Clear;
+  end;
+  for i := 0 to ChartEpsilon.SeriesList.Count-1 do
+  begin
     ChartEpsilon.Series[i].Clear;
   end;
   for i := 0 to ChartChemistry.SeriesList.Count-1 do
   begin
     ChartChemistry.Series[i].Clear;
   end;
+  for i := 0 to ChartT2DM.SeriesList.Count-1 do
+  begin
+    ChartT2DM.Series[i].Clear;
+  end;
   ChartInitial.Title.Caption := '';
   ChartEpsilon.Title.Caption := '';
   ChartChemistry.Title.Caption := '';
+  ChartT2DM.Title.Caption := '';
 
   TabControl1.ActiveTab := ti_Graph;
-  strIsotopeSystem := cbIsotopeSystem.Text;
-  cbIsotopeSystemChange(Sender);
-  DC := DC1;
-  eKd_XX_OlDblClick(Sender);
-  eKd_YY_OlDblClick(Sender);
+  if (cbIsotopeSystem.ItemIndex = 0) then strIsotopeSystem := 'SmNd';
+  if (cbIsotopeSystem.ItemIndex = 1) then strIsotopeSystem := 'LuHf';
+  if (strIsotopeSystem = 'SmNd') then
+  begin
+    Val(eMaximumRatioAge1.Text,MaximumRatioAge1_SmNd,iCode);
+    Val(eMinimumRatioAge1.Text,MinimumRatioAge1_SmNd,iCode);
+    Val(eMaximumRatioAge2.Text,MaximumRatioAge2_SmNd,iCode);
+    Val(eMinimumRatioAge2.Text,MinimumRatioAge2_SmNd,iCode);
+    Val(ejElementXX.Text,ElementXX_j_SmNd,iCode);
+    Val(eeElementXX.Text,ElementXX_e_SmNd,iCode);
+    Val(ejElementYY.Text,ElementYY_j_SmNd,iCode);
+    Val(eeElementYY.Text,ElementYY_e_SmNd,iCode);
+    Val(ejRatioY.Text,RatioY_j_SmNd,iCode);
+    Val(eeRatioY.Text,RatioY_e_SmNd,iCode);
+    Val(ejRatioX.Text,RatioX_j_SmNd,iCode);
+    Val(eeRatioX.Text,RatioX_e_SmNd,iCode);
+    Val(eKc.Text,tKc,iCode);
+    tKc_SmNd := tKc;
+    DMModelRatioX := DMModelRatioX_SmNd;
+    DMModelRatioY := DMModelRatioY_SmNd;
+  end;
+  if (strIsotopeSystem = 'LuHf') then
+  begin
+    Val(eMaximumRatioAge1.Text,MaximumRatioAge1_LuHf,iCode);
+    Val(eMinimumRatioAge1.Text,MinimumRatioAge1_LuHf,iCode);
+    Val(eMaximumRatioAge2.Text,MaximumRatioAge2_LuHf,iCode);
+    Val(eMinimumRatioAge2.Text,MinimumRatioAge2_LuHf,iCode);
+    Val(ejElementXX.Text,ElementXX_j_LuHf,iCode);
+    Val(eeElementXX.Text,ElementXX_e_LuHf,iCode);
+    Val(ejElementYY.Text,ElementYY_j_LuHf,iCode);
+    Val(eeElementYY.Text,ElementYY_e_LuHf,iCode);
+    Val(ejRatioY.Text,RatioY_j_LuHf,iCode);
+    Val(eeRatioY.Text,RatioY_e_LuHf,iCode);
+    Val(ejRatioX.Text,RatioX_j_LuHf,iCode);
+    Val(eeRatioX.Text,RatioX_e_LuHf,iCode);
+    Val(eKc.Text,tKc,iCode);
+    tKc_LuHf := tKc;
+    DMModelRatioX := DMModelRatioX_LuHf;
+    DMModelRatioY := DMModelRatioY_LuHf;
+  end;
+  Val(eMaximumRatioAge1.Text,RatioEndMaxAge1,iCode);
+  Val(eMinimumRatioAge1.Text,RatioStartMinAge1,iCode);
+  Val(eMaximumRatioAge2.Text,RatioEndMaxAge2,iCode);
+  Val(eMinimumRatioAge2.Text,RatioStartMinAge2,iCode);
   Val(eModelStartingAge.Text,ModelStartingAge,iCode);
   Val(eModelEndingAge.Text,ModelEndingAge,iCode);
   Val(emProportionJuvenile.Text,ProportionJuvenile,iCode);
@@ -423,8 +790,18 @@ begin
   Val(eeRatioX.Text,RatioX_e,iCode);
   Val(emMixingAge1.Text,Age1,iCode);
   Val(emMixingAge2.Text,Age2,iCode);
+
+  cbIsotopeSystemChange(Sender);
+  DC := DC1;
+  eKd_XX_OlDblClick(Sender);
+  eKd_YY_OlDblClick(Sender);
+
   CalculateEpsilon(0.0,DC,CHURX,CHURY_present,RatioY_j,Epsilon_j);
   CalculateEpsilon(0.0,DC,CHURX,CHURY_present,RatioY_e,Epsilon_e);
+  eMaximumRatioAge1.Text := FormatFloat('#0.000000',RatioEndMaxAge1);
+  eMinimumRatioAge1.Text := FormatFloat('#0.000000',RatioStartMinAge1);
+  eMaximumRatioAge2.Text := FormatFloat('#0.000000',RatioEndMaxAge2);
+  eMinimumRatioAge2.Text := FormatFloat('#0.000000',RatioStartMinAge2);
   // Calculate Y ratios for juvenile and evolved components at Age1 and Age2
   RatioY_j_Age1 := RatioY_j - RatioX_j*(exp(DC*Age1*1.0e6)-1.0);
   RatioY_j_Age2 := RatioY_j - RatioX_j*(exp(DC*Age2*1.0e6)-1.0);
@@ -439,6 +816,8 @@ begin
   // Calculate ElementYY and Y Ratio for mixture at Age1
   CalculateMixtureValues(ProportionJuvenile, RatioY_j_Age1, RatioY_e_Age1, ElementYY_j, ElementYY_e, MixRatioY_Age1, MixElementYY_Age1);
   CalculateEpsilon(Age1,DC,CHURX,CHURY_present,MixRatioY_Age1,MixEpsilon_Age1);
+  CreateRandomPoints('Points Age1',Age1,DC,CHURX,CHURY_present,NPoints,RatioStartMinAge1,RatioEndMaxAge1,PointsArray);
+  CreateRandomPoints('Points Age2',Age2,DC,CHURX,CHURY_present,NPoints,RatioStartMinAge2,RatioEndMaxAge2,PointsArray);
   // Calculate present day X and Y ratios to use for back calculation to use at Age2
   CalculatePresentRatio(cbIsotopeSystem.Text,Age1,MixElementXX_Age1,MixElementYY_Age1,MixRatioY_Age1,DC,RatioY_m_Age1_present,RatioX_m_Age1_present);
   // Calculate mixture evolution curve values for Age1 mixture
@@ -459,7 +838,7 @@ begin
   CalculateMixtureEvolutionValues('Mixture evolution Age2',Age2,ModelEndingAge,RatioY_m_Age2_present,RatioX_m_Age2_present,DC);
   //CalculateMixtureEvolutionChemistryValues('Mixture evolution Age2',RatioY_j_Age2, RatioY_m_Age2, ElementYY_j, MixElementYY_Age2);
   CalculateMixtureEvolutionChemistryValues('Mixture evolution Age2',RatioY_j_Age2, RatioY_m_Age2, ElementYY_j, MixElementYY_Age1);
-  CalculateDMValues(ModelStartingAge, ModelEndingAge, DMModelRatioY, DMModelRatioX, DC);
+  CalculateDMValues(ModelStartingAge, ModelEndingAge, RatioY_j, RatioX_j, DC);
   CalculateEvolvedValues(ModelStartingAge, ModelEndingAge, RatioY_e, RatioX_e, DC);
   CalculateBulkKD(Bulk_Kd_Sm,Bulk_Kd_Nd);
 
@@ -500,7 +879,7 @@ begin
     Bulk_Kd_Nd,Bulk_Kd_Sm,
     ElementYY_j,ElementXX_j,RatioY_j_Age2,
     MeltElementYY_Age1,MeltElementXX_Age1,RatioY_melt_Age2);
-  if (cbIsotopeSystem.Text = 'Lu-Hf') then
+  if (strIsotopeSystem = 'LuHf') then
   begin
     // Zircon in mixture at Age1
     CalculatePresentRatio(cbIsotopeSystem.Text,Age1,0.0,MixElementYY_Age1,MixRatioY_Age1,DC,RatioY_z_Age1_present,RatioX_z_Age1_present);
@@ -547,12 +926,23 @@ begin
   UpdateChartChemistry('AFC',MeltElementYY_Age1,MeltRatioY_Age1);
   UpdateChartChemistry('AFC',MeltElementYY_Age2,MeltRatioY_Age2);
 
+  UpdateChartT2DM('Juvenile',Age1,Zero+5.0);
+  UpdateChartT2DM('Juvenile',Age2,Zero+5.0);
+  UpdateChartT2DM('Mixture',DM2_Age_From_Ration(Age1, DC, DMModelRatioX, DMModelRatioY, MixRatioY_Age1,tKc),Zero+5.0);
+  UpdateChartT2DM('Mixture',DM2_Age_From_Ration(Age2, DC, DMModelRatioX, DMModelRatioY, MixRatioY_Age2,tKc),Zero+5.0);
+  UpdateChartT2DM('AFC',DM2_Age_From_Ration(Age1, DC, DMModelRatioX, DMModelRatioY, MeltRatioY_Age1,tKc),Zero+5.0);
+  UpdateChartT2DM('AFC',DM2_Age_From_Ration(Age2, DC, DMModelRatioX, DMModelRatioY, MeltRatioY_Age2,tKc),Zero+5.0);
+  UpdateChartT2DM('Evolved',DM2_Age_From_Ration(Age1, DC, DMModelRatioX, DMModelRatioY, RatioY_e_Age1,tKc),Zero+5.0);
+  CalculateExampleDataT2DMCurves('Example data probability Age1',1,Age1, DC, DMModelRatioX, DMModelRatioY, tKc);
+  CalculateExampleDataT2DMCurves('Example data probability Age2',2,Age2, DC, DMModelRatioX, DMModelRatioY, tKc);
+
   // Update text fields
   CalculatedProportionJuvenile := 1.0-((1.0-ProportionMelt)*MassAssimilatedMassCrystallised);
   eCalculatedProportionJuvenile.Text := FormatFloat('#0.000',CalculatedProportionJuvenile);
   eMassAssimilatedMassCrystallised.Text := FormatFloat('#0.000',MassAssimilatedMassCrystallised);
   eProportionMeltDefined.Text := FormatFloat('#0.000',ProportionMelt);
   emProportionJuvenile.Text := FormatFloat('#0.000',ProportionJuvenile);
+  eKc.Text := FormatFloat('#0.0000',tKc);
   ejEpsilon.Text := FormatFloat('#0.00',Epsilon_j);
   eeEpsilon.Text := FormatFloat('#0.00',Epsilon_e);
   eRatioY_j_Age1.Text := FormatFloat('0.000000',RatioY_j_Age1);
@@ -582,12 +972,12 @@ begin
   eMelt_Sm_Age1.Text := FormatFloat('#0.000',MeltElementXX_Age1);
   eMix_Nd_Age1.Text := FormatFloat('#0.000',MixElementYY_Age1);
   eMelt_Nd_Age1.Text := FormatFloat('#0.000',MeltElementYY_Age1);
-  eMelt_SmNd_Age1.Text := FormatFloat('#0.0000',MeltElementXX_Age1/MeltElementYY_Age1);
+  //eMelt_SmNd_Age1.Text := FormatFloat('#0.0000',MeltElementXX_Age1/MeltElementYY_Age1);
   eMix_Sm_Age2.Text := FormatFloat('#0.000',MixElementXX_Age2);
   eMelt_Sm_Age2.Text := FormatFloat('#0.000',MeltElementXX_Age2);
   eMix_Nd_Age2.Text := FormatFloat('#0.000',MixElementYY_Age2);
   eMelt_Nd_Age2.Text := FormatFloat('#0.000',MeltElementYY_Age2);
-  eMelt_SmNd_Age2.Text := FormatFloat('#0.0000',MeltElementXX_Age2/MeltElementYY_Age2);
+  //eMelt_SmNd_Age2.Text := FormatFloat('#0.0000',MeltElementXX_Age2/MeltElementYY_Age2);
   eProportionMeltAFC.Text := FormatFloat('#0.00',ProportionMelt);
   eAFCMagma_Sm_Age1.Text := FormatFloat('#0.000',ElementXX_j);
   eAFCMagma_Nd_Age1.Text := FormatFloat('#0.000',ElementYY_j);
@@ -603,6 +993,109 @@ begin
   eAFCMelt_Sm_Age2.Text := FormatFloat('#0.000',MeltElementXX_Age2);
   eAFCMelt_Nd_Age2.Text := FormatFloat('#0.000',MeltElementYY_Age2);
   eAFCMelt_SmNd_Age2.Text := FormatFloat('#0.0000',MeltElementXX_Age2/MeltElementYY_Age2);
+end;
+
+procedure Tfm_RdMx_Main.PopulateFields(tIsotopeSystem : string);
+var
+  iCode : integer;
+  RatioY_j_Age1,
+  RatioY_e_Age1,
+  RatioY_j_Age2,
+  RatioY_e_Age2 : double;
+  RatioY_m_Age2, RatioY_melt_Age2 : double;
+  strIsotopeSystem : string;
+  DC : double;
+  MixRatioY_Age1, MixElementYY_Age1,
+  MixRatioY_Age2, MixElementYY_Age2,
+  MeltRatioY_Age1, MeltRatioY_Age2,
+  MixElementXX_Age1,
+  MixElementXX_Age2 : double;
+  i : integer;
+  Bulk_Kd_Sm, Bulk_Kd_Nd : double;
+  Epsilon_j_Age1, Epsilon_j_Age2,
+  Epsilon_e_Age1, Epsilon_e_Age2,
+  Epsilon_m_Age1, Epsilon_m_Age2,
+  Epsilon_melt_Age2,
+  MixEpsilon_Age1, MixEpsilon_Age2 : double;
+  MeltEpsilon_Age1, MeltEpsilon_Age2 : double;
+  CalculatedProportionJuvenile,
+  RateAssimilated, RateCrystallised : double;
+  RatioX_z_Age1_present, RatioY_z_Age1_present,
+  RatioX_z_Age2_present, RatioY_z_Age2_present,
+  RatioY_z_Age1, RatioY_z_Age2 : double;
+  Epsilon_z_Age1, Epsilon_z_Age2 : double;
+  tMixElementYY_Age2 : double;
+begin
+  emMixingAge1.Text := FormatFloat('###0.00',Age1);
+  emMixingAge2.Text := FormatFloat('###0.00',Age2);
+  eMassAssimilatedMassCrystallised.Text := FormatFloat('#0.000',MassAssimilatedMassCrystallised);
+  eProportionMeltDefined.Text := FormatFloat('#0.000',ProportionMelt);
+  emProportionJuvenile.Text := FormatFloat('#0.000',ProportionJuvenile);
+  if (tIsotopeSystem = 'SmNd') then
+  begin
+    // Update text fields
+    DC := DC1_SmNd;
+    eKc.Text := FormatFloat('#0.0000',tKc_SmNd);
+    RatioEndMaxAge1 := MaximumRatioAge1_SmNd;
+    RatioStartMinAge1 := MinimumRatioAge1_SmNd;
+    RatioEndMaxAge2 := MaximumRatioAge2_SmNd;
+    RatioStartMinAge2 := MinimumRatioAge2_SmNd;
+    eMaximumRatioAge1.Text := FormatFloat('#0.000000',RatioEndMaxAge1);
+    eMinimumRatioAge1.Text := FormatFloat('#0.000000',RatioStartMinAge1);
+    eMaximumRatioAge2.Text := FormatFloat('#0.000000',RatioEndMaxAge2);
+    eMinimumRatioAge2.Text := FormatFloat('#0.000000',RatioStartMinAge2);
+    ElementXX_j := ElementXX_j_SmNd;
+    ElementYY_j := ElementYY_j_SmNd;
+    RatioX_j := RatioX_j_SmNd;
+    RatioY_j := RatioY_j_SmNd;
+    ejElementXX.Text := FormatFloat('###0.000',ElementXX_j);
+    ejElementYY.Text := FormatFloat('###0.000',ElementYY_j);
+    ejRatioX.Text := FormatFloat('#0.0000',RatioX_j);
+    ejRatioY.Text := FormatFloat('#0.0000',RatioY_j);
+    ejEpsilon.Text := '';
+    ElementXX_e := ElementXX_e_SmNd;
+    ElementYY_e := ElementYY_e_SmNd;
+    RatioX_e := RatioX_e_SmNd;
+    RatioY_e := RatioY_e_SmNd;
+    eeElementXX.Text := FormatFloat('###0.000',ElementXX_e);
+    eeElementYY.Text := FormatFloat('###0.000',ElementYY_e);
+    eeRatioX.Text := FormatFloat('#0.0000',RatioX_e);
+    eeRatioY.Text := FormatFloat('#0.0000',RatioY_e);
+    eeEpsilon.Text := '';
+  end;
+  if (tIsotopeSystem = 'LuHf') then
+  begin
+    // Update text fields
+    DC := DC1_LuHf;
+    eKc.Text := FormatFloat('#0.0000',tKc_LuHf);
+    RatioEndMaxAge1 := MaximumRatioAge1_LuHf;
+    RatioStartMinAge1 := MinimumRatioAge1_LuHf;
+    RatioEndMaxAge2 := MaximumRatioAge2_LuHf;
+    RatioStartMinAge2 := MinimumRatioAge2_LuHf;
+    eMaximumRatioAge1.Text := FormatFloat('#0.000000',RatioEndMaxAge1);
+    eMinimumRatioAge1.Text := FormatFloat('#0.000000',RatioStartMinAge1);
+    eMaximumRatioAge2.Text := FormatFloat('#0.000000',RatioEndMaxAge2);
+    eMinimumRatioAge2.Text := FormatFloat('#0.000000',RatioStartMinAge2);
+    ElementXX_j := ElementXX_j_LuHf;
+    ElementYY_j := ElementYY_j_LuHf;
+    RatioX_j := RatioX_j_LuHf;
+    RatioY_j := RatioY_j_LuHf;
+    ejElementXX.Text := FormatFloat('###0.000',ElementXX_j);
+    ejElementYY.Text := FormatFloat('###0.000',ElementYY_j);
+    ejRatioX.Text := FormatFloat('#0.0000',RatioX_j);
+    ejRatioY.Text := FormatFloat('#0.0000',RatioY_j);
+    ejEpsilon.Text := '';
+    ElementXX_e := ElementXX_e_LuHf;
+    ElementYY_e := ElementYY_e_LuHf;
+    RatioX_e := RatioX_e_LuHf;
+    RatioY_e := RatioY_e_LuHf;
+    eeElementXX.Text := FormatFloat('###0.000',ElementXX_e);
+    eeElementYY.Text := FormatFloat('###0.000',ElementYY_e);
+    eeRatioX.Text := FormatFloat('#0.0000',RatioX_e);
+    eeRatioY.Text := FormatFloat('#0.0000',RatioY_e);
+    eeEpsilon.Text := '';
+  end;
+  Application.ProcessMessages;
 end;
 
 procedure Tfm_RdMx_Main.UpdateChartInitial(SeriesID : string; Age, Ratio : double);
@@ -623,6 +1116,8 @@ begin
   if (SeriesID = 'Zircon evolution Age2') then SeriesNum := 11;
   if (SeriesID = 'Zircon melt evolution Age1') then SeriesNum := 12;
   if (SeriesID = 'Zircon melt evolution Age2') then SeriesNum := 13;
+  if (SeriesID = 'Points Age1') then SeriesNum := 14;
+  if (SeriesID = 'Points Age2') then SeriesNum := 15;
   //ShowMessage('Updating '+SeriesID);
   ChartInitial.SeriesList[SeriesNum].AddXY(Age,Ratio);
 end;
@@ -645,6 +1140,8 @@ begin
   if (SeriesID = 'Zircon evolution Age2') then SeriesNum := 11;
   if (SeriesID = 'Zircon melt evolution Age1') then SeriesNum := 12;
   if (SeriesID = 'Zircon melt evolution Age2') then SeriesNum := 13;
+  if (SeriesID = 'Points Age1') then SeriesNum := 14;
+  if (SeriesID = 'Points Age2') then SeriesNum := 15;
   //ShowMessage('Updating '+SeriesID);
   ChartEpsilon.SeriesList[SeriesNum].AddXY(Age,Epsilon);
 end;
@@ -661,7 +1158,23 @@ begin
   if (SeriesID = 'Mixture evolution Age2') then SeriesNum := 5;
   if (SeriesID = 'Melt evolution Age1') then SeriesNum := 6;
   if (SeriesID = 'Melt evolution Age2') then SeriesNum := 7;
+  if (SeriesID = 'Points Age1') then SeriesNum := 8;
+  if (SeriesID = 'Points Age2') then SeriesNum := 9;
   ChartChemistry.SeriesList[SeriesNum].AddXY(X,Y);
+end;
+
+procedure Tfm_RdMx_Main.UpdateChartT2DM(SeriesID : string; Age, Probability : double);
+var
+  SeriesNum : integer;
+begin
+  if (SeriesID = 'Juvenile') then SeriesNum := 0;
+  if (SeriesID = 'Evolved') then SeriesNum := 1;
+  if (SeriesID = 'Mixture') then SeriesNum := 2;
+  if (SeriesID = 'AFC') then SeriesNum := 3;
+  if (SeriesID = 'Example data probability Age1') then SeriesNum := 4;
+  if (SeriesID = 'Example data probability Age2') then SeriesNum := 5;
+  //ShowMessage('Updating '+SeriesID);
+  ChartT2DM.SeriesList[SeriesNum].AddXY(Age,Probability);
 end;
 
 procedure Tfm_RdMx_Main.CalculateDMValues(ModelStartingAge, ModelEndingAge : double; ModelRatioY, ModelRatioX, DC : double);
@@ -810,8 +1323,16 @@ begin
 end;
 
 procedure Tfm_RdMx_Main.FormShow(Sender: TObject);
+var
+  strIsotopeSystem : string;
 begin
   TabControl1.ActiveTab := ti_Control;
+  GetIniFile;
+  if (cbIsotopeSystem.ItemIndex = 0) then strIsotopeSystem := 'SmNd';
+  if (cbIsotopeSystem.ItemIndex = 1) then strIsotopeSystem := 'LuHf';
+  eModelStartingAge.Text := FormatFloat('###0.00',ModelStartingAge);
+  eModelEndingAge.Text := FormatFloat('###0.00',ModelEndingAge);
+  PopulateFields(strIsotopeSystem);
   eWtOlChange(Sender);
   eKd_XX_OlChange(Sender);
   eKd_YY_OlChange(Sender);
@@ -819,6 +1340,7 @@ end;
 
 procedure Tfm_RdMx_Main.mi_File_ExitClick(Sender: TObject);
 begin
+  SetIniFile;
   Close;
 end;
 
@@ -1063,15 +1585,15 @@ begin
   Val(eKd_YY_Mt.Text,KdMt,iCode);
   Val(eKd_YY_Tit.Text,KdTit,iCode);
   KdBulk := WtOl*KdOl + WtOpx*KdOpx + WtCpx*KdCpx + WtHbl*KdHbl + WtGt*KdGt + WtPg*KdPg + WtMt*KdMt + WtTit*KdTit;
-  eKd_YY_Ol.Text := FormatFloat('#0.0000',KdOl);
-  eKd_YY_Opx.Text := FormatFloat('#0.0000',KdOpx);
-  eKd_YY_Cpx.Text := FormatFloat('#0.0000',KdCpx);
-  eKd_YY_Hbl.Text := FormatFloat('#0.0000',KdHbl);
-  eKd_YY_Gt.Text := FormatFloat('#0.0000',KdGt);
-  eKd_YY_Pg.Text := FormatFloat('#0.0000',KdPg);
-  eKd_YY_Mt.Text := FormatFloat('#0.0000',KdMt);
-  eKd_YY_Tit.Text := FormatFloat('#0.0000',KdTit);
-  eKd_YY_Bulk.Text := FormatFloat('#0.0000',KdBulk);
+  eKd_YY_Ol.Text := FormatFloat('#0.000',KdOl);
+  eKd_YY_Opx.Text := FormatFloat('#0.000',KdOpx);
+  eKd_YY_Cpx.Text := FormatFloat('#0.000',KdCpx);
+  eKd_YY_Hbl.Text := FormatFloat('#0.000',KdHbl);
+  eKd_YY_Gt.Text := FormatFloat('#0.000',KdGt);
+  eKd_YY_Pg.Text := FormatFloat('#0.000',KdPg);
+  eKd_YY_Mt.Text := FormatFloat('#0.000',KdMt);
+  eKd_YY_Tit.Text := FormatFloat('#0.000',KdTit);
+  eKd_YY_Bulk.Text := FormatFloat('#0.000',KdBulk);
 end;
 
 procedure Tfm_RdMx_Main.eKd_YY_OlDblClick(Sender: TObject);
@@ -1107,15 +1629,15 @@ begin
   Val(eKd_XX_Mt.Text,KdMt,iCode);
   Val(eKd_XX_Tit.Text,KdTit,iCode);
   KdBulk := WtOl*KdOl + WtOpx*KdOpx + WtCpx*KdCpx + WtHbl*KdHbl + WtGt*KdGt + WtPg*KdPg + WtMt*KdMt + WtTit*KdTit;
-  eKd_XX_Ol.Text := FormatFloat('#0.0000',KdOl);
-  eKd_XX_Opx.Text := FormatFloat('#0.0000',KdOpx);
-  eKd_XX_Cpx.Text := FormatFloat('#0.0000',KdCpx);
-  eKd_XX_Hbl.Text := FormatFloat('#0.0000',KdHbl);
-  eKd_XX_Gt.Text := FormatFloat('#0.0000',KdGt);
-  eKd_XX_Pg.Text := FormatFloat('#0.0000',KdPg);
-  eKd_XX_Mt.Text := FormatFloat('#0.0000',KdMt);
-  eKd_XX_Tit.Text := FormatFloat('#0.0000',KdTit);
-  eKd_XX_Bulk.Text := FormatFloat('#0.0000',KdBulk);
+  eKd_XX_Ol.Text := FormatFloat('#0.000',KdOl);
+  eKd_XX_Opx.Text := FormatFloat('#0.000',KdOpx);
+  eKd_XX_Cpx.Text := FormatFloat('#0.000',KdCpx);
+  eKd_XX_Hbl.Text := FormatFloat('#0.000',KdHbl);
+  eKd_XX_Gt.Text := FormatFloat('#0.000',KdGt);
+  eKd_XX_Pg.Text := FormatFloat('#0.000',KdPg);
+  eKd_XX_Mt.Text := FormatFloat('#0.000',KdMt);
+  eKd_XX_Tit.Text := FormatFloat('#0.000',KdTit);
+  eKd_XX_Bulk.Text := FormatFloat('#0.000',KdBulk);
 end;
 
 procedure Tfm_RdMx_Main.eKd_XX_OlDblClick(Sender: TObject);
@@ -1160,49 +1682,55 @@ procedure Tfm_RdMx_Main.cbIsotopeSystemChange(Sender: TObject);
 var
   iCode : integer;
 begin
-  if (cbIsotopeSystem.Text = 'Sm-Nd') then
+  tmpIsotopeSystem := cbIsotopeSystem.Text;
+  //if (cbIsotopeSystem.ItemIndex = 0) then tmpIsotopeSystem := 'SmNd';
+  //if (cbIsotopeSystem.ItemIndex = 1) then tmpIsotopeSystem := 'LuHf';
+  if (tmpIsotopeSystem = 'Sm-Nd') then
   begin
-    CHURX := 0.196;
-    CHURY_present := 0.512630;
-    DC1 := 6.524e-12;
-    DMModelRatioX := 0.2136;
-    DMModelRatioY := 0.513075;
-    ElementXX_j := 2.99;
-    ElementYY_j := 8.48;
-    ejElementXX.Text := FormatFloat('#0.00',ElementXX_j);
-    ejElementYY.Text := FormatFloat('#0.00',ElementYY_j);
-    ejRatioX.Text := FormatFloat('#0.0000',DMModelRatioX);
-    ejRatioY.Text := FormatFloat('#0.000000',DMModelRatioY);
-    Val(ejRatioX.Text,RatioX_j,iCode);
-    Val(ejRatioY.Text,RatioY_j,iCode);
-    CalculateEpsilon(0.0,DC1,CHURX,CHURY_present,RatioY_j,Epsilon_j);
+    DC1 := DC1_SmNd;
+    tKc := tKc_SmNd;
+    eKc.Text := FormatFloat('#0.0000',tKc);
+    CHURX := CHURX_SmNd;
+    CHURY_present := CHURY_present_SmNd;
+    ejElementXX.Text := FormatFloat('#0.00',ElementXX_j_SmNd);
+    ejElementYY.Text := FormatFloat('#0.00',ElementYY_j_SmNd);
+    ejRatioX.Text := FormatFloat('#0.0000',RatioX_j_SmNd);
+    ejRatioY.Text := FormatFloat('#0.000000',RatioY_j_SmNd);
+    Val(ejRatioX.Text,RatioX_j_SmNd,iCode);
+    Val(ejRatioY.Text,RatioY_j_SmNd,iCode);
+    CalculateEpsilon(0.0,DC1,CHURX_SmNd,CHURY_present_SmNd,RatioY_j_SmNd,Epsilon_j);
     ejEpsilon.Text := FormatFloat('##0.00',Epsilon_j);
-    eeElementXX.Text := FormatFloat('#0.00',2.8);
-    eeElementYY.Text := FormatFloat('#0.00',11.0);
-    eeRatioX.Text := FormatFloat('#0.0000',0.1180);
-    eeRatioY.Text := FormatFloat('#0.000000',0.510500);
-    Val(eeRatioX.Text,RatioX_e,iCode);
-    Val(eeRatioY.Text,RatioY_e,iCode);
-    CalculateEpsilon(0.0,DC1,CHURX,CHURY_present,RatioY_e,Epsilon_e);
+    eeElementXX.Text := FormatFloat('#0.00',ElementXX_e_SmNd);
+    eeElementYY.Text := FormatFloat('#0.00',ElementYY_e_SmNd);
+    eeRatioX.Text := FormatFloat('#0.0000',RatioX_e_SmNd);
+    eeRatioY.Text := FormatFloat('#0.000000',RatioY_e_SmNd);
+    Val(eeRatioX.Text,RatioX_e_SmNd,iCode);
+    Val(eeRatioY.Text,RatioY_e_SmNd,iCode);
+    CalculateEpsilon(0.0,DC1,CHURX_SmNd,CHURY_present_SmNd,RatioY_e_SmNd,Epsilon_e);
     eeEpsilon.Text := FormatFloat('##0.00',Epsilon_e);
-    eKd_XX_Ol.Text := FormatFloat('#0.0000',0.0013);
-    eKd_XX_Opx.Text := FormatFloat('#0.0000',0.0100);
-    eKd_XX_Cpx.Text := FormatFloat('#0.0000',0.7000);
-    eKd_XX_Hbl.Text := FormatFloat('#0.0000',0.8500);
-    eKd_XX_Gt.Text := FormatFloat('#0.0000',0.2170);
-    eKd_XX_Pg.Text := FormatFloat('#0.0000',0.1100);
-    eKd_XX_Mt.Text := FormatFloat('#0.0000',1.1000);
-    eKd_XX_Tit.Text := FormatFloat('#0.0000',10.000);
-    eKd_XX_Bulk.Text := FormatFloat('#0.0000',0.0);
-    eKd_YY_Ol.Text := FormatFloat('#0.0000',0.0010);
-    eKd_YY_Opx.Text := FormatFloat('#0.0000',0.0050);
-    eKd_YY_Cpx.Text := FormatFloat('#0.0000',0.300);
-    eKd_YY_Hbl.Text := FormatFloat('#0.0000',0.6500);
-    eKd_YY_Gt.Text := FormatFloat('#0.0000',0.0870);
-    eKd_YY_Pg.Text := FormatFloat('#0.0000',0.1400);
-    eKd_YY_Mt.Text := FormatFloat('#0.0000',1.0000);
-    eKd_YY_Tit.Text := FormatFloat('#0.0000',10.000);
-    eKd_YY_Bulk.Text := FormatFloat('#0.0000',0.0);
+    //ejRatioY.Text := FormatFloat('#0.000000',DMModelRatioY);
+    eKd_XX_Ol.Text := FormatFloat('#0.000',Kd_SmNd_XX_Ol);
+    eKd_XX_Opx.Text := FormatFloat('#0.000',Kd_SmNd_XX_Opx);
+    eKd_XX_Cpx.Text := FormatFloat('#0.000',Kd_SmNd_XX_Cpx);
+    eKd_XX_Hbl.Text := FormatFloat('#0.000',Kd_SmNd_XX_Hbl);
+    eKd_XX_Gt.Text := FormatFloat('#0.000',Kd_SmNd_XX_Gt);
+    eKd_XX_Pg.Text := FormatFloat('#0.000',Kd_SmNd_XX_Pg);
+    eKd_XX_Mt.Text := FormatFloat('#0.000',Kd_SmNd_XX_Mt);
+    eKd_XX_Tit.Text := FormatFloat('#0.000',Kd_SmNd_XX_Tit);
+    eKd_XX_Bulk.Text := FormatFloat('#0.000',0.0);
+    eKd_YY_Ol.Text := FormatFloat('#0.000',Kd_SmNd_YY_Ol);
+    eKd_YY_Opx.Text := FormatFloat('#0.000',Kd_SmNd_YY_Opx);
+    eKd_YY_Cpx.Text := FormatFloat('#0.000',Kd_SmNd_YY_Cpx);
+    eKd_YY_Hbl.Text := FormatFloat('#0.000',Kd_SmNd_YY_Hbl);
+    eKd_YY_Gt.Text := FormatFloat('#0.000',Kd_SmNd_YY_Gt);
+    eKd_YY_Pg.Text := FormatFloat('#0.000',Kd_SmNd_YY_Pg);
+    eKd_YY_Mt.Text := FormatFloat('#0.000',Kd_SmNd_YY_Mt);
+    eKd_YY_Tit.Text := FormatFloat('#0.000',Kd_SmNd_YY_Tit);
+    eKd_YY_Bulk.Text := FormatFloat('#0.000',0.0);
+    eMaximumRatioAge1.Text := FormatFloat('##0.000000',MaximumRatioAge1_SmNd);
+    eMinimumRatioAge1.Text := FormatFloat('##0.000000',MinimumRatioAge1_SmNd);
+    eMaximumRatioAge2.Text := FormatFloat('##0.000000',MaximumRatioAge2_SmNd);
+    eMinimumRatioAge2.Text := FormatFloat('##0.000000',MinimumRatioAge2_SmNd);
     leElementXX.Text := 'Sm (ppm)';
     leElementYY.Text := 'Nd (ppm)';
     leRatioX.Text := '147Sm/144Nd';
@@ -1238,48 +1766,52 @@ begin
     ChartInitial.SeriesList.Items[12].ShowInLegend := false;
     ChartInitial.SeriesList.Items[13].ShowInLegend := false;
   end;
-  if (cbIsotopeSystem.Text = 'Lu-Hf') then
+  if (tmpIsotopeSystem = 'Lu-Hf') then
   begin
-    CHURX := 0.0336;
-    CHURY_present := 0.282785;
-    DC1 := 1.867e-11;
-    DMModelRatioX := 0.0384;
-    DMModelRatioY := 0.283238;
-    ElementXX_j := 0.470;
-    ElementYY_j := 2.20;
-    ejElementXX.Text := FormatFloat('#0.00',ElementXX_j);
-    ejElementYY.Text := FormatFloat('#0.00',ElementYY_j);
-    ejRatioX.Text := FormatFloat('#0.0000',DMModelRatioX);
-    ejRatioY.Text := FormatFloat('#0.000000',DMModelRatioY);
-    Val(ejRatioX.Text,RatioX_j,iCode);
-    Val(ejRatioY.Text,RatioY_j,iCode);
-    CalculateEpsilon(0.0,DC1,CHURX,CHURY_present,RatioY_j,Epsilon_j);
+    DC1 := DC1_LuHf;
+    tKc := tKc_LuHf;
+    eKc.Text := FormatFloat('#0.0000',tKc);
+    CHURX := CHURX_LuHf;
+    CHURY_present := CHURY_present_LuHf;
+    ejElementXX.Text := FormatFloat('#0.00',ElementXX_j_LuHf);
+    ejElementYY.Text := FormatFloat('#0.00',ElementYY_j_LuHf);
+    ejRatioX.Text := FormatFloat('#0.0000',RatioX_j_LuHf);
+    ejRatioY.Text := FormatFloat('#0.000000',Ratioy_j_LuHf);
+    Val(ejRatioX.Text,RatioX_j_LuHf,iCode);
+    Val(ejRatioY.Text,RatioY_j_LuHf,iCode);
+    CalculateEpsilon(0.0,DC1,CHURX_LuHf,CHURY_present_LuHf,RatioY_j_LuHf,Epsilon_j);
     ejEpsilon.Text := FormatFloat('##0.00',Epsilon_j);
-    eeElementXX.Text := FormatFloat('#0.00',0.250);
-    eeElementYY.Text := FormatFloat('#0.00',1.90);
-    eeRatioX.Text := FormatFloat('#0.0000',0.015);
-    eeRatioY.Text := FormatFloat('#0.000000',0.28150);
-    Val(eeRatioX.Text,RatioX_e,iCode);
-    Val(eeRatioY.Text,RatioY_e,iCode);
-    CalculateEpsilon(0.0,DC1,CHURX,CHURY_present,RatioY_e,Epsilon_e);
+    eeElementXX.Text := FormatFloat('#0.00',ElementXX_e_LuHf);
+    eeElementYY.Text := FormatFloat('#0.00',ElementYY_e_LuHf);
+    eeRatioX.Text := FormatFloat('#0.0000',RatioX_e_LuHf);
+    eeRatioY.Text := FormatFloat('#0.000000',RatioY_e_LuHf);
+    Val(eeRatioX.Text,RatioX_e_LuHf,iCode);
+    Val(eeRatioY.Text,RatioY_e_LuHf,iCode);
+    CalculateEpsilon(0.0,DC1,CHURX_LuHf,CHURY_present_LuHf,RatioY_e_LuHf,Epsilon_e);
     eeEpsilon.Text := FormatFloat('##0.00',Epsilon_e);
-    eKd_XX_Ol.Text := FormatFloat('#0.0000',0.0015);
-    eKd_XX_Opx.Text := FormatFloat('#0.0000',0.0600);
-    eKd_XX_Cpx.Text := FormatFloat('#0.0000',0.2650);
-    eKd_XX_Gt.Text := FormatFloat('#0.0000',5.5000);
-    eKd_XX_Pg.Text := FormatFloat('#0.0000',0.0250);
-    eKd_XX_Mt.Text := FormatFloat('#0.0000',1.0000);
-    eKd_XX_Tit.Text := FormatFloat('#0.0000',10.000);
+
+    eKd_XX_Ol.Text := FormatFloat('#0.0000',Kd_LuHf_XX_Ol);
+    eKd_XX_Opx.Text := FormatFloat('#0.0000',Kd_LuHf_XX_Opx);
+    eKd_XX_Cpx.Text := FormatFloat('#0.0000',Kd_LuHf_XX_Cpx);
+    eKd_XX_Hbl.Text := FormatFloat('#0.0000',Kd_LuHf_XX_Hbl);
+    eKd_XX_Gt.Text := FormatFloat('#0.0000',Kd_LuHf_XX_Gt);
+    eKd_XX_Pg.Text := FormatFloat('#0.0000',Kd_LuHf_XX_Pg);
+    eKd_XX_Mt.Text := FormatFloat('#0.0000',Kd_LuHf_XX_Mt);
+    eKd_XX_Tit.Text := FormatFloat('#0.0000',Kd_LuHf_XX_Tit);
     eKd_XX_Bulk.Text := FormatFloat('#0.0000',0.0);
-    eKd_YY_Ol.Text := FormatFloat('#0.0000',0.0037);
-    eKd_YY_Opx.Text := FormatFloat('#0.0000',0.0550);
-    eKd_YY_Cpx.Text := FormatFloat('#0.0000',0.2630);
-    eKd_YY_Hbl.Text := FormatFloat('#0.0000',0.5000);
-    eKd_YY_Gt.Text := FormatFloat('#0.0000',0.3000);
-    eKd_YY_Pg.Text := FormatFloat('#0.0000',0.0510);
-    eKd_YY_Mt.Text := FormatFloat('#0.0000',3.000);
-    eKd_YY_Tit.Text := FormatFloat('#0.0000',10.000);
+    eKd_YY_Ol.Text := FormatFloat('#0.0000',Kd_LuHf_YY_Ol);
+    eKd_YY_Opx.Text := FormatFloat('#0.0000',Kd_LuHf_YY_Opx);
+    eKd_YY_Cpx.Text := FormatFloat('#0.0000',Kd_LuHf_YY_Cpx);
+    eKd_YY_Hbl.Text := FormatFloat('#0.0000',Kd_LuHf_YY_Hbl);
+    eKd_YY_Gt.Text := FormatFloat('#0.0000',Kd_LuHf_YY_Gt);
+    eKd_YY_Pg.Text := FormatFloat('#0.0000',Kd_LuHf_YY_Pg);
+    eKd_YY_Mt.Text := FormatFloat('#0.0000',Kd_LuHf_YY_Mt);
+    eKd_YY_Tit.Text := FormatFloat('#0.0000',Kd_LuHf_YY_Tit);
     eKd_YY_Bulk.Text := FormatFloat('#0.0000',0.0);
+    eMaximumRatioAge1.Text := FormatFloat('##0.000000',MaximumRatioAge1_LuHf);
+    eMinimumRatioAge1.Text := FormatFloat('##0.000000',MinimumRatioAge1_LuHf);
+    eMaximumRatioAge2.Text := FormatFloat('##0.000000',MaximumRatioAge2_LuHf);
+    eMinimumRatioAge2.Text := FormatFloat('##0.000000',MinimumRatioAge2_LuHf);
     leElementXX.Text := 'Lu (ppm)';
     leElementYY.Text := 'Hf (ppm)';
     leRatioX.Text := '176Lu/177Hf';
@@ -1313,9 +1845,11 @@ begin
     ChartInitial.SeriesList.Items[12].ShowInLegend := true;
     ChartInitial.SeriesList.Items[13].ShowInLegend := true;
   end;
+  Application.ProcessMessages;
   eWtOlChange(Sender);
   eKd_XX_OlDblClick(Sender);
   eKd_YY_OlDblClick(Sender);
+  Application.ProcessMessages;
 end;
 
 procedure Tfm_RdMx_Main.mi_Help_AboutClick(Sender: TObject);
@@ -1336,4 +1870,136 @@ begin
   end;
 end;
 
+procedure Tfm_RdMx_Main.CreateRandomPoints(SeriesID : string; Age,DC,CHURX,CHURY_present : double; NPoints : integer;
+  RatioStartMin, RatioEndMax : double; var PointsArray : TPointsArray);
+var
+  i : integer;
+  iAgeSeq : integer;
+begin
+  iAgeSeq := 2;
+  if (SeriesID = 'Points Age1') then iAgeSeq := 1;
+  if (SeriesID = 'Points Age2') then iAgeSeq := 2;
+
+  //ShowMessage('CreateRandomPoints '+IntToStr(NPoints));
+  //Calculate starting isotope ratios for example data for two points at end of mixing array
+  PointsArray[iAgeSeq,1,1] := Age;
+  PointsArray[iAgeSeq,1,2] := RatioStartMin;
+  CalculateEpsilon(Age,DC,CHURX,CHURY_present,PointsArray[iAgeSeq,1,2],PointsArray[iAgeSeq,1,3]);
+  PointsArray[iAgeSeq,1,4] := ElementYY_j;
+  PointsArray[iAgeSeq,2,1] := Age;
+  PointsArray[iAgeSeq,2,2] := RatioStartMin;
+  CalculateEpsilon(Age,DC,CHURX,CHURY_present,PointsArray[iAgeSeq,2,2],PointsArray[iAgeSeq,2,3]);
+  PointsArray[iAgeSeq,2,4] := ElementYY_j;
+  //Calculate additional example data at random spacing between two end points
+  for i:=3 to NPoints do
+  begin
+    if mi_Options_RandomPoints.IsChecked then
+    begin
+      PointsArray[iAgeSeq,i,1] := Age;
+      PointsArray[iAgeSeq,i,2] := RatioStartMin + Random*(RatioEndMax-RatioStartMin);
+      CalculateEpsilon(Age,DC,CHURX,CHURY_present,PointsArray[iAgeSeq,i,2],PointsArray[iAgeSeq,i,3]);
+      PointsArray[iAgeSeq,i,4] := ElementYY_j;
+    end else
+    begin
+      PointsArray[iAgeSeq,i,1] := Age;
+      PointsArray[iAgeSeq,i,2] := RatioStartMin + ((1.0*i-1.0)*(RatioEndMax-RatioStartMin)/(1.0*NPoints));
+      CalculateEpsilon(Age,DC,CHURX,CHURY_present,PointsArray[iAgeSeq,i,2],PointsArray[iAgeSeq,i,3]);
+      PointsArray[iAgeSeq,i,4] := ElementYY_j;
+    end;
+    //ShowMessage('Points at '+FormatFloat('###0.000',Age)+' and ratio = '+FormatFloat('#0.000000',PointsArray[i,2]));
+    UpdateChartInitial(SeriesID, Age, PointsArray[iAgeSeq,i,2]);
+    UpdateChartEpsilon(SeriesID, Age, PointsArray[iAgeSeq,i,3]);
+  end;
+end;
+
+procedure Tfm_RdMx_Main.mi_Options_RandomPointsClick(Sender: TObject);
+begin
+  mi_Options_RandomPoints.IsChecked := not mi_Options_RandomPoints.IsChecked;
+end;
+
+function Tfm_RdMx_Main.DM2_Age_From_Ration(Age, DC, tKdm, tRdm, tRsmp, tKc : double) : double;
+var
+  temp, temp1  : double;
+  AgeMax :  double;
+  ty : double;
+  tRc, tKsmp  : double;
+begin
+  // Age expected in Ma
+  //calculation only works for situation with linear CHUR and DM curves,
+  //not for quadratic versions
+  //ShowMessage(FormatFloat('###0.000000',tKdm)+'   '+FormatFloat('###0.000000',tRdm)+'   '+FormatFloat('###0.000000',tRsmp)+'   '+FormatFloat('###0.000000',tKc));
+  tRc := tRsmp + tKc*(exp(DC*Age*1.0e6) - 1.0);
+  ty := tKdm - tKc;
+  //ShowMessage(FormatFloat('###0.000000',tRc)+'   '+FormatFloat('###0.000000',ty));
+  temp := (tRdm-tRc);
+  if (ty <> 0.0) then
+  begin
+    if (temp/ty > -1.0) then
+    begin
+      temp1:=Ln(1.0+temp/ty);
+    end else
+    begin
+      temp1:=0.0;
+    end;
+  end else
+  begin
+    temp1:=0.0;
+  end;
+  AgeMax:=(temp1/DC);
+  Result := AgeMax/1.0E6;
+end;
+
+procedure Tfm_RdMx_Main.CalculateExampleDataT2DMCurves(SeriesID : string;iAgeSeq : integer; Age, DC, tKdm, tRdm, tKc : double);
+var
+  Spectrum2 : array[1..1000] of double;
+  Steps : integer;
+  tUncert : double;
+  i, j : integer;
+  temp1 : double;
+  tAge, x1, y2 : double;
+  tModelAge, tRatio : double;
+begin
+  Steps := 1000;
+  FillChar(Spectrum2,SizeOf(Spectrum2),0);
+  for i := 1 to NPoints do
+  begin
+    tUncert := 100.0;
+    tRatio := PointsArray[iAgeSeq,i,2];
+    tModelAge := DM2_Age_From_Ration(Age, DC, tKdm, tRdm, tRatio, tKc);
+    for j := 1 to Steps do
+    begin
+      x1 := ModelEndingAge + 1.0*j*(ModelStartingAge+300.0-ModelEndingAge)/Steps;
+      Spectrum2[j] := Spectrum2[j] + Gauss(x1,tModelAge,tUncert);
+    end;
+  end;
+  temp1 := 0.0;
+  for i := 1 to Steps do
+  begin
+    if (temp1 < Spectrum2[i]) then temp1 := Spectrum2[i];
+  end;
+  if (temp1 = 0.0) then temp1 := 1.0e-9;
+  for i := 0 to Steps do
+  begin
+    x1 := ModelEndingAge + 1.0*i*(ModelStartingAge+300.0-ModelEndingAge)/Steps;
+    if (i > 0) then y2 := 100.0 * Spectrum2[i]/temp1
+               else y2 := 100.0 * Spectrum2[1]/temp1;
+    if (y2 = 0.0) then y2 := -1.0;
+    UpdateChartT2DM(SeriesID, x1, y2);
+  end;
+end;
+
+function Tfm_RdMx_Main.Gauss(Ratio, Mean, Dev : double) : double;
+begin
+  if (Abs(Dev) > 0.0) then
+  begin
+    if (sqr((Ratio-Mean)/Dev) < 2000) then
+      Gauss := (1/(Dev*sqrt(2*Pi))) * exp(-sqr((Ratio-Mean)/Dev)/2)
+    else
+      Gauss := 0.0;
+    end else Gauss := 0.0;
+end;
+
+
+
 end.
+

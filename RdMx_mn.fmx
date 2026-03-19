@@ -4,6 +4,7 @@ object fm_RdMx_Main: Tfm_RdMx_Main
   Caption = 'Radiogenic Isotope Mixture Modelling'
   ClientHeight = 603
   ClientWidth = 1008
+  WindowState = wsMaximized
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
@@ -164,7 +165,7 @@ object fm_RdMx_Main: Tfm_RdMx_Main
             Size.Width = 100.000000000000000000
             Size.Height = 22.000000000000000000
             Size.PlatformDefault = False
-            TabOrder = 3
+            TabOrder = 4
             OnChange = cbIsotopeSystemChange
           end
           object Label3: TLabel
@@ -174,7 +175,7 @@ object fm_RdMx_Main: Tfm_RdMx_Main
             Size.Height = 17.000000000000000000
             Size.PlatformDefault = False
             Text = 'Isotope System'
-            TabOrder = 4
+            TabOrder = 5
           end
           object Label6: TLabel
             Position.X = 8.000000000000000000
@@ -183,7 +184,7 @@ object fm_RdMx_Main: Tfm_RdMx_Main
             Size.Height = 17.000000000000000000
             Size.PlatformDefault = False
             Text = 'Starting age (Ma)'
-            TabOrder = 2
+            TabOrder = 3
           end
           object Label7: TLabel
             Position.X = 8.000000000000000000
@@ -192,21 +193,41 @@ object fm_RdMx_Main: Tfm_RdMx_Main
             Size.Height = 17.000000000000000000
             Size.PlatformDefault = False
             Text = 'Ending age (Ma)'
-            TabOrder = 1
+            TabOrder = 2
           end
           object eModelStartingAge: TEdit
             Touch.InteractiveGestures = [LongTap, DoubleTap]
-            TabOrder = 7
+            TabOrder = 9
             Text = '3800'
             Position.X = 120.000000000000000000
             Position.Y = 41.000000000000000000
           end
           object eModelEndingAge: TEdit
             Touch.InteractiveGestures = [LongTap, DoubleTap]
-            TabOrder = 6
+            TabOrder = 8
             Text = '0'
             Position.X = 120.000000000000000000
             Position.Y = 71.000000000000000000
+          end
+          object eKc: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 7
+            Text = '0'
+            TextSettings.HorzAlign = Trailing
+            Position.X = 169.000000000000000000
+            Position.Y = 122.000000000000000000
+            Size.Width = 51.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object Label27: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 127.000000000000000000
+            Size.Width = 153.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Ratio for T(2DM) calculation'
+            TabOrder = 1
           end
         end
       end
@@ -1169,6 +1190,102 @@ object fm_RdMx_Main: Tfm_RdMx_Main
           Size.Height = 152.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 3
+          object Label14: TLabel
+            StyledSettings = [Family, Size, FontColor]
+            Position.X = 8.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 81.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.WordWrap = False
+            Text = 'Data points'
+            TabOrder = 2
+          end
+          object Label15: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 34.000000000000000000
+            Size.Width = 81.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Maximum ratio'
+            TabOrder = 4
+          end
+          object Label24: TLabel
+            Position.X = 8.000000000000000000
+            Position.Y = 64.000000000000000000
+            Size.Width = 81.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Minimum ratio'
+            TabOrder = 5
+          end
+          object eMaximumRatioAge2: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 8
+            Text = '0.513075'
+            Position.X = 95.000000000000000000
+            Position.Y = 33.000000000000000000
+            Size.Width = 57.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object eMinimumRatioAge2: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 9
+            Text = '0.510500'
+            Position.X = 95.000000000000000000
+            Position.Y = 63.000000000000000000
+            Size.Width = 57.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object eMaximumRatioAge1: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 6
+            Text = '0.513075'
+            Position.X = 175.000000000000000000
+            Position.Y = 33.000000000000000000
+            Size.Width = 57.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object eMinimumRatioAge1: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 7
+            Text = '0.510500'
+            Position.X = 175.000000000000000000
+            Position.Y = 63.000000000000000000
+            Size.Width = 57.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object Label25: TLabel
+            StyledSettings = [Family, Size, FontColor]
+            Position.X = 97.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 48.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.HorzAlign = Center
+            TextSettings.WordWrap = False
+            Text = 'Age2'
+            TabOrder = 1
+          end
+          object Label26: TLabel
+            StyledSettings = [Family, Size, FontColor]
+            Position.X = 177.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 48.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.HorzAlign = Center
+            TextSettings.WordWrap = False
+            Text = 'Age1'
+            TabOrder = 0
+          end
         end
       end
     end
@@ -1194,7 +1311,7 @@ object fm_RdMx_Main: Tfm_RdMx_Main
         object Panel15: TPanel
           Align = Top
           Size.Width = 490.000000000000000000
-          Size.Height = 49.000000000000000000
+          Size.Height = 33.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 1
           object TeeCommanderInitial: TTeeCommander
@@ -1473,7 +1590,7 @@ object fm_RdMx_Main: Tfm_RdMx_Main
         object Panel17: TPanel
           Align = Client
           Size.Width = 490.000000000000000000
-          Size.Height = 265.000000000000000000
+          Size.Height = 281.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 3
           object ChartInitial: TChart
@@ -1505,7 +1622,7 @@ object fm_RdMx_Main: Tfm_RdMx_Main
             Align = Client
             TabOrder = 1
             Size.Width = 490.000000000000000000
-            Size.Height = 265.000000000000000000
+            Size.Height = 281.000000000000000000
             Size.PlatformDefault = False
             ColorPaletteIndex = 13
             object Series1: TPointSeries
@@ -1657,7 +1774,7 @@ object fm_RdMx_Main: Tfm_RdMx_Main
               YValues.Order = loNone
             end
             object Series19: TLineSeries
-              SeriesColor = xFF6A6A6A
+              SeriesColor = xFF6E6D6D
               Title = 'Zircon Melt Age1'
               Brush.BackColor = x00FFFFFF
               LinePen.Width = 3.000000000000000000
@@ -1680,182 +1797,58 @@ object fm_RdMx_Main: Tfm_RdMx_Main
               YValues.Name = 'Y'
               YValues.Order = loNone
             end
+            object Series23: TPointSeries
+              SeriesColor = xFFE3A32D
+              Title = 'Example data Age1'
+              ClickableLine = False
+              Pointer.Dark3D = False
+              Pointer.Draw3D = False
+              Pointer.HorizSize = 2
+              Pointer.InflateMargins = True
+              Pointer.Pen.Color = xFF867762
+              Pointer.Pen.Fill.Color = xFF867762
+              Pointer.Style = psCircle
+              Pointer.Transparency = 10
+              Pointer.VertSize = 2
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object Series24: TPointSeries
+              SeriesColor = xFFDDC184
+              Title = 'Example data Age2'
+              ClickableLine = False
+              Pointer.Dark3D = False
+              Pointer.Draw3D = False
+              Pointer.HorizSize = 1
+              Pointer.InflateMargins = True
+              Pointer.Pen.Color = xFF7E6A6A
+              Pointer.Pen.Fill.Color = xFF7E6A6A
+              Pointer.Style = psRectangle
+              Pointer.VertSize = 1
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
           end
         end
       end
-      object pChartChemistry: TPanel
+      object pChartChemistryT2DM: TPanel
         Align = Right
         Position.X = 658.000000000000000000
         Size.Width = 350.000000000000000000
         Size.Height = 482.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 1
-        object Panel19: TPanel
-          Align = Top
-          Size.Width = 350.000000000000000000
-          Size.Height = 49.000000000000000000
-          Size.PlatformDefault = False
-          TabOrder = 1
-          object TeeCommander1: TTeeCommander
-            Panel = ChartChemistry
-            Align = Top
-            ParentShowHint = False
-            Size.Width = 350.000000000000000000
-            Size.Height = 33.000000000000000000
-            Size.PlatformDefault = False
-            TabOrder = 0
-          end
-        end
-        object Panel21: TPanel
-          Align = Client
-          Size.Width = 350.000000000000000000
-          Size.Height = 265.000000000000000000
-          Size.PlatformDefault = False
-          TabOrder = 3
-          object ChartChemistry: TChart
-            Foot.Alignment = taLeftJustify
-            Foot.Font.Size = 8.000000000000000000
-            Foot.Font.Style = []
-            Foot.Font.Color = claBlack
-            Foot.Font.Brush.Color = claBlack
-            Foot.TextAlignment = taLeftJustify
-            Legend.Title.Font.StyleExt = {00070000000000000004000000}
-            Legend.Visible = False
-            SubFoot.Alignment = taLeftJustify
-            SubFoot.Font.Size = 9.000000000000000000
-            SubFoot.Font.Style = []
-            SubFoot.Font.Color = xFF0B0A0A
-            SubFoot.Font.Brush.Color = xFF0B0A0A
-            SubFoot.Text.Strings = (
-              'RadMix (2026)')
-            SubFoot.TextAlignment = taLeftJustify
-            Title.Text.Strings = (
-              'TChart')
-            BottomAxis.AxisValuesFormat = '#,##0.0##'
-            BottomAxis.Title.Caption = 'Concentration'
-            Chart3DPercent = 1
-            LeftAxis.AxisValuesFormat = '#,##0.0000'
-            LeftAxis.LabelsSeparation = 0
-            LeftAxis.RoundFirstLabel = False
-            LeftAxis.Title.Caption = 'Ratio'
-            View3D = False
-            Zoom.Brush.Kind = None
-            Zoom.Pen.Fill.Color = claSilver
-            Align = Client
-            TabOrder = 0
-            Size.Width = 350.000000000000000000
-            Size.Height = 265.000000000000000000
-            Size.PlatformDefault = False
-            ColorPaletteIndex = 13
-            object PointSeries4: TPointSeries
-              SeriesColor = xFF4D9C16
-              Title = 'Juvenile'
-              ClickableLine = False
-              Pointer.HorizSize = 3
-              Pointer.InflateMargins = True
-              Pointer.Style = psRectangle
-              Pointer.VertSize = 3
-              XValues.Name = 'X'
-              XValues.Order = loAscending
-              YValues.Name = 'Y'
-              YValues.Order = loNone
-            end
-            object PointSeries5: TPointSeries
-              SeriesColor = xFFDA0D0D
-              Title = 'Evolved'
-              ClickableLine = False
-              Pointer.HorizSize = 3
-              Pointer.InflateMargins = True
-              Pointer.Style = psRectangle
-              Pointer.VertSize = 3
-              XValues.Name = 'X'
-              XValues.Order = loAscending
-              YValues.Name = 'Y'
-              YValues.Order = loNone
-            end
-            object PointSeries6: TPointSeries
-              SeriesColor = xFFF18914
-              Title = 'Mixture'
-              ClickableLine = False
-              Pointer.HorizSize = 3
-              Pointer.InflateMargins = True
-              Pointer.Style = psRectangle
-              Pointer.VertSize = 3
-              XValues.Name = 'X'
-              XValues.Order = loAscending
-              YValues.Name = 'Y'
-              YValues.Order = loNone
-            end
-            object PointSeries7: TPointSeries
-              SeriesColor = xFF1479F1
-              Title = 'AFC'
-              ClickableLine = False
-              Pointer.HorizSize = 5
-              Pointer.InflateMargins = True
-              Pointer.Style = psDiamond
-              Pointer.VertSize = 5
-              XValues.Name = 'X'
-              XValues.Order = loAscending
-              YValues.Name = 'Y'
-              YValues.Order = loNone
-            end
-            object Series11: TLineSeries
-              SeriesColor = xFFE38816
-              Title = 'Mixture Age1'
-              Brush.BackColor = x00FFFFFF
-              LinePen.Width = 3.000000000000000000
-              Pointer.InflateMargins = True
-              Pointer.Style = psRectangle
-              XValues.Name = 'X'
-              XValues.Order = loAscending
-              YValues.Name = 'Y'
-              YValues.Order = loNone
-            end
-            object Series13: TLineSeries
-              SeriesColor = xFFDED69D
-              Title = 'Mixture Age2'
-              Brush.BackColor = x00FFFFFF
-              LinePen.Width = 4.000000000000000000
-              Pointer.InflateMargins = True
-              Pointer.Style = psRectangle
-              XValues.Name = 'X'
-              XValues.Order = loAscending
-              YValues.Name = 'Y'
-              YValues.Order = loNone
-            end
-            object Series12: TLineSeries
-              SeriesColor = xFF0B4CD1
-              Title = 'Melt Age1'
-              Brush.BackColor = x00FFFFFF
-              LinePen.Width = 3.000000000000000000
-              Pointer.InflateMargins = True
-              Pointer.Style = psRectangle
-              XValues.Name = 'X'
-              XValues.Order = loAscending
-              YValues.Name = 'Y'
-              YValues.Order = loNone
-            end
-            object Series14: TLineSeries
-              SeriesColor = xFF14C1ED
-              Title = 'Melt Age2'
-              Brush.BackColor = x00FFFFFF
-              LinePen.Width = 3.000000000000000000
-              Pointer.InflateMargins = True
-              Pointer.Style = psRectangle
-              XValues.Name = 'X'
-              XValues.Order = loAscending
-              YValues.Name = 'Y'
-              YValues.Order = loNone
-            end
-          end
-        end
         object Panel1: TPanel
           Align = Bottom
           Position.Y = 314.000000000000000000
           Size.Width = 350.000000000000000000
           Size.Height = 168.000000000000000000
           Size.PlatformDefault = False
-          TabOrder = 2
+          TabOrder = 1
           object Label38: TLabel
             StyledSettings = [Family, Size, FontColor]
             Position.X = 8.000000000000000000
@@ -2104,6 +2097,313 @@ object fm_RdMx_Main: Tfm_RdMx_Main
             TabOrder = 1
           end
         end
+        object pChartChemistry: TPanel
+          Align = Client
+          Size.Width = 350.000000000000000000
+          Size.Height = 104.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          object Panel19: TPanel
+            Align = Top
+            Size.Width = 350.000000000000000000
+            Size.Height = 33.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object TeeCommanderChemistry: TTeeCommander
+              Panel = ChartChemistry
+              Align = Top
+              ParentShowHint = False
+              Size.Width = 350.000000000000000000
+              Size.Height = 33.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+            end
+          end
+          object Panel21: TPanel
+            Align = Client
+            Size.Width = 350.000000000000000000
+            Size.Height = 71.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object ChartChemistry: TChart
+              Foot.Alignment = taLeftJustify
+              Foot.Font.Size = 8.000000000000000000
+              Foot.Font.Style = []
+              Foot.Font.Color = claBlack
+              Foot.Font.Brush.Color = claBlack
+              Foot.TextAlignment = taLeftJustify
+              Legend.Title.Font.StyleExt = {00070000000000000004000000}
+              Legend.Visible = False
+              SubFoot.Alignment = taLeftJustify
+              SubFoot.Font.Size = 9.000000000000000000
+              SubFoot.Font.Style = []
+              SubFoot.Font.Color = xFF0B0A0A
+              SubFoot.Font.Brush.Color = xFF0B0A0A
+              SubFoot.Text.Strings = (
+                'RadMix (2026)')
+              SubFoot.TextAlignment = taLeftJustify
+              Title.Text.Strings = (
+                'TChart')
+              BottomAxis.AxisValuesFormat = '#,##0.0##'
+              BottomAxis.Title.Caption = 'Concentration'
+              Chart3DPercent = 1
+              LeftAxis.AxisValuesFormat = '#,##0.0000'
+              LeftAxis.LabelsSeparation = 0
+              LeftAxis.RoundFirstLabel = False
+              LeftAxis.Title.Caption = 'Ratio'
+              View3D = False
+              Zoom.Brush.Kind = None
+              Zoom.Pen.Fill.Color = claSilver
+              Align = Client
+              TabOrder = 0
+              Size.Width = 350.000000000000000000
+              Size.Height = 71.000000000000000000
+              Size.PlatformDefault = False
+              ColorPaletteIndex = 13
+              object PointSeries4: TPointSeries
+                SeriesColor = xFF4D9C16
+                Title = 'Juvenile'
+                ClickableLine = False
+                Pointer.HorizSize = 3
+                Pointer.InflateMargins = True
+                Pointer.Style = psRectangle
+                Pointer.VertSize = 3
+                XValues.Name = 'X'
+                XValues.Order = loAscending
+                YValues.Name = 'Y'
+                YValues.Order = loNone
+              end
+              object PointSeries5: TPointSeries
+                SeriesColor = xFFDA0D0D
+                Title = 'Evolved'
+                ClickableLine = False
+                Pointer.HorizSize = 3
+                Pointer.InflateMargins = True
+                Pointer.Style = psRectangle
+                Pointer.VertSize = 3
+                XValues.Name = 'X'
+                XValues.Order = loAscending
+                YValues.Name = 'Y'
+                YValues.Order = loNone
+              end
+              object PointSeries6: TPointSeries
+                SeriesColor = xFFF18914
+                Title = 'Mixture'
+                ClickableLine = False
+                Pointer.HorizSize = 3
+                Pointer.InflateMargins = True
+                Pointer.Style = psRectangle
+                Pointer.VertSize = 3
+                XValues.Name = 'X'
+                XValues.Order = loAscending
+                YValues.Name = 'Y'
+                YValues.Order = loNone
+              end
+              object PointSeries7: TPointSeries
+                SeriesColor = xFF1479F1
+                Title = 'AFC'
+                ClickableLine = False
+                Pointer.HorizSize = 5
+                Pointer.InflateMargins = True
+                Pointer.Style = psDiamond
+                Pointer.VertSize = 5
+                XValues.Name = 'X'
+                XValues.Order = loAscending
+                YValues.Name = 'Y'
+                YValues.Order = loNone
+              end
+              object Series11: TLineSeries
+                SeriesColor = xFFE38816
+                Title = 'Mixture Age1'
+                Brush.BackColor = x00FFFFFF
+                LinePen.Width = 3.000000000000000000
+                Pointer.InflateMargins = True
+                Pointer.Style = psRectangle
+                XValues.Name = 'X'
+                XValues.Order = loAscending
+                YValues.Name = 'Y'
+                YValues.Order = loNone
+              end
+              object Series13: TLineSeries
+                SeriesColor = xFFDED69D
+                Title = 'Mixture Age2'
+                Brush.BackColor = x00FFFFFF
+                LinePen.Width = 4.000000000000000000
+                Pointer.InflateMargins = True
+                Pointer.Style = psRectangle
+                XValues.Name = 'X'
+                XValues.Order = loAscending
+                YValues.Name = 'Y'
+                YValues.Order = loNone
+              end
+              object Series12: TLineSeries
+                SeriesColor = xFF0B4CD1
+                Title = 'Melt Age1'
+                Brush.BackColor = x00FFFFFF
+                LinePen.Width = 3.000000000000000000
+                Pointer.InflateMargins = True
+                Pointer.Style = psRectangle
+                XValues.Name = 'X'
+                XValues.Order = loAscending
+                YValues.Name = 'Y'
+                YValues.Order = loNone
+              end
+              object Series14: TLineSeries
+                SeriesColor = xFF14C1ED
+                Title = 'Melt Age2'
+                Brush.BackColor = x00FFFFFF
+                LinePen.Width = 3.000000000000000000
+                Pointer.InflateMargins = True
+                Pointer.Style = psRectangle
+                XValues.Name = 'X'
+                XValues.Order = loAscending
+                YValues.Name = 'Y'
+                YValues.Order = loNone
+              end
+            end
+          end
+        end
+        object Splitter3: TSplitter
+          Align = Top
+          Cursor = crVSplit
+          MinSize = 20.000000000000000000
+          Position.Y = 200.000000000000000000
+          Size.Width = 350.000000000000000000
+          Size.Height = 10.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object pT2DM: TPanel
+          Align = Top
+          Size.Width = 350.000000000000000000
+          Size.Height = 200.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 4
+          object ChartT2DM: TChart
+            Foot.Alignment = taLeftJustify
+            Foot.Font.Size = 8.000000000000000000
+            Foot.Font.Style = []
+            Foot.Font.Color = claBlack
+            Foot.Font.Brush.Color = claBlack
+            Foot.TextAlignment = taLeftJustify
+            Legend.CheckBoxes = True
+            Legend.Title.Font.StyleExt = {00070000000000000004000000}
+            Legend.Visible = False
+            SubFoot.Alignment = taLeftJustify
+            SubFoot.Font.Size = 9.000000000000000000
+            SubFoot.Font.Style = []
+            SubFoot.Font.Color = xFF0B0A0A
+            SubFoot.Font.Brush.Color = xFF0B0A0A
+            SubFoot.Text.Strings = (
+              'RadMix (2026)')
+            SubFoot.TextAlignment = taLeftJustify
+            Title.Text.Strings = (
+              'TChart')
+            BottomAxis.Title.Caption = 'T(2DM) Age (Ma)'
+            Chart3DPercent = 1
+            LeftAxis.Automatic = False
+            LeftAxis.AutomaticMaximum = False
+            LeftAxis.AutomaticMinimum = False
+            LeftAxis.AxisValuesFormat = '#,##0.0'
+            LeftAxis.Maximum = 100.000000000000000000
+            LeftAxis.Title.Caption = 'Probability'
+            View3D = False
+            Zoom.Brush.Kind = None
+            Zoom.Pen.Fill.Color = claSilver
+            Align = Client
+            TabOrder = 0
+            Size.Width = 350.000000000000000000
+            Size.Height = 167.000000000000000000
+            Size.PlatformDefault = False
+            ColorPaletteIndex = 13
+            object PointSeries11: TPointSeries
+              SeriesColor = xFF4D9C16
+              Title = 'Juvenile'
+              ClickableLine = False
+              Pointer.HorizSize = 3
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              Pointer.VertSize = 3
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object PointSeries12: TPointSeries
+              SeriesColor = xFFDA0D0D
+              Title = 'Evolved'
+              ClickableLine = False
+              Pointer.HorizSize = 3
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              Pointer.VertSize = 3
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object PointSeries13: TPointSeries
+              SeriesColor = xFFF18914
+              Title = 'Mixture'
+              ClickableLine = False
+              Pointer.HorizSize = 3
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              Pointer.VertSize = 3
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object PointSeries14: TPointSeries
+              SeriesColor = xFF146BF1
+              Title = 'AFC'
+              ClickableLine = False
+              Pointer.HorizSize = 5
+              Pointer.InflateMargins = True
+              Pointer.Style = psDiamond
+              Pointer.VertSize = 5
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object Series17: TLineSeries
+              SeriesColor = xFFF09C10
+              Title = 'Example data Age1'
+              Brush.BackColor = x00FFFFFF
+              Dark3D = False
+              LinePen.Width = 3.000000000000000000
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object Series18: TLineSeries
+              SeriesColor = xFFF7CC53
+              Title = 'Example data Age2'
+              Brush.BackColor = x00FFFFFF
+              Dark3D = False
+              LinePen.Width = 3.000000000000000000
+              Pointer.InflateMargins = True
+              Pointer.Style = psRectangle
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+          end
+          object TeeCommanderT2DM: TTeeCommander
+            Panel = ChartT2DM
+            Align = Top
+            ParentShowHint = False
+            Size.Width = 350.000000000000000000
+            Size.Height = 33.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+          end
+        end
       end
       object pChartEpsilon: TPanel
         Align = Client
@@ -2114,7 +2414,7 @@ object fm_RdMx_Main: Tfm_RdMx_Main
         object Panel23: TPanel
           Align = Top
           Size.Width = 152.000000000000000000
-          Size.Height = 49.000000000000000000
+          Size.Height = 33.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 1
           object TeeCommanderEpsilon: TTeeCommander
@@ -2144,7 +2444,7 @@ object fm_RdMx_Main: Tfm_RdMx_Main
             TextSettings.Font.StyleExt = {00070000000000000004000000}
             TextSettings.WordWrap = False
             Text = 'Mixture and AFC Melt'
-            TabOrder = 27
+            TabOrder = 24
           end
           object Label19: TLabel
             Position.X = 152.000000000000000000
@@ -2154,7 +2454,7 @@ object fm_RdMx_Main: Tfm_RdMx_Main
             Size.PlatformDefault = False
             TextSettings.WordWrap = False
             Text = 'Age2'
-            TabOrder = 13
+            TabOrder = 12
           end
           object Label20: TLabel
             Position.X = 274.000000000000000000
@@ -2164,26 +2464,7 @@ object fm_RdMx_Main: Tfm_RdMx_Main
             Size.PlatformDefault = False
             TextSettings.WordWrap = False
             Text = 'Age1'
-            TabOrder = 5
-          end
-          object eMelt_SmNd_Age2: TEdit
-            Touch.InteractiveGestures = [LongTap, DoubleTap]
-            TabOrder = 20
-            Position.X = 137.000000000000000000
-            Position.Y = 100.000000000000000000
-            Size.Width = 48.000000000000000000
-            Size.Height = 22.000000000000000000
-            Size.PlatformDefault = False
-          end
-          object Label21: TLabel
-            Position.X = 8.000000000000000000
-            Position.Y = 101.000000000000000000
-            Size.Width = 81.000000000000000000
-            Size.Height = 17.000000000000000000
-            Size.PlatformDefault = False
-            TextSettings.WordWrap = False
-            Text = 'Ratio'
-            TabOrder = 0
+            TabOrder = 4
           end
           object Label22: TLabel
             Position.X = 8.000000000000000000
@@ -2193,11 +2474,11 @@ object fm_RdMx_Main: Tfm_RdMx_Main
             Size.PlatformDefault = False
             TextSettings.WordWrap = False
             Text = 'Mixture'
-            TabOrder = 4
+            TabOrder = 3
           end
           object eMix_Sm_Age2: TEdit
             Touch.InteractiveGestures = [LongTap, DoubleTap]
-            TabOrder = 23
+            TabOrder = 20
             Position.X = 113.000000000000000000
             Position.Y = 40.000000000000000000
             Size.Width = 48.000000000000000000
@@ -2206,7 +2487,7 @@ object fm_RdMx_Main: Tfm_RdMx_Main
           end
           object eMix_Nd_Age1: TEdit
             Touch.InteractiveGestures = [LongTap, DoubleTap]
-            TabOrder = 19
+            TabOrder = 17
             Position.X = 297.000000000000000000
             Position.Y = 40.000000000000000000
             Size.Width = 48.000000000000000000
@@ -2221,11 +2502,11 @@ object fm_RdMx_Main: Tfm_RdMx_Main
             Size.PlatformDefault = False
             TextSettings.WordWrap = False
             Text = 'Melt'
-            TabOrder = 1
+            TabOrder = 0
           end
           object eMelt_Sm_Age2: TEdit
             Touch.InteractiveGestures = [LongTap, DoubleTap]
-            TabOrder = 17
+            TabOrder = 15
             Position.X = 113.000000000000000000
             Position.Y = 70.000000000000000000
             Size.Width = 48.000000000000000000
@@ -2234,7 +2515,7 @@ object fm_RdMx_Main: Tfm_RdMx_Main
           end
           object eMelt_Nd_Age1: TEdit
             Touch.InteractiveGestures = [LongTap, DoubleTap]
-            TabOrder = 8
+            TabOrder = 7
             Position.X = 297.000000000000000000
             Position.Y = 70.000000000000000000
             Size.Width = 48.000000000000000000
@@ -2243,7 +2524,7 @@ object fm_RdMx_Main: Tfm_RdMx_Main
           end
           object eMix_Nd_Age2: TEdit
             Touch.InteractiveGestures = [LongTap, DoubleTap]
-            TabOrder = 22
+            TabOrder = 19
             Position.X = 169.000000000000000000
             Position.Y = 40.000000000000000000
             Size.Width = 48.000000000000000000
@@ -2252,7 +2533,7 @@ object fm_RdMx_Main: Tfm_RdMx_Main
           end
           object eMelt_Nd_Age2: TEdit
             Touch.InteractiveGestures = [LongTap, DoubleTap]
-            TabOrder = 16
+            TabOrder = 14
             Position.X = 169.000000000000000000
             Position.Y = 70.000000000000000000
             Size.Width = 48.000000000000000000
@@ -2267,7 +2548,7 @@ object fm_RdMx_Main: Tfm_RdMx_Main
             Size.PlatformDefault = False
             TextSettings.WordWrap = False
             Text = 'Sm'
-            TabOrder = 12
+            TabOrder = 11
           end
           object lMixAFCYY_Age2: TLabel
             Position.X = 175.000000000000000000
@@ -2277,11 +2558,11 @@ object fm_RdMx_Main: Tfm_RdMx_Main
             Size.PlatformDefault = False
             TextSettings.WordWrap = False
             Text = 'Nd'
-            TabOrder = 11
+            TabOrder = 10
           end
           object eMelt_Sm_Age1: TEdit
             Touch.InteractiveGestures = [LongTap, DoubleTap]
-            TabOrder = 7
+            TabOrder = 6
             Position.X = 232.000000000000000000
             Position.Y = 70.000000000000000000
             Size.Width = 49.000000000000000000
@@ -2290,18 +2571,9 @@ object fm_RdMx_Main: Tfm_RdMx_Main
           end
           object eMix_Sm_Age1: TEdit
             Touch.InteractiveGestures = [LongTap, DoubleTap]
-            TabOrder = 18
+            TabOrder = 16
             Position.X = 232.000000000000000000
             Position.Y = 40.000000000000000000
-            Size.Width = 49.000000000000000000
-            Size.Height = 22.000000000000000000
-            Size.PlatformDefault = False
-          end
-          object eMelt_SmNd_Age1: TEdit
-            Touch.InteractiveGestures = [LongTap, DoubleTap]
-            TabOrder = 14
-            Position.X = 256.000000000000000000
-            Position.Y = 98.000000000000000000
             Size.Width = 49.000000000000000000
             Size.Height = 22.000000000000000000
             Size.PlatformDefault = False
@@ -2314,7 +2586,7 @@ object fm_RdMx_Main: Tfm_RdMx_Main
             Size.PlatformDefault = False
             TextSettings.WordWrap = False
             Text = 'Nd'
-            TabOrder = 9
+            TabOrder = 8
           end
           object lMixAFCXX_Age1: TLabel
             Position.X = 241.000000000000000000
@@ -2324,13 +2596,13 @@ object fm_RdMx_Main: Tfm_RdMx_Main
             Size.PlatformDefault = False
             TextSettings.WordWrap = False
             Text = 'Sm'
-            TabOrder = 10
+            TabOrder = 9
           end
         end
         object Panel25: TPanel
           Align = Client
           Size.Width = 152.000000000000000000
-          Size.Height = 265.000000000000000000
+          Size.Height = 281.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 3
           object ChartEpsilon: TChart
@@ -2363,7 +2635,7 @@ object fm_RdMx_Main: Tfm_RdMx_Main
             Align = Client
             TabOrder = 1
             Size.Width = 152.000000000000000000
-            Size.Height = 265.000000000000000000
+            Size.Height = 281.000000000000000000
             Size.PlatformDefault = False
             ColorPaletteIndex = 13
             object PointSeries1: TPointSeries
@@ -2468,7 +2740,7 @@ object fm_RdMx_Main: Tfm_RdMx_Main
             end
             object LineSeries5: TLineSeries
               SeriesColor = xFF0635E8
-              Title = 'Melt Age1'
+              Title = 'AFC Melt Age1'
               Brush.BackColor = x00FFFFFF
               LinePen.Width = 3.000000000000000000
               Pointer.InflateMargins = True
@@ -2480,7 +2752,7 @@ object fm_RdMx_Main: Tfm_RdMx_Main
             end
             object LineSeries6: TLineSeries
               SeriesColor = xFF18AFE6
-              Title = 'Melt Age2'
+              Title = 'AFC Melt Age2'
               Brush.BackColor = x00FFFFFF
               LinePen.Width = 4.000000000000000000
               Pointer.InflateMargins = True
@@ -2490,9 +2762,9 @@ object fm_RdMx_Main: Tfm_RdMx_Main
               YValues.Name = 'Y'
               YValues.Order = loNone
             end
-            object Series17: TLineSeries
-              SeriesColor = xFF575759
-              Title = 'Zircon Age1'
+            object LineSeries7: TLineSeries
+              SeriesColor = xFF4F4E4E
+              Title = 'Zircon Mixture Age1'
               Brush.BackColor = x00FFFFFF
               LinePen.Width = 3.000000000000000000
               Pointer.InflateMargins = True
@@ -2502,9 +2774,9 @@ object fm_RdMx_Main: Tfm_RdMx_Main
               YValues.Name = 'Y'
               YValues.Order = loNone
             end
-            object Series18: TLineSeries
-              SeriesColor = claDarkgray
-              Title = 'Zircon Age2'
+            object LineSeries8: TLineSeries
+              SeriesColor = xFFADADAD
+              Title = 'Zircon Mixture Age2'
               Brush.BackColor = x00FFFFFF
               LinePen.Width = 3.000000000000000000
               Pointer.InflateMargins = True
@@ -2514,8 +2786,8 @@ object fm_RdMx_Main: Tfm_RdMx_Main
               YValues.Name = 'Y'
               YValues.Order = loNone
             end
-            object Series21: TLineSeries
-              SeriesColor = xFF727272
+            object LineSeries9: TLineSeries
+              SeriesColor = xFF6E6D6D
               Title = 'Zircon Melt Age1'
               Brush.BackColor = x00FFFFFF
               LinePen.Width = 3.000000000000000000
@@ -2526,13 +2798,48 @@ object fm_RdMx_Main: Tfm_RdMx_Main
               YValues.Name = 'Y'
               YValues.Order = loNone
             end
-            object Series22: TLineSeries
-              SeriesColor = xFFA2A2A2
+            object LineSeries10: TLineSeries
+              SeriesColor = xFF9A9A9A
               Title = 'Zircon Melt Age2'
               Brush.BackColor = x00FFFFFF
               LinePen.Width = 3.000000000000000000
               Pointer.InflateMargins = True
               Pointer.Style = psRectangle
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object PointSeries9: TPointSeries
+              SeriesColor = xFFE3A32D
+              Title = 'Example data Age1'
+              ClickableLine = False
+              Pointer.Dark3D = False
+              Pointer.Draw3D = False
+              Pointer.HorizSize = 2
+              Pointer.InflateMargins = True
+              Pointer.Pen.Color = xFF867762
+              Pointer.Pen.Fill.Color = xFF867762
+              Pointer.Style = psCircle
+              Pointer.Transparency = 10
+              Pointer.VertSize = 2
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+            object PointSeries10: TPointSeries
+              SeriesColor = xFFDDC184
+              Title = 'Example data Age2'
+              ClickableLine = False
+              Pointer.Dark3D = False
+              Pointer.Draw3D = False
+              Pointer.HorizSize = 1
+              Pointer.InflateMargins = True
+              Pointer.Pen.Color = xFF7E6A6A
+              Pointer.Pen.Fill.Color = xFF7E6A6A
+              Pointer.Style = psRectangle
+              Pointer.VertSize = 1
               XValues.Name = 'X'
               XValues.Order = loAscending
               YValues.Name = 'Y'
@@ -2599,6 +2906,15 @@ object fm_RdMx_Main: Tfm_RdMx_Main
       Locked = True
       Text = 'Calculate'
       OnClick = mi_CalculateClick
+    end
+    object mi_Options: TMenuItem
+      Text = 'Options'
+      object mi_Options_RandomPoints: TMenuItem
+        Locked = True
+        IsChecked = True
+        Text = 'Random points'
+        OnClick = mi_Options_RandomPointsClick
+      end
     end
     object mi_Help: TMenuItem
       Text = 'Help'
